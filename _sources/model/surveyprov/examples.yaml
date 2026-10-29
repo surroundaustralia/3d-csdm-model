@@ -1,0 +1,7 @@
+examples:
+  - title: survey activity examples
+    content: Example data from `csdm_model/examples/survey_activity_examples.ttl`.
+    base-output-filename: survey_activity_examples
+    snippets:
+      - language: turtle
+        ref: examples/survey_activity_examples.ttl

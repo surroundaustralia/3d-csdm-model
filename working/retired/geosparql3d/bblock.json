@@ -1,0 +1,30 @@
+{
+  "name": "GeoSPARQL 3D Profile",
+  "abstract": "Profile declaration relating the CSDM geometry primitives to GeoSPARQL and its possible evolutions.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "1. Foundations",
+  "highlighted": false,
+  "ontology": "geosparql3d.ttl",
+  "concept": [
+    "https://www.opengis.net/def/profiles/geosparql3d"
+  ],
+  "dependsOn": [
+    "bblocks://icsm.csdm.model.geometry",
+    "bblocks://ogc.model.cross-domain.geosparql",
+    "bblocks://ogc.model.cross-domain.prof"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ]
+}

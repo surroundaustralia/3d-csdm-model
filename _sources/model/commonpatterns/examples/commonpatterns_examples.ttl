@@ -1,0 +1,18 @@
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ex:             <https://linked.data.gov.au/def/csdm/examples/commonpatterns/> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+
+# A survey point with a quality class and a numeric quality measure, as produced by the
+# ptQuality / ptQualityMeasure properties of the Survey Features schema.
+ex:surveyPoint1
+  rdfs:label "PM 12345" ;
+  commonpatterns:qualityClass ex:class-b ;
+  commonpatterns:qualityMeasure 0.02 ;
+.
+
+# A qualified measurement: a value with a quality measure.
+ex:distance1
+  a commonpatterns:Measure ;
+  commonpatterns:value 101.234 ;
+  commonpatterns:qualityMeasure 0.005 ;
+.

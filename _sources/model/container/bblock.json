@@ -1,0 +1,40 @@
+{
+  "name": "CSDM Survey Plan Container",
+  "abstract": "Import closure for the 3D model packages and aggregation containers for exchange objects.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "3. Containers",
+  "highlighted": false,
+  "ontology": "container.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/container"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.bbr.utils.compoundName.ontology",
+    "bblocks://icsm.csdm.model.commonpatterns",
+    "bblocks://icsm.csdm.model.geometry",
+    "ogc.ladm.land-parcels.ontology",
+    "bblocks://icsm.csdm.model.surveyfeatures",
+    "bblocks://icsm.csdm.model.surveyobs",
+    "bblocks://icsm.csdm.model.surveyprov",
+    "bblocks://ogc.model.cross-domain.sosa",
+    "bblocks://ogc.model.cross-domain.prov",
+    "bblocks://ogc.skos.concept"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": [
+    "container.shapes.ttl"
+  ]
+}

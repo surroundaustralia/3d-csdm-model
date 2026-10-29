@@ -1,0 +1,8 @@
+concept,kind,change,property,CSDM value,land-parcels value
+parcel:Appellation,Class,differs,rdfs:subClassOf,parcel:ParcelModel,
+parcel:LandInterest,Class,differs,rdfs:subClassOf,parcel:ParcelModel,
+parcel:Parcel,Class,differs,rdfs:subClassOf,parcel:ParcelModel,
+parcel:ParcelAggregate,Class,differs,rdfs:subClassOf,parcel:ParcelModel,
+parcel:ParcelModel,Class,only in CSDM,rdf:type,owl:Class,
+parcel:ParcelModel,Class,only in CSDM,rdfs:subClassOf,owl:Thing,
+parcel:ParcelModel,Class,only in CSDM,skos:prefLabel,"""Parcel Module Component""@en",

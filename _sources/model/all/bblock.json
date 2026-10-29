@@ -1,0 +1,29 @@
+{
+  "name": "3D Cadastral Survey Data Model (complete)",
+  "abstract": "ICSM Conceptual Model for 3D Cadastral Survey Dataset Submissions. A PROF profile aggregating all CSDM model modules.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "0. Model",
+  "highlighted": true,
+  "ontology": "csdm.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm"
+  ],
+  "dependsOn": [
+    "bblocks://icsm.csdm.model.container",
+    "bblocks://icsm.csdm.model.geometry"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ]
+}

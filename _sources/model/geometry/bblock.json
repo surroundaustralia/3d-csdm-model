@@ -1,0 +1,33 @@
+{
+  "name": "CSDM Geometry Primitives",
+  "abstract": "Extends GeoSPARQL with a named subset of ISO 19107 concepts for 3D solids and 3D topology amongst features. A candidate extension for GeoSPARQL 1.1. Includes the former GeoSPARQL 3D profile placeholder module, and maps its terms to the Topo-Feature and spatial-representation ontologies used by the exchange encoding.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "1. Foundations",
+  "highlighted": false,
+  "ontology": "geometryprim.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/geometry"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.model.cross-domain.geosparql",
+    "bblocks://ogc.geo.topo.ontology",
+    "bblocks://ogc.ladm.land-parcels.spatialRepresentationDefinition"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": [
+    "geometryprimitives.shapes.ttl"
+  ]
+}

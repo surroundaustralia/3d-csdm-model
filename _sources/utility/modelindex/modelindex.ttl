@@ -1,0 +1,104 @@
+# baseURI: https://linked.data.gov.au/def/csdm/modelindex
+#
+# CSDM model index: classification of model elements used to organise the model documentation.
+#
+# These classes and axioms were previously part of the container module (container.ttl). They classify model elements
+# for documentation and selection; they are not part of the domain model. The class IRIs are unchanged (they remain in
+# the container namespace) and are now defined by this ontology.
+
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix container:      <https://linked.data.gov.au/def/csdm/container/> .
+@prefix dct:            <http://purl.org/dc/terms/> .
+@prefix geometry:       <https://linked.data.gov.au/def/csdm/geometry/> .
+@prefix ont:            <https://linked.data.gov.au/def/csdm/modelindex> .
+@prefix owl:            <http://www.w3.org/2002/07/owl#> .
+@prefix parcel:         <https://linked.data.gov.au/def/csdm/parcels/> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix surv:           <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix surveyobs:      <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix survprov:       <https://linked.data.gov.au/def/csdm/surveyprov/> .
+
+ont:
+  a owl:Ontology ;
+  rdfs:label "CSDM Model Index"@en ;
+  dct:description "Classification of 3D CSDM model elements used to organise and select elements in the model documentation. Not part of the domain model."@en ;
+  dct:source <https://github.com/icsm-au/3d-csdm/blob/main/csdm_model/container.ttl> ;
+  skos:historyNote "Moved from the container module (https://linked.data.gov.au/def/csdm/container) on 2026-10-30. Class IRIs are unchanged."@en ;
+.
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Classification classes (formerly in container.ttl)
+# ---------------------------------------------------------------------------------------------------------------------
+
+container:ModelledElement
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "SelectableModelElement" ;
+  rdfs:subClassOf owl:Thing ;
+.
+
+container:ClassIn3DCadastre
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Class defined in 3D Cadastre Model" ;
+  rdfs:subClassOf container:ModelledElement ;
+.
+
+container:StandardClass
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Key Class used by 3D Cadastre Model" ;
+  rdfs:subClassOf container:ModelledElement ;
+  skos:definition "This class is just to provide a highlight for key class types used by 3D Cadastre model" ;
+.
+
+container:GeoSPARQL-3D
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "GeoSPARQL 1.2 (3D profile)" ;
+  rdfs:subClassOf container:ClassIn3DCadastre ;
+  skos:definition "This class represents a container for objects described by the 3D profile of ISO19107 as a GeoSPARQL 1.2 extension candidate." ;
+.
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Classification of model classes (formerly in container.ttl)
+# ---------------------------------------------------------------------------------------------------------------------
+
+container:CSD
+  rdfs:subClassOf container:ClassIn3DCadastre ;
+.
+
+surv:CadastralFeature
+  rdfs:subClassOf container:ClassIn3DCadastre ;
+.
+
+surveyobs:SurveyObservation
+  rdfs:subClassOf container:ClassIn3DCadastre ;
+.
+
+survprov:SurveyProvenanceObject
+  rdfs:subClassOf container:ClassIn3DCadastre ;
+.
+
+parcel:ParcelModel
+  rdfs:subClassOf container:ClassIn3DCadastre ;
+.
+
+geometry:3DSpatialUnit
+  rdfs:subClassOf container:GeoSPARQL-3D ;
+.
+
+geometry:BoundaryFeature
+  rdfs:subClassOf container:GeoSPARQL-3D ;
+.
+
+# Formerly stated for geometry:SolidGeometry, which is not defined; the geometry module's class is AbstractSolidGeometry.
+geometry:AbstractSolidGeometry
+  rdfs:subClassOf container:GeoSPARQL-3D ;
+.
+
+# Formerly stated for surveyobs:Measure, now a deprecated equivalent of commonpatterns:Measure.
+commonpatterns:Measure
+  rdfs:subClassOf container:StandardClass ;
+.

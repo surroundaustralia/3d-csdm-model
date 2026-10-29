@@ -1,0 +1,46 @@
+@prefix :     <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# Numeric literals: JSON-LD maps JSON numbers to xsd:double or xsd:integer; Turtle data may also use xsd:decimal.
+:NumericLiteral
+  a sh:NodeShape ;
+  sh:or (
+      [ sh:datatype xsd:decimal ]
+      [ sh:datatype xsd:double ]
+      [ sh:datatype xsd:float ]
+      [ sh:datatype xsd:integer ]
+    ) ;
+.
+
+:MeasureShape
+  a sh:NodeShape ;
+  sh:targetClass :Measure ;
+  sh:property [
+      sh:path :value ;
+      sh:node :NumericLiteral ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:message "A Measure has exactly one numeric value."@en ;
+    ] ;
+  sh:property [
+      sh:path :qualityMeasure ;
+      sh:maxCount 1 ;
+      sh:message "A Measure has at most one quality measure."@en ;
+    ] ;
+.
+
+:QualityMeasureShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf :qualityMeasure ;
+  sh:node :NumericLiteral ;
+  sh:message "A quality measure is a numeric literal."@en ;
+.
+
+:QualityClassShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf :qualityClass ;
+  sh:nodeKind sh:IRI ;
+  sh:message "A quality class is a reference (IRI) to a codelist concept."@en ;
+.

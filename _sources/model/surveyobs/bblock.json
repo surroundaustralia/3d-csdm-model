@@ -1,0 +1,37 @@
+{
+  "name": "CSDM Survey Observations",
+  "abstract": "Survey observations modelling for cadastral surveys, as a specialisation of SOSA.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "2. Modules",
+  "highlighted": false,
+  "ontology": "surveyobs.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/surveyobs"
+  ],
+  "dependsOn": [
+    "bblocks://icsm.csdm.model.surveyfeatures",
+    "bblocks://ogc.bbr.utils.compoundName.ontology",
+    "bblocks://icsm.csdm.model.commonpatterns",
+    "bblocks://ogc.model.cross-domain.sosa",
+    "bblocks://ogc.model.cross-domain.geosparql",
+    "bblocks://ogc.model.cross-domain.schema-org",
+    "bblocks://ogc.model.cross-domain.dcterms"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": [
+    "vector_observations.shapes.ttl"
+  ]
+}

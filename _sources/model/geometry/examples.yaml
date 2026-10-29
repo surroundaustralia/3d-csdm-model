@@ -1,0 +1,7 @@
+examples:
+  - title: geometryprimitives examples
+    content: Example data from `csdm_model/examples/geometryprimitives_examples.ttl`.
+    base-output-filename: geometryprimitives_examples
+    snippets:
+      - language: turtle
+        ref: examples/geometryprimitives_examples.ttl

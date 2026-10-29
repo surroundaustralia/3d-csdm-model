@@ -1,0 +1,8 @@
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ex:             <https://linked.data.gov.au/def/csdm/examples/commonpatterns/> .
+
+# A Measure must have exactly one value.
+ex:distance2
+  a commonpatterns:Measure ;
+  commonpatterns:qualityMeasure 0.005 ;
+.

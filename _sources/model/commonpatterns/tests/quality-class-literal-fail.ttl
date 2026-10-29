@@ -1,0 +1,7 @@
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ex:             <https://linked.data.gov.au/def/csdm/examples/commonpatterns/> .
+
+# A quality class must be a reference to a codelist concept, not a literal.
+ex:surveyPoint2
+  commonpatterns:qualityClass "B" ;
+.

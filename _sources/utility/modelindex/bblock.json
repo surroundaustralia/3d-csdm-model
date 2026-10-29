@@ -1,0 +1,29 @@
+{
+  "name": "CSDM Model Index",
+  "abstract": "Classification of 3D CSDM model elements (modelled element, class defined in the 3D cadastre model, key class, GeoSPARQL 3D profile class) used to organise the model documentation. Moved from the container module; not part of the domain model.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "Utility: design process and documentation",
+  "highlighted": false,
+  "ontology": "modelindex.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/modelindex"
+  ],
+  "dependsOn": [
+    "bblocks://icsm.csdm.model.all",
+    "bblocks://icsm.csdm.model.commonpatterns"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "design process"
+  ]
+}

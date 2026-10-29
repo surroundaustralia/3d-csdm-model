@@ -1,0 +1,28 @@
+{
+  "name": "CSDM Attributions",
+  "abstract": "Persons, organisations and groups referenced for attribution of the CSDM.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "Utility: design process and documentation",
+  "highlighted": false,
+  "ontology": "attributions.ttl",
+  "concept": [
+    "https://linked.data.gov.au/dataset/csdm/attributions"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.skos.conceptScheme"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ]
+}

@@ -1,0 +1,7 @@
+examples:
+  - title: vector observations examples
+    content: Example data from `csdm_model/examples/vector_observations_examples.ttl`.
+    base-output-filename: vector_observations_examples
+    snippets:
+      - language: turtle
+        ref: examples/vector_observations_examples.ttl

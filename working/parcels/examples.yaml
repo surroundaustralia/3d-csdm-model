@@ -1,0 +1,7 @@
+examples:
+  - title: parcel examples
+    content: Example data from `csdm_model/examples/parcel_examples.ttl`.
+    base-output-filename: parcel_examples
+    snippets:
+      - language: turtle
+        ref: examples/parcel_examples.ttl

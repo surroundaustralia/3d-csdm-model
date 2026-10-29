@@ -1,0 +1,33 @@
+{
+  "name": "CSDM Documentation Configuration",
+  "abstract": "pyLODE configuration describing the CSDM modules, their shapes and supporting resources for generating the model documentation.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-29T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "Utility: design process and documentation",
+  "highlighted": false,
+  "dependsOn": [
+    "bblocks://icsm.csdm.model.all",
+    "bblocks://icsm.csdm.utility.attributions",
+    "bblocks://icsm.csdm.utility.modelindex"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "design process"
+  ],
+  "resources": [
+    {
+      "ref": "pylode.ttl",
+      "format": "text/turtle",
+      "role": "data"
+    }
+  ]
+}

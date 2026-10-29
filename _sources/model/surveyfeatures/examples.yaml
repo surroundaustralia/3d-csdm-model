@@ -1,0 +1,13 @@
+examples:
+  - title: survey features examples
+    content: Example data from `csdm_model/examples/survey_features_examples.ttl`.
+    base-output-filename: survey_features_examples
+    snippets:
+      - language: turtle
+        ref: examples/survey_features_examples.ttl
+  - title: survmark condition NZ
+    content: Example data from `csdm_model/examples/survmark_condition_NZ.ttl`.
+    base-output-filename: survmark_condition_NZ
+    snippets:
+      - language: turtle
+        ref: examples/survmark_condition_NZ.ttl

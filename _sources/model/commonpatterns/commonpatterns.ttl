@@ -1,0 +1,139 @@
+# baseURI: https://linked.data.gov.au/def/csdm/commonpatterns
+#
+# CSDM Common Patterns: implementation patterns not directly supported by other standards.
+#
+# Restored from the CSDM Common Patterns module (icsm-au/3d-csdm, csdm_model/commonpatterns.ttl), keeping its
+# original namespace. The compound name pattern (CompoundName, NamePart, name) has moved to the OGC Utility register
+# (ogc.bbr.utils.compoundName.ontology, https://w3id.org/ogc/utils/label/). The original IRIs of those three terms
+# are kept here as deprecated equivalents so that existing references still resolve.
+
+@prefix :        <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix com:     <https://w3id.org/ogc/utils/label/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix ont:     <https://linked.data.gov.au/def/csdm/commonpatterns> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prof:    <http://www.w3.org/ns/dx/prof/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+ont:
+  a owl:Ontology ;
+  rdfs:label "CSDM Common Patterns"@en ;
+  dct:title "CSDM Common Patterns"@en ;
+  dct:description "Common implementation patterns used by the 3D Cadastral Survey Data Model that are not directly supported by other standards: qualified measures, quality indicators, jurisdictional codelists and reports. Compound names are defined by the OGC Utility compoundName ontology."@en ;
+  dct:source <https://github.com/icsm-au/3d-csdm/blob/main/csdm_model/commonpatterns.ttl> ;
+  owl:versionInfo "0.2" ;
+  skos:historyNote "Version 0.2 re-establishes the module in the 3D CSDM common register. The compound name terms moved to https://w3id.org/ogc/utils/label/ and are kept here only as deprecated equivalents."@en ;
+.
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Classes
+# ---------------------------------------------------------------------------------------------------------------------
+
+:Common
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Common Implementation Patterns"@en ;
+  skos:prefLabel "Common Reusable Patterns"@en ;
+  skos:definition "SuperClass for common implementations patterns not provided by existing standards"@en ;
+.
+
+:Measure
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Qualified Measurement"@en ;
+  rdfs:subClassOf :Common ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :value ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty :qualityMeasure ;
+    ] ;
+  skos:definition "A measured value with at most one numeric quality measure."@en ;
+.
+
+:RelevantJurisdictionalCodelist
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Relevant Jurisdictional Codelist"@en ;
+  rdfs:subClassOf skos:ConceptScheme ;
+  rdfs:subClassOf :Common ;
+  skos:definition "A codelist that will be defined in each implementing jurisdiction"@en ;
+.
+
+:Report
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Report"@en ;
+  rdfs:subClassOf prof:ResourceDescriptor ;
+  rdfs:subClassOf :Common ;
+  skos:definition "An arbitrary report of a known type, with metadata about its purpose and format as required."@en ;
+  skos:editorialNote "Logical model using the ResourceDescriptor pattern from the Profiles vocabulary to allow specification of what form the report or document is in."@en ;
+.
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Properties
+# ---------------------------------------------------------------------------------------------------------------------
+
+:value
+  a owl:DatatypeProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "value"@en ;
+  rdfs:domain :Measure ;
+  rdfs:range xsd:decimal ;
+  skos:definition "The numeric value of a qualified measurement."@en ;
+.
+
+:qualityMeasure
+  a owl:DatatypeProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Quality Measure"@en ;
+  skos:definition "a numeric quality measure"@en ;
+  skos:scopeNote "This has not been fully modelled - a placeholder - for an ISO 19157 DQV concept"@en ;
+  skos:scopeNote "No rdfs:range is asserted: JSON numbers mapped through JSON-LD become xsd:double or xsd:integer literals (for example the ptQualityMeasure property of survey points). The original module declared xsd:decimal."@en ;
+.
+
+:qualityClass
+  a owl:ObjectProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Quality Class"@en ;
+  rdfs:range skos:Concept ;
+  skos:definition "A reference to a code indicating a quality class"@en ;
+  skos:scopeNote "Values are concepts from a relevant jurisdictional codelist of quality or accuracy classes."@en ;
+.
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Deprecated: compound names now defined by the OGC Utility compoundName ontology
+# ---------------------------------------------------------------------------------------------------------------------
+
+:CompoundName
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "CompoundName (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass com:CompoundName ;
+  dct:isReplacedBy com:CompoundName ;
+.
+
+:NamePart
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Name Part (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass com:NamePart ;
+  dct:isReplacedBy com:NamePart ;
+.
+
+:name
+  a owl:ObjectProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Name (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty com:name ;
+  dct:isReplacedBy com:name ;
+.

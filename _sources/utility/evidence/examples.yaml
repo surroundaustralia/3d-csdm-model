@@ -1,0 +1,13 @@
+examples:
+  - title: canonical examples closure
+    content: Example data from `csdm_model/examples/canonical_examples_closure.ttl`.
+    base-output-filename: canonical_examples_closure
+    snippets:
+      - language: turtle
+        ref: examples/canonical_examples_closure.ttl
+  - title: implementation examples
+    content: Example data from `csdm_model/examples/implementation_examples.ttl`.
+    base-output-filename: implementation_examples
+    snippets:
+      - language: turtle
+        ref: examples/implementation_examples.ttl

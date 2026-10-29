@@ -1,0 +1,36 @@
+{
+  "name": "CSDM Cadastral Parcels",
+  "abstract": "A model for cadastral parcels. Shares its concepts with the OGC Land Parcels ontology (`ogc.ladm.land-parcels.ontology`) - see the reconciliation report for differences.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "2. Modules",
+  "highlighted": false,
+  "ontology": "parcels.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/parcels"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.bbr.utils.commonpatterns",
+    "bblocks://icsm.csdm.model.geometry",
+    "bblocks://ogc.model.cross-domain.geosparql",
+    "bblocks://ogc.model.cross-domain.schema-org",
+    "bblocks://ogc.skos.concept",
+    "bblocks://ogc.ladm.land-parcels.ontology"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": [
+    "parcel_module.shapes.ttl"
+  ]
+}

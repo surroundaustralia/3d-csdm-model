@@ -1,0 +1,9 @@
+examples:
+  - title: Quality class, quality measure and qualified measurement
+    content: |-
+      A survey point carrying a quality class and a numeric quality measure (the RDF form of the `ptQuality` and
+      `ptQualityMeasure` properties of the Survey Features schema), and a qualified measurement.
+    base-output-filename: commonpatterns_examples
+    snippets:
+      - language: turtle
+        ref: examples/commonpatterns_examples.ttl

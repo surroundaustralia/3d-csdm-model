@@ -1,0 +1,31 @@
+{
+  "name": "CSDM Common Patterns",
+  "abstract": "Common implementation patterns not directly supported by other standards: qualified measures, quality classes and measures, jurisdictional codelists and reports. Compound names are reused from the OGC Utility compoundName ontology.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.2",
+  "group": "1. Foundations",
+  "highlighted": false,
+  "ontology": "commonpatterns.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/commonpatterns"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.bbr.utils.compoundName.ontology"
+  ],
+  "sources": [
+    {
+      "title": "CSDM Common Patterns module (icsm-au/3d-csdm, csdm_model/commonpatterns.ttl)",
+      "link": "https://github.com/icsm-au/3d-csdm/blob/main/csdm_model/commonpatterns.ttl"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": [
+    "shapes.shacl"
+  ]
+}
