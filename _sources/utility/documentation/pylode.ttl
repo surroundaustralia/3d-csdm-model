@@ -114,8 +114,10 @@ PREFIX role: <http://www.w3.org/ns/dx/prof/role/>
     lode:ignoreClass
         <https://linked.data.gov.au/def/csdm/surveyfeatures/AllowableCoordinateReferenceSystem> ,
         <https://linked.data.gov.au/def/csdm/surveyfeatures/Angle> ,
+        <https://linked.data.gov.au/def/csdm/surveyfeatures/AngleType> ,
         <https://linked.data.gov.au/def/csdm/surveyfeatures/ConditionCode> ,
         <https://linked.data.gov.au/def/csdm/surveyfeatures/Distance> ,
+        <https://linked.data.gov.au/def/csdm/surveyfeatures/DistanceType> ,
         <https://linked.data.gov.au/def/csdm/surveyfeatures/MonumentCondition> ,
         <https://linked.data.gov.au/def/csdm/surveyfeatures/MonumentForm> ,
         <https://linked.data.gov.au/def/csdm/surveyfeatures/NoOccupation> ,

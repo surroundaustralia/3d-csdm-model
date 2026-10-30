@@ -437,4 +437,52 @@ Verification: local builds of topo-feature, 3d-csdm-model (against a local expor
 (topo-face, topo-shell, topo-feature-multi-collection), all from topo-validator plugin geometry checks; an unmodified
 build of HEAD fails in exactly the same way.
 
-Not yet done: the shapes issue (§8, last row), context fixes in §8, and items 5.1 to 5.4, 5.6, 5.8 and 7.1.
+### Second round (2026-10-30)
+
+| Item | What was done | Repository |
+|---|---|---|
+| §6.1 context defects | `ref` now `@type: @id` in `topology`; `topo-face` and `topo-shell` map `ref` to `topo:ref` (was an alias of `@id`, which put the orientation on the referenced feature; **changes uplift**); `topo:` prefix declared in `topo-ring`; `@context` wrapper added in `topo-feature-collection`, `topo-arc`, `topo-line`; `AggregatePolygon` bound to the new class `topo:AggregatePolygon` (**changes uplift**). | topo-feature |
+| §8 context issues | `featureType` values `OccupationMark`, `SurveyMark`, `SurveyPoint`, `SurveyedVector` bound; `SubtendedAngle` topology type bound; `hasResult.angle` bound to `surv:angle`; `adoptedObservations` bound; `yaw`, `pitch`, `roll` also bound at the top level of the SurveyObservations context (the annotator dropped the scoped bindings, so they were lost on uplift). D3 applied: `AdoptedVector` now maps to `surv:AdoptedVector`. All **change uplift**. `Touches` (one test) left unbound. D8 deferred. | 3d-csdm-common |
+| §8 address context | Prefix `ad` declared (was `ads`) with a valid IRI; `propertyNumber`, `streetName`, `streetType` no longer uplift to relative IRIs. | 3d-csdm-profile-icsm |
+| 5.1 container | The 7 properties, `adoptedObservations`, `csd:locality` (D2) declared; ranges for `vectorObservations`, `occupationObservations`, `referencedCSD`; CRS, datum and admin unit properties are object properties; `bearingRotation` a datatype sub-property of `ladm:bearingRotation` (D11); `surveyType` moved from the shapes into the ontology. | 3d-csdm-model |
+| 5.2 surveyfeatures | `SurveyedVector`, `SubtendedAngle`, `fromSurvey`, `geodeticid`, `angle` declared; `distance`, `horizontalAngle`, `verticalAngle` are datatype properties (shapes updated); `state` has no domain (schema and model examples disagree) and range `skos:Concept`; domains and ranges for `monumentedBy`, `purpose`, `vectorPurpose`, `condition`, `form`; `setup` corrected to an object property (found by the consistency shapes); `geodeticid` is an `rdf:Property` because the schema allows a string or a compound name. | 3d-csdm-model |
+| 5.3 surveyobs | Accuracy properties declared and the quality properties deprecated; `angleType`/`distanceType` ranges; `surv:age` a string datatype property; `surv:pose`, `surv:sensorType`, `surv:sensorRole`, `surv:lastCalibrated`, `sensors:DifferentialGPS`, `sensors:baseSensor`, `sensors:roverSensor` declared (D4: the sensor identifiers stay literals). | 3d-csdm-model |
+| 5.4 surveyprov | `SurveyType` moved from `container.shapes.ttl`. | 3d-csdm-model |
+| 6.3 GeoPose (D10) | New block `icsm.csdm.model.geopose` in this register (not bblocks-utility: the IRIs are CSDM-owned and ontologies now live here). | 3d-csdm-model |
+| 5.6 | `model.all` profiles the new modules and the reused components. | 3d-csdm-model |
+| 5.8 | New block `icsm.csdm.model.parcelsalignment`: the 30 CSDM parcels terms are deprecated and mapped to Land Parcels (`ParcelModel` has no counterpart). `working/parcels` moved to `working/retired/parcels`. | 3d-csdm-model |
+| 7.1 | The 19 missing `ladm:` terms declared. `burdened` and `benefited` are `rdf:Property`: their values are literal parcel identifiers because the binding has no `@type: @id`. | bblocks-land-parcels |
+| Consistency shapes | `tools/owl2shacl.py` generates `owl-consistency.shapes.ttl` for each model module (node kind, compatible datatype, maximum cardinality); `tools/generate-owl-shapes.sh` regenerates them. | 3d-csdm-model |
+| Shapes in common | The copies in `_sources/csdm/shapes/` are marked deprecated (header and README); `CSD` no longer loads them and depends on `icsm.csdm.model.container`; `SurveyFeatures` and `SurveyObservations` depend on their model blocks. The model shapes now validate the common examples. | 3d-csdm-common |
+| Utility cleanup | `Measure` shape, example and fail test removed; dangling `rdfs:subClassOf :Common` removed; abstract, label and description now cover compound names only. | bblocks-utility |
+
+Missing shapes check: apart from the parcels, the copies in common hold nothing the model shapes lack (they are
+older versions). The old parcel shapes are not ported: they use `sh:class` on nodes the JSON-LD encoding does not
+type, contain typos (`sh:Class`) and reference undefined classes. Land Parcels needs its own reviewed shapes.
+
+Remaining: D8, `Touches`, `@type: @id` for `burdenedParcels` / `benefitedParcels`, Land Parcels shapes, the
+undeclared `surv:distanceQualityMeasure` / `surv:angleQualityMeasure` used in the surveyobs examples.
+
+### Angle and distance types (2026-10-30)
+
+The WA regression showed that `surv:Angle` and `surv:Distance` were used for two things: as measures in the model
+(labelled "Angle Measurement" / "Distance Measurement", subclasses of `commonpatterns:Measure`, the range of
+`surv:horizontalDistance`, `sh:class` in the `QualifiedVector` shape) and as the types of the codes in the ICSM angle
+type and distance type vocabularies. With the model shapes applied, every code was validated as a measurement.
+
+| Change | Repository |
+|---|---|
+| New codelist classes `surv:AngleType` and `surv:DistanceType` (subclasses of `skos:Concept`); `surv:Angle` and `surv:Distance` stay measures. `QualifiedVector` shape checks numeric literals instead of `sh:class`. | 3d-csdm-model |
+| `icsm-angle-type` and `icsm-distance-type` regenerated with `scripts/build_vocabs.py` (concepts now typed `surv:AngleType` / `surv:DistanceType`); `source/vocabs-uplift.yml` and the scheme scope notes updated. | icsm-vocabs (surroundaustralia fork) |
+| `vocabs-uplift.yml` and the vocabulary bindings (`.csv`, `.csv.json`, `.jsonld`, `.ttl`) use the new classes. | 3d-csdm-profile-icsm |
+| `vocabs-uplift.yml` uses the new classes. | 3d-csdm-profile-wa |
+
+The ICSM bindings name `surv:angleType` / `surv:distanceType`, but the data uses `surveyobs:angleType` /
+`surveyobs:distanceType`; the bindings files are not loaded by any block, so this was left unchanged.
+
+Also found by the regression: `wa-survey-purpose:subdivision-t-sts` has two `skos:prefLabel` values
+(`profiles/wa-survey-purpose-supplement.ttl` adds an untagged one); this fails the SKOS rules now inherited through
+the model's `ogc.skos.concept` dependency. Not fixed (vocabulary content).
+
+The four empty JSON-LD contexts in topo-feature (`topo-aggregate-solid`, `topo-arc`, `topo-line`, `topo-solid`) were
+removed; the topo-feature results did not change.

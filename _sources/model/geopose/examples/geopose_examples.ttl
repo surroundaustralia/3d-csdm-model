@@ -1,0 +1,13 @@
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
+@prefix surv:    <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix ex:      <https://linked.data.gov.au/def/csdm/examples/geopose/> .
+
+# The pose of a survey vector observation result, from the 3d-csdm-common CSD example (hasResult.pose).
+ex:result1
+  surv:pose [
+      geopose:angles [
+          geopose:yaw 231.38 ;
+          geopose:pitch -0.001 ;
+        ] ;
+    ] ;
+.

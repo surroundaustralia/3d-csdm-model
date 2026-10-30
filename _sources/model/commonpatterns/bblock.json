@@ -26,6 +26,7 @@
     "ontology"
   ],
   "shaclShapes": [
-    "shapes.shacl"
+    "shapes.shacl",
+    "owl-consistency.shapes.ttl"
   ]
 }

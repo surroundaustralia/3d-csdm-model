@@ -240,22 +240,26 @@ An occupation feature is disjoint from (has no common elements with) a boundary.
   skos:definition "Each vector MAY state how it was defined using the relevant jurisdictional code list"@en ;
 .
 :condition
-  a rdf:Property ;
+  a owl:ObjectProperty ;
   skos:prefLabel "monument condition"@en ;
-  rdfs:range :MonumentCondition ;
+  rdfs:domain :Monument ;
+  rdfs:range skos:Concept ;
+  skos:definition "Condition of a monument when found, using a relevant jurisdictional codelist"@en ;
+  skos:scopeNote "Values are concepts from a MonumentCondition codelist."@en ;
 .
 :distance
-  a owl:ObjectProperty ;
-  rdfs:domain :SurveyedLine ;
+  a owl:DatatypeProperty ;
   skos:prefLabel "Distance"@en ;
-  rdfs:range :Distance ;
+  skos:scopeNote "The exchange encoding gives the distance as a number (on surveyed vectors and on observation results), so no object range is asserted; surv:Distance describes the measure conceptually."@en ;
   skos:altLabel "Slope Distance" ;
   skos:definition "The line of sight distance between the instrument and target point"@en ;
 .
 :form
-  a rdf:Property ;
+  a owl:ObjectProperty ;
   skos:prefLabel "Monument physical form"@en ;
-  rdfs:range :MonumentForm ;
+  rdfs:domain :Monument ;
+  rdfs:range skos:Concept ;
+  skos:scopeNote "Values are concepts from a MonumentForm codelist."@en ;
   skos:definition "Physical form of monument using code list"@en ;
 .
 :from
@@ -265,14 +269,16 @@ An occupation feature is disjoint from (has no common elements with) a boundary.
   skos:definition "Start point for a survey line"@en ;
 .
 :horizontalAngle
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   rdfs:domain :SurveyedLine ;
   skos:prefLabel "horizontal angle"@en ;
-  rdfs:range :Angle ;
+  skos:scopeNote "Given as a number; surv:Angle describes the measure conceptually."@en ;
   skos:definition "The horizontal angle of the target point relative to the setup bearing"@en ;
 .
 :monumentedBy
   a owl:ObjectProperty ;
+  rdfs:domain :SurveyMark ;
+  rdfs:range :Monument ;
   skos:prefLabel "monumented by"@en ;
   skos:definition "Reference to physical monument description"@en ;
 .
@@ -284,12 +290,17 @@ An occupation feature is disjoint from (has no common elements with) a boundary.
 .
 :purpose
   a owl:ObjectProperty ;
+  rdfs:range skos:Concept ;
+  skos:scopeNote "Values are concepts from a SurveyPointPurpose codelist."@en ;
   skos:prefLabel "purpose"@en ;
   skos:definition "Purpose of an entity using relevant codelist"@en ;
 .
 
 :vectorPurpose
   a owl:ObjectProperty ;
+  rdfs:domain :SurveyedLine ;
+  rdfs:range skos:Concept ;
+  skos:scopeNote "Values are concepts from a VectorDeterminationMethod or vector purpose codelist."@en ;
   skos:prefLabel "purpose for a survey vector"@en ;
   skos:definition "Purpose of vector, using relevant codelist"@en ;
 .
@@ -306,14 +317,17 @@ An occupation feature is disjoint from (has no common elements with) a boundary.
   skos:definition "Reference to description of previous monument"@en ;
 .
 :setup
-  a owl:DatatypeProperty ;
+  a owl:ObjectProperty ;
   skos:prefLabel "setup"@en ;
+  rdfs:range <https://linked.data.gov.au/def/csdm/surveyobs/Setup> ;
+  skos:definition "The instrument setup at a survey point."@en ;
+  skos:historyNote "Previously declared as a datatype property; its shape (sh:class Setup) and examples use a setup resource."@en ;
 .
 :state
   a owl:ObjectProperty ;
-  rdfs:domain :SurveyMark ;
   skos:prefLabel "state"@en ;
-  rdfs:range :SurveyPointState ;
+  rdfs:range skos:Concept ;
+  skos:scopeNote "Values are concepts from a SurveyPointState codelist. The exchange schema gives state on the monument description (monumentedBy); earlier model examples give it on the survey mark, so no domain is asserted."@en ;
   skos:definition "State of survey point"@en ;
 .
 :target
@@ -323,9 +337,86 @@ An occupation feature is disjoint from (has no common elements with) a boundary.
   skos:definition "Target (end) point for a survey line"@en ;
 .
 :verticalAngle
-  a owl:ObjectProperty ;
+  a owl:DatatypeProperty ;
   rdfs:domain :SurveyedLine ;
   skos:prefLabel "vertical angle"@en ;
-  rdfs:range :Angle ;
-  skos:definition "The horizontal angle of the target point relative to the setup bearing"@en ;
+  skos:scopeNote "Given as a number; surv:Angle describes the measure conceptually."@en ;
+  skos:definition "The vertical angle of the target point"@en ;
+.
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Terms bound by the 3D CSDM exchange schema (3d-csdm-common SurveyFeatures, CSD and SurveyObservations contexts and
+# the ICSM profile) that were not declared. Added 2026-10-30.
+# ---------------------------------------------------------------------------------------------------------------------
+
+:SurveyedVector
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:subClassOf :SurveyedLine ;
+  skos:prefLabel "Surveyed Vector"@en ;
+  skos:definition "A vector between two survey points recorded in a cadastral survey dataset, with a purpose, an optional distance and comment. The common superclass of observed and adopted vectors."@en ;
+  dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyFeatures> ;
+.
+
+:ObservedVector rdfs:subClassOf :SurveyedVector .
+:AdoptedVector rdfs:subClassOf :SurveyedVector .
+
+:SubtendedAngle
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:subClassOf <https://purl.org/geojson/topo#Topology> ;
+  skos:prefLabel "Subtended Angle"@en ;
+  skos:definition "A topology of exactly three referenced survey points defining the angle subtended at a vertex point."@en ;
+  skos:scopeNote "The type of the topology of a subtended angle vector (SubtendedAngleVector in the CSD schema)."@en ;
+  dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/CSD> ;
+.
+
+:fromSurvey
+  a owl:ObjectProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:domain :AdoptedVector ;
+  skos:prefLabel "from survey"@en ;
+  skos:definition "The survey (cadastral survey dataset or survey plan) from which an adopted vector was adopted."@en ;
+  dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyFeatures> ;
+.
+
+:geodeticid
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:domain :GeodeticReferenceMark ;
+  skos:prefLabel "geodetic identifier"@en ;
+  skos:definition "The identifier of a geodetic reference mark in the jurisdictional geodetic network."@en ;
+  skos:scopeNote "The exchange schema allows a compound name (com:CompoundName) or a plain string, so neither an object nor a datatype property is asserted."@en ;
+  dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyFeatures> ;
+.
+
+:angle
+  a owl:DatatypeProperty ;
+  rdfs:isDefinedBy ont: ;
+  skos:prefLabel "angle"@en ;
+  skos:definition "The observed angle of a vector observation result, given as a number; the kind of angle is given by the angle type of the observation (surveyobs:angleType)."@en ;
+  skos:scopeNote "Bound to the angle property of survey vector observation results. The examples give decimal degrees."@en ;
+  dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyObservations> ;
+.
+
+# Codelist classes for the type of an angle or distance measurement. The ICSM angle type and distance type vocabularies
+# (https://linked.data.gov.au/def/csdm/icsm-angle-type, icsm-distance-type) previously typed their concepts as
+# surv:Angle and surv:Distance, which are measures (subclasses of commonpatterns:Measure). Added 2026-10-30.
+
+:AngleType
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Angle Type"@en ;
+  skos:definition "A type of angle measurement (for example azimuth, bearing or subtended angle), from a relevant jurisdictional codelist. The value of surveyobs:angleType."@en ;
+  skos:scopeNote "Not an angle measurement: surv:Angle is the measure."@en ;
+.
+
+:DistanceType
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:subClassOf skos:Concept ;
+  skos:prefLabel "Distance Type"@en ;
+  skos:definition "A type of distance measurement, according to assumptions about projections and datum (for example slope, horizontal or ellipsoidal distance), from a relevant jurisdictional codelist. The value of surveyobs:distanceType."@en ;
+  skos:scopeNote "Not a distance measurement: surv:Distance is the measure."@en ;
 .

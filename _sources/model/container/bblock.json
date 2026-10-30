@@ -15,13 +15,13 @@
     "bblocks://ogc.bbr.utils.compoundName.ontology",
     "bblocks://icsm.csdm.model.commonpatterns",
     "bblocks://icsm.csdm.model.geometry",
-    "ogc.ladm.land-parcels.ontology",
     "bblocks://icsm.csdm.model.surveyfeatures",
     "bblocks://icsm.csdm.model.surveyobs",
     "bblocks://icsm.csdm.model.surveyprov",
     "bblocks://ogc.model.cross-domain.sosa",
     "bblocks://ogc.model.cross-domain.prov",
-    "bblocks://ogc.skos.concept"
+    "bblocks://ogc.skos.concept",
+    "bblocks://ogc.ladm.land-parcels.ontology"
   ],
   "sources": [
     {
@@ -35,6 +35,7 @@
     "ontology"
   ],
   "shaclShapes": [
-    "container.shapes.ttl"
+    "container.shapes.ttl",
+    "owl-consistency.shapes.ttl"
   ]
 }

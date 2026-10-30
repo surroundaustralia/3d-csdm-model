@@ -1,0 +1,32 @@
+{
+  "name": "CSDM GeoPose",
+  "abstract": "RDF terms for the GeoPose Basic-YPR structure (position and yaw, pitch, roll angles) used by 3D CSDM survey observation results.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "1. Foundations",
+  "highlighted": false,
+  "ontology": "geopose.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/utils/geopose"
+  ],
+  "sources": [
+    {
+      "title": "OGC GeoPose",
+      "link": "https://www.ogc.org/standards/geopose/"
+    },
+    {
+      "title": "3D CSDM common: SurveyObservations schema",
+      "link": "https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyObservations"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "geopose",
+    "ontology"
+  ],
+  "shaclShapes": [
+    "owl-consistency.shapes.ttl"
+  ]
+}

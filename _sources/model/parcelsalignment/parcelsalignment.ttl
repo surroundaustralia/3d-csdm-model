@@ -1,0 +1,295 @@
+# baseURI: https://linked.data.gov.au/def/csdm/parcels
+#
+# CSDM Cadastral Parcels: alignment of the retired CSDM parcels module to the OGC Land Parcels ontology.
+#
+# The CSDM parcels module (https://linked.data.gov.au/def/csdm/parcels) was the source of the OGC Land Parcels
+# ontology (https://w3id.org/ogc/ladm/parcels/), which the 3D CSDM exchange schema now uses. Each CSDM parcels term is
+# deprecated and mapped to the Land Parcels term with the same name, so that the CSDM IRIs still resolve.
+# Generated from working/retired/parcels/parcels.ttl and the Land Parcels ontology on 2026-10-30.
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix :     <https://linked.data.gov.au/def/csdm/parcels/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix ladm: <https://w3id.org/ogc/ladm/parcels/> .
+@prefix ont:  <https://linked.data.gov.au/def/csdm/parcels> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ont:
+  a owl:Ontology ;
+  rdfs:label "CSDM Cadastral Parcels (alignment to OGC Land Parcels)"@en ;
+  dct:description "Deprecated CSDM parcels terms, each mapped to the OGC Land Parcels term that replaces it."@en ;
+  dct:isReplacedBy <https://w3id.org/ogc/ladm/parcels> ;
+  dct:source <https://github.com/icsm-au/3d-csdm/blob/main/csdm_model/parcels.ttl> ;
+  owl:versionInfo "0.2" ;
+.
+
+:Appellation
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Appellation (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:Appellation ;
+  dct:isReplacedBy ladm:Appellation ;
+.
+
+:CodeTypes
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Code Types (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:CodeTypes ;
+  dct:isReplacedBy ladm:CodeTypes ;
+.
+
+:Estate
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Estate (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:Estate ;
+  dct:isReplacedBy ladm:Estate ;
+.
+
+:EstateParcel
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Estate Parcel (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:EstateParcel ;
+  dct:isReplacedBy ladm:EstateParcel ;
+.
+
+:LandInterest
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Interest In Land (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:LandInterest ;
+  dct:isReplacedBy ladm:LandInterest ;
+.
+
+:Parcel
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Cadastral Parcel (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:Parcel ;
+  dct:isReplacedBy ladm:Parcel ;
+.
+
+:ParcelAggregate
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Parcel Aggregate (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:ParcelAggregate ;
+  dct:isReplacedBy ladm:ParcelAggregate ;
+.
+
+:ParcelModel
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Parcel Module Component (deprecated)"@en ;
+  owl:deprecated true ;
+  skos:historyNote "No OGC Land Parcels counterpart. The CSDM module used this class to group the parcel model classes for documentation."@en ;
+.
+
+:ParcelPurpose
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Parcel Purpose (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:ParcelPurpose ;
+  dct:isReplacedBy ladm:ParcelPurpose ;
+.
+
+:ParcelState
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Parcel State (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:ParcelState ;
+  dct:isReplacedBy ladm:ParcelState ;
+.
+
+:ParcelType
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Parcel Type (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:ParcelType ;
+  dct:isReplacedBy ladm:ParcelType ;
+.
+
+:PrimaryParcel
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Primary Cadastral Parcel (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:PrimaryParcel ;
+  dct:isReplacedBy ladm:PrimaryParcel ;
+.
+
+:PurposeOfSpatialUnit
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Purpose of Spatial Unit (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:PurposeOfSpatialUnit ;
+  dct:isReplacedBy ladm:PurposeOfSpatialUnit ;
+.
+
+:SecondaryParcel
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Secondary Cadastral Parcel (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:SecondaryParcel ;
+  dct:isReplacedBy ladm:SecondaryParcel ;
+.
+
+:TerrainIntersection
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Terrain Intersection (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentClass ladm:TerrainIntersection ;
+  dct:isReplacedBy ladm:TerrainIntersection ;
+.
+
+:appellation
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "appellation (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:appellation ;
+  dct:isReplacedBy ladm:appellation ;
+.
+
+:area
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Parcel Area (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:area ;
+  dct:isReplacedBy ladm:area ;
+.
+
+:interest
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "interest (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:interest ;
+  dct:isReplacedBy ladm:interest ;
+.
+
+:parcel
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "parcel (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:parcel ;
+  dct:isReplacedBy ladm:parcel ;
+.
+
+:parcelState
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "parcelState (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:parcelState ;
+  dct:isReplacedBy ladm:parcelState ;
+.
+
+:purpose
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "parcel purpose (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:purpose ;
+  dct:isReplacedBy ladm:purpose ;
+.
+
+:qualityClass
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "parcel quality (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:qualityClass ;
+  dct:isReplacedBy ladm:qualityClass ;
+.
+
+:state
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "parcel state (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:state ;
+  dct:isReplacedBy ladm:state ;
+.
+
+:surface
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "surface (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:surface ;
+  dct:isReplacedBy ladm:surface ;
+.
+
+:surfaceArea
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "surfaceArea (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:surfaceArea ;
+  dct:isReplacedBy ladm:surfaceArea ;
+.
+
+:terrainIntersectionCurve
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "terrain intersection (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:terrainIntersectionCurve ;
+  dct:isReplacedBy ladm:terrainIntersectionCurve ;
+.
+
+:type
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "parcel type (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:type ;
+  dct:isReplacedBy ladm:type ;
+.
+
+:unitVolume
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "unit volume (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:unitVolume ;
+  dct:isReplacedBy ladm:unitVolume ;
+.
+
+:zmax
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Z Max Value (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:zmax ;
+  dct:isReplacedBy ladm:zmax ;
+.
+
+:zmin
+  a rdf:Property ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Z Min Value (deprecated)"@en ;
+  owl:deprecated true ;
+  owl:equivalentProperty ladm:zmin ;
+  dct:isReplacedBy ladm:zmin ;
+.

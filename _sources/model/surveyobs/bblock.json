@@ -18,7 +18,8 @@
     "bblocks://ogc.model.cross-domain.sosa",
     "bblocks://ogc.model.cross-domain.geosparql",
     "bblocks://ogc.model.cross-domain.schema-org",
-    "bblocks://ogc.model.cross-domain.dcterms"
+    "bblocks://ogc.model.cross-domain.dcterms",
+    "bblocks://icsm.csdm.model.geopose"
   ],
   "sources": [
     {
@@ -32,6 +33,7 @@
     "ontology"
   ],
   "shaclShapes": [
-    "vector_observations.shapes.ttl"
+    "vector_observations.shapes.ttl",
+    "owl-consistency.shapes.ttl"
   ]
 }

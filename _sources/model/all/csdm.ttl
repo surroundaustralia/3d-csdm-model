@@ -50,10 +50,17 @@ ont:
         prof:hasArtifact <https://icsm-au.github.io/3d-csdm/pylode.ttl> ;
     ] ;
     prof:isProfileOf
+        :commonpatterns ,
         :geometryprim ,
+        <https://linked.data.gov.au/def/csdm/utils/geopose> ,
         :container ,
         :parcels ,
         :surveyfeatures ,
         :surveyobs ,
-        :surveyprov ;
+        :surveyprov ,
+        <https://w3id.org/ogc/ladm/parcels> ,
+        <https://linked.data.gov.au/def/csdm/spatial-representation/> ,
+        <https://purl.org/geojson/topo> ,
+        <https://w3id.org/ogc/utils/label> ;
+    rdfs:comment "Profiles the CSDM modules (common patterns, geometry, GeoPose, container, survey features, survey observations, survey provenance; parcels as an alignment to OGC Land Parcels) and the components the exchange encoding reuses: OGC Land Parcels, the spatial-representation ontology, Topo-Feature and the OGC Utility compoundName ontology."@en ;
 .

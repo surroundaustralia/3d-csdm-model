@@ -231,7 +231,7 @@ surv:SurveyedLine
 surv:SurveyedLine-distance
     a        sh:PropertyShape ;
     sh:path  surv:distance ;
-    sh:class surv:Distance ;
+    sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:double ] [ sh:datatype xsd:float ] [ sh:datatype xsd:integer ] ) ;
 .
 
 surv:SurveyedLine-from
@@ -254,7 +254,7 @@ surv:SurveyedLine-purpose
 surv:SurveyedLine-horizontalAngle
     a        sh:PropertyShape ;
     sh:path  surv:horizontalAngle ;
-    sh:class surv:Angle ;
+    sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:double ] [ sh:datatype xsd:float ] [ sh:datatype xsd:integer ] ) ;
 .
 
 surv:SurveyedLine-source
@@ -276,6 +276,5 @@ surv:SurveyedLine-target
 surv:SurveyedLine-verticalAngle
     a           sh:PropertyShape ;
     sh:path     surv:verticalAngle ;
-    sh:class    surv:Angle ;
-    sh:nodeKind sh:BlankNodeOrLiteral ;
+    sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:double ] [ sh:datatype xsd:float ] [ sh:datatype xsd:integer ] ) ;
 .

@@ -13,7 +13,10 @@
   ],
   "dependsOn": [
     "bblocks://icsm.csdm.model.container",
-    "bblocks://icsm.csdm.model.geometry"
+    "bblocks://icsm.csdm.model.geometry",
+    "bblocks://icsm.csdm.model.commonpatterns",
+    "bblocks://icsm.csdm.model.geopose",
+    "bblocks://icsm.csdm.model.parcelsalignment"
   ],
   "sources": [
     {

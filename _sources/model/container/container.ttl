@@ -10,7 +10,10 @@
 @prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
 @prefix container: <https://linked.data.gov.au/def/csdm/container/> .
 @prefix dct:       <http://purl.org/dc/terms/> .
+@prefix csd:       <https://linked.data.gov.au/def/csdm/csd/> .
 @prefix geometry:  <https://linked.data.gov.au/def/csdm/geometry/> .
+@prefix ladm:      <https://w3id.org/ogc/ladm/parcels/> .
+@prefix sosa:      <http://www.w3.org/ns/sosa/> .
 @prefix ont:       <https://linked.data.gov.au/def/csdm/container> .
 @prefix owl:       <http://www.w3.org/2002/07/owl#> .
 @prefix parcel:    <https://linked.data.gov.au/def/csdm/parcels/> .
@@ -70,26 +73,27 @@ container:CSD
 .
 
 container:bearingRotation
-    a          rdf:Property ;
+    a          owl:DatatypeProperty ;
+    rdfs:subPropertyOf ladm:bearingRotation ;
     rdfs:label "bearingRotation" ;
     skos:definition
                "The bearing rotation to apply to all vectors in a CSD relative to a referential context such as a CSD adopting bearings from this CSD." ;
 .
 
 container:horizontalCRS
-    a               rdf:Property ;
+    a               owl:ObjectProperty ;
     rdfs:label      "horizontal CRS" ;
     skos:definition "The CRS  to assume for all horizontal coordinates in scope of this object." ;
 .
 
 container:compoundCRS
-    a               rdf:Property ;
+    a               owl:ObjectProperty ;
     rdfs:label      "Compound CRS" ;
     skos:definition "The CRS to assume for both horizontal and vertical coordinates in scope of this object." ;
 .
 
 container:adminUnit
-    a               rdf:Property ;
+    a               owl:ObjectProperty ;
     rdfs:label      "Administration Unit" ;
     skos:definition "Qualified reference to Administration Unit identifiers." ;
 .
@@ -107,7 +111,7 @@ container:occupationObservations
     dct:description
                "the set of observations about the nature of occupation present for survey features. Note that the relative positions of occupation features may be present as vector observations." ;
     rdfs:label "Observations on Occupation Features" ;
-    rdfs:range <http://www.w3.org/ns/sosa/ObservationCollection> ;
+    rdfs:range surveyobs:OccupationObservations ;
 .
 
 container:parcels
@@ -116,6 +120,7 @@ container:parcels
     dct:description
                "the set of Parcels defined or re-surveyed by this survey. These reference vectors which in turn reference the points coordinate geometry of the survey, using topological relationships to these points via the \"id\" property." ;
     rdfs:range geometry:FeatureCollection ;
+    skos:scopeNote "The members of the collection are Land Parcels (https://w3id.org/ogc/ladm/parcels/Parcel)." ;
 .
 
 container:points
@@ -127,7 +132,8 @@ container:points
 .
 
 container:referencedCSD
-    a               rdf:Property ;
+    a               owl:ObjectProperty ;
+    rdfs:range      container:CSD ;
     dct:description "Is a CSD container that references existing CSD survey features and observations surveyed and /or used/adopted as part of the survey definition for the CSD. In short, it is a list of previous surveys (CSD) used in the current survey. Note that the implementation may be a set of empty (shell) CSDs containing minimal metadata and a CSD referencing this will contain the relevant set of adopted observations and points" ;
     rdfs:label      "Referenced CSD" ;
     skos:definition "A CSD containing referenced survey features and observations" ;
@@ -146,11 +152,11 @@ container:vectorObservations
     dct:description
                "the set of observed vectors defined or re-surveyed by this survey - adopted vectors will be present in the context of the original CSD they are adopted from to preserve metadata." ;
     rdfs:label "Vector Observations" ;
-    rdfs:range <http://www.w3.org/ns/sosa/ObservationCollection> ;
+    rdfs:range surveyobs:VectorObservations ;
 .
 
 container:verticalDatum
-    a               rdf:Property ;
+    a               owl:ObjectProperty ;
     rdfs:label      "verticalDatum" ;
     skos:definition "The verticalDatum to assume for all height values in scope of this object." ;
 .
@@ -177,4 +183,79 @@ surveyobs:Measure
     owl:equivalentClass commonpatterns:Measure ;
     dct:isReplacedBy commonpatterns:Measure ;
     skos:historyNote "Previously declared here with the label \"GeoSPARQL 1.2 (3D profile)\" (a copy error) as a key class of the model; the qualified measurement pattern is commonpatterns:Measure." ;
+.
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Terms bound by the 3D CSDM exchange schema (3d-csdm-common CSD context) that were not declared. Added 2026-10-30.
+# ---------------------------------------------------------------------------------------------------------------------
+
+container:surveyType
+    a               owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:label      "survey type" ;
+    rdfs:range      skos:Concept ;
+    skos:definition "The type of a survey, from a relevant jurisdictional codelist (survprov:SurveyType), i.e. whether the survey was part-compiled, compiled, computed or surveyed." ;
+.
+
+container:surveyDescription
+    a               owl:DatatypeProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:label      "survey description" ;
+    rdfs:range      xsd:string ;
+    skos:definition "A free text description of the survey." ;
+.
+
+container:surveyDescriptors
+    a               owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:label      "survey descriptors" ;
+    rdfs:range      com:CompoundName ;
+    skos:definition "A structured description of the survey as a compound name of typed parts." ;
+.
+
+container:annotations
+    a               owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:label      "annotations" ;
+    skos:definition "Annotations on the survey dataset, each with a role (prof:hasRole) and a description (dct:description)." ;
+.
+
+container:supportingDocuments
+    a               owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:label      "supporting documents" ;
+    skos:definition "Links to documents supporting the survey, each with a role." ;
+.
+
+container:observedVectors
+    a               owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:label      "observed vectors" ;
+    rdfs:range      geometry:FeatureCollection ;
+    skos:definition "The set of vectors observed in this survey (surv:ObservedVector features)." ;
+.
+
+container:adoptedVectors
+    a               owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:label      "adopted vectors" ;
+    rdfs:range      geometry:FeatureCollection ;
+    skos:definition "The set of vectors adopted from previous surveys (surv:AdoptedVector features)." ;
+.
+
+container:adoptedObservations
+    a               owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:label      "adopted observations" ;
+    rdfs:range      sosa:ObservationCollection ;
+    skos:definition "Collections of vector observations adopted from previous surveys." ;
+.
+
+csd:locality
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:label         "locality" ;
+    rdfs:subPropertyOf schema:addressLocality ;
+    skos:definition    "The locality of a survey." ;
+    skos:scopeNote     "Bound by the CSD context, but the CSD schema has no locality property; addresses use schema:addressLocality. Declared so that the binding resolves." ;
 .

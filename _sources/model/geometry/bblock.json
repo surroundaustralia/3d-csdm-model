@@ -28,6 +28,7 @@
     "ontology"
   ],
   "shaclShapes": [
-    "geometryprimitives.shapes.ttl"
+    "geometryprimitives.shapes.ttl",
+    "owl-consistency.shapes.ttl"
   ]
 }

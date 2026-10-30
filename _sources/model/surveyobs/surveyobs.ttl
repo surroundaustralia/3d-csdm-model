@@ -9,6 +9,8 @@ PREFIX :        <https://linked.data.gov.au/def/csdm/surveyobs/>
 PREFIX com:     <https://w3id.org/ogc/utils/label/>
 PREFIX commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/>
+PREFIX sensors: <https://linked.data.gov.au/def/csdm/sensors/>
 PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
 PREFIX ont:     <https://linked.data.gov.au/def/csdm/surveyobs>
 PREFIX owl:     <http://www.w3.org/2002/07/owl#>
@@ -127,7 +129,10 @@ surv:Traverse
 .
 
 surv:age
-    a                rdf:Property ;
+    a                owl:DatatypeProperty ;
+    rdfs:domain      surv:OccupationMark ;
+    rdfs:range       xsd:string ;
+    skos:scopeNote   "In the exchange schema a string that may be constrained to a number or range using a regex."@en ;
     rdfs:comment     "Use a note for further description" ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/csdm/surveyfeatures> ;
     sdo:description  "Estimated Age in years of a physical object. May be implemented with any relevant object model or literal" ;
@@ -303,6 +308,8 @@ ont:
 
 :angleQualityMeasure
     a                  owl:DatatypeProperty ;
+    owl:deprecated     true ;
+    dcterms:isReplacedBy :angleAccuracyMeasure ;
     rdfs:isDefinedBy   ont: ;
     rdfs:subPropertyOf commonpatterns:qualityMeasure ;
     sdo:description    "A numerical measure of confidence in an angle measure expressed in the same units as the measure" ;
@@ -311,6 +318,7 @@ ont:
 
 :angleType
     a                  owl:ObjectProperty ;
+    rdfs:range         skos:Concept ;
     rdfs:isDefinedBy   ont: ;
     sdo:description    "A reference to the specific type of angle measurement" ;
     sdo:name           "angle type" ;
@@ -318,6 +326,7 @@ ont:
 
 :distanceType
     a                  owl:ObjectProperty ;
+    rdfs:range         skos:Concept ;
     rdfs:isDefinedBy   ont: ;
     sdo:description    "A reference to the specific type of distance measured, according to assumptions about projections and datum" ;
     sdo:name           "distance type" ;
@@ -325,6 +334,8 @@ ont:
 
 :angleQuality
     a                  owl:DatatypeProperty ;
+    owl:deprecated     true ;
+    dcterms:isReplacedBy :angleAccuracyMeasure ;
     rdfs:isDefinedBy   ont: ;
     rdfs:subPropertyOf commonpatterns:qualityMeasure ;
     sdo:description    "A numerical measure of confidence in an angle measure expressed in the same units as the measure" ;
@@ -333,6 +344,8 @@ ont:
 
 :distanceQualityMeasure
     a                  owl:DatatypeProperty ;
+    owl:deprecated     true ;
+    dcterms:isReplacedBy :distanceAccuracyMeasure ;
     rdfs:isDefinedBy   ont: ;
     rdfs:subPropertyOf commonpatterns:qualityMeasure ;
     sdo:description    "A numerical measure of confidence in an distance measure expressed in the same units as the measure" ;
@@ -340,7 +353,9 @@ ont:
 .
 
 :distanceQuality
-    a                  owl:ObjectProperty ;
+    a                  owl:DatatypeProperty ;
+    owl:deprecated     true ;
+    dcterms:isReplacedBy :distanceAccuracyMeasure ;
     rdfs:isDefinedBy   ont: ;
     rdfs:subPropertyOf commonpatterns:qualityMeasure ;
     sdo:description    "A numerical measure of confidence in an distance measure expressed in the same units as the measure" ;
@@ -426,4 +441,112 @@ surv:horizontalDistance
     rdfs:subClassOf  sosa:Observation ;
     sdo:description  "Abstract superclass of observations undertaken during survey activities" ;
     sdo:name         "Survey Observation" ;
+.
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Terms bound by the 3D CSDM exchange schema that were not declared. Added 2026-10-30.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# Accuracy of a vector observation result (3d-csdm-common datatypes/quality, applied through sosa:hasResultQuality).
+# These replace the unbound angleQuality, angleQualityMeasure, distanceQuality and distanceQualityMeasure.
+
+:angleAccuracyMeasure
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:subPropertyOf commonpatterns:qualityMeasure ;
+    sdo:name           "angle accuracy" ;
+    sdo:description    "A numerical measure of the accuracy of an angle measure, expressed in the same units as the measure" ;
+    dcterms:source     <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/datatypes/quality> ;
+.
+
+:distanceAccuracyMeasure
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:subPropertyOf commonpatterns:qualityMeasure ;
+    sdo:name           "distance accuracy" ;
+    sdo:description    "A numerical measure of the accuracy of a distance measure, expressed in the same units as the measure" ;
+    dcterms:source     <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/datatypes/quality> ;
+.
+
+:angleAccuracyClass
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:subPropertyOf commonpatterns:qualityClass ;
+    rdfs:range         skos:Concept ;
+    sdo:name           "angle accuracy class" ;
+    sdo:description    "A reference to the accuracy class of an angle measure, from a relevant jurisdictional codelist" ;
+    dcterms:source     <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/datatypes/quality> ;
+.
+
+:distanceAccuracyClass
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:subPropertyOf commonpatterns:qualityClass ;
+    rdfs:range         skos:Concept ;
+    sdo:name           "distance accuracy class" ;
+    sdo:description    "A reference to the accuracy class of a distance measure, from a relevant jurisdictional codelist" ;
+    dcterms:source     <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/datatypes/quality> ;
+.
+
+# Observation result pose (3d-csdm-common SurveyObservations).
+
+surv:pose
+    a                owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range       geopose:Pose ;
+    sdo:name         "pose" ;
+    sdo:description  "The position and orientation (GeoPose) determined by a survey observation result" ;
+    dcterms:source   <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyObservations> ;
+.
+
+# Sensors (3d-csdm-common SurveyObservations madeBySensor; ICSM profile common context).
+
+surv:sensorType
+    a                owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range       skos:Concept ;
+    sdo:name         "sensor type" ;
+    sdo:description  "The type of survey equipment, from an equipment type codelist" ;
+    skos:scopeNote   "Bound by the ICSM profile. Within madeBySensor the common schema maps sensorType to @type, so the equipment type is then asserted as the sensor's rdf:type instead."@en ;
+.
+
+surv:sensorRole
+    a                owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range       skos:Concept ;
+    sdo:name         "sensor role" ;
+    sdo:description  "The role of a sensor in a survey observation (for example base or rover), from a relevant codelist" ;
+.
+
+surv:lastCalibrated
+    a                owl:DatatypeProperty ;
+    rdfs:isDefinedBy ont: ;
+    sdo:name         "last calibrated" ;
+    sdo:description  "The date the survey equipment was last calibrated" ;
+.
+
+sensors:DifferentialGPS
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:Sensor ;
+    sdo:name         "Differential GPS" ;
+    sdo:description  "A differential GNSS system made of a base receiver and a rover receiver" ;
+.
+
+sensors:baseSensor
+    a                owl:DatatypeProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:domain      sensors:DifferentialGPS ;
+    sdo:name         "base sensor" ;
+    sdo:description  "Identifier of the base receiver of a differential GNSS system" ;
+    skos:scopeNote   "The exchange schema gives a string identifier, so this is a datatype property. It describes the same relationship as sosa:hasSubSystem, which would apply if the value were a sensor IRI."@en ;
+.
+
+sensors:roverSensor
+    a                owl:DatatypeProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:domain      sensors:DifferentialGPS ;
+    sdo:name         "rover sensor" ;
+    sdo:description  "Identifier of the rover receiver of a differential GNSS system" ;
+    skos:scopeNote   "The exchange schema gives a string identifier, so this is a datatype property. It describes the same relationship as sosa:hasSubSystem, which would apply if the value were a sensor IRI."@en ;
 .

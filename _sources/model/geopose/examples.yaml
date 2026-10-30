@@ -1,0 +1,8 @@
+examples:
+  - title: Pose of a survey vector observation result
+    content: |-
+      The RDF form of `hasResult.pose` in the 3d-csdm-common CSD example: yaw and pitch angles.
+    base-output-filename: geopose_examples
+    snippets:
+      - language: turtle
+        ref: examples/geopose_examples.ttl

@@ -145,19 +145,7 @@ container:CSD-verticalDatum
   sh:maxCount 1 ;
   sh:name "vertical datum" ;
 .
-container:surveyType
-  a rdf:Property ;
-  rdfs:label "survey type" ;
-.
 <https://linked.data.gov.au/def/csdm/surveyprov/SurveyElements>
   a sh:PropertyGroup ;
   rdfs:label "Survey Elements" ;
-.
-<https://linked.data.gov.au/def/csdm/surveyprov/SurveyType>
-  a owl:Class ;
-  a sh:NodeShape ;
-  rdfs:isDefinedBy <https://linked.data.gov.au/def/csdm/container> ;
-  rdfs:label "Survey Type" ;
-  rdfs:subClassOf <https://linked.data.gov.au/def/csdm/commonpatterns/RelevantJurisdictionalCodelist> ;
-  skos:definition "A codelist of survey  types relevant to a particular jurisdiction.  i.e. whether the survey was part-compiled, compiled, computed or surveyed." ;
 .

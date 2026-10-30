@@ -97,3 +97,12 @@ surveyobs:Survey
   rdfs:subClassOf prov:Entity ;
   skos:prefLabel "Survey"@en ;
 .
+
+# Moved from container.shapes.ttl on 2026-10-30.
+:SurveyType
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Survey Type" ;
+  rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+  skos:definition "A codelist of survey  types relevant to a particular jurisdiction.  i.e. whether the survey was part-compiled, compiled, computed or surveyed." ;
+.

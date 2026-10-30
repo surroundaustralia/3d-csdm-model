@@ -165,7 +165,7 @@ surveyobs:QualifiedVector
   sh:property [
       a sh:PropertyShape ;
       sh:path surv:distance ;
-      sh:class surv:Distance ;
+      sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:double ] [ sh:datatype xsd:float ] [ sh:datatype xsd:integer ] ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
       sh:name "distance" ;
@@ -173,7 +173,7 @@ surveyobs:QualifiedVector
   sh:property [
       a sh:PropertyShape ;
       sh:path surv:horizontalAngle ;
-      sh:class surv:Angle ;
+      sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:double ] [ sh:datatype xsd:float ] [ sh:datatype xsd:integer ] ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
       sh:name "horizontal angle" ;
@@ -181,7 +181,7 @@ surveyobs:QualifiedVector
   sh:property [
       a sh:PropertyShape ;
       sh:path surv:verticalAngle ;
-      sh:class surv:Angle ;
+      sh:or ( [ sh:datatype xsd:decimal ] [ sh:datatype xsd:double ] [ sh:datatype xsd:float ] [ sh:datatype xsd:integer ] ) ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
       sh:name "vertical angle" ;

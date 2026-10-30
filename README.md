@@ -27,8 +27,9 @@ The register is split in two:
 | `model.container` | `container.ttl` | container shapes | cdm `sosa`, `prov`; skos `concept` |
 | `model.all` | `csdm.ttl` (PROF profile of all modules) | – | `model.container`, `model.geometry` |
 
-The Cadastral Parcels module is being reconciled with OGC Land Parcels in `working/parcels/` and is not currently
-built.
+The Cadastral Parcels module has been replaced by OGC Land Parcels. `model.parcelsalignment` deprecates each CSDM
+parcels term and maps it to the Land Parcels term that replaces it. The original module and its reconciliation are kept
+for reference in `working/retired/parcels/`.
 
 ## Utility blocks (`_sources/utility/`)
 
@@ -78,10 +79,10 @@ These source files were not packaged:
 
 ## Reconciliation with OGC Land Parcels
 
-`_sources/parcels/description.md` compares the CSDM parcels ontology with the
+`working/retired/parcels/description.md` compares the CSDM parcels ontology with the
 [Land Parcels ontology](https://github.com/ogcincubator/bblocks-land-parcels/tree/master/_sources/ontology) concept by
 concept, ignoring IRIs, and lists the points to resolve. The machine-readable form is in
-`_sources/parcels/reconciliation/differences.csv`. To regenerate it (requires `rdflib`):
+`working/retired/parcels/reconciliation/differences.csv`. To regenerate it (requires `rdflib`):
 
 ```bash
 tools/reconcile-parcels.sh

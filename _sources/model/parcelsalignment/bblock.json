@@ -1,0 +1,33 @@
+{
+  "name": "CSDM Cadastral Parcels Alignment",
+  "abstract": "Deprecates the terms of the retired CSDM Cadastral Parcels module and maps each to the OGC Land Parcels term that replaces it, so the CSDM parcels IRIs still resolve.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.2",
+  "group": "2. Modules",
+  "highlighted": false,
+  "ontology": "parcelsalignment.ttl",
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/parcels"
+  ],
+  "dependsOn": [
+    "bblocks://ogc.ladm.land-parcels.ontology"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm, csdm_model/parcels.ttl)",
+      "link": "https://github.com/icsm-au/3d-csdm/blob/main/csdm_model/parcels.ttl"
+    },
+    {
+      "title": "OGC Land Parcels ontology",
+      "link": "https://github.com/ogcincubator/bblocks-land-parcels/tree/master/_sources/ontology"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "parcels",
+    "alignment"
+  ]
+}

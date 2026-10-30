@@ -1,0 +1,10 @@
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
+@prefix surv:    <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix ex:      <https://linked.data.gov.au/def/csdm/examples/geopose/> .
+
+# Yaw must be a number.
+ex:result2
+  surv:pose [
+      geopose:angles [ geopose:yaw "north-east" ] ;
+    ] ;
+.
