@@ -42,6 +42,9 @@ imports:
   - '@ogc/skos'
   - '@ogc/land-parcels'
   - '@ogc/utility'
-  - https://ogcincubator.github.io/topo-feature
+# INTERIM: the Topo-Feature ontology block (ogc.geo.topo.ontology) is published from the surroundaustralia fork
+# until https://github.com/ogcincubator/topo-feature/pull/11 is merged - then revert to
+#  - https://ogcincubator.github.io/topo-feature
+  - https://surroundaustralia.github.io/topo-feature
 
 schema-oas30-downcompile: False
