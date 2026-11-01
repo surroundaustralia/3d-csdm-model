@@ -1,0 +1,270 @@
+{
+  "title": "Validation report for icsm.csdm.model.geopose - CSDM GeoPose",
+  "bblockName": "CSDM GeoPose",
+  "bblockId": "icsm.csdm.model.geopose",
+  "generated": "2026-11-01T23:45:15.659298+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/model/geopose/tests/yaw-not-numeric-fail.ttl",
+        "url": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/tests/yaw-not-numeric-fail.ttl",
+        "language": "ttl"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using yaw-not-numeric-fail.ttl from test resources"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/geopose/geopose.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode \"north-east\" ;\n            sh:resultMessage \"yaw is a datatype property with range double: its values are compatible literals.\"@en ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:OrConstraintComponent ;\n            sh:sourceShape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal> ;\n            sh:value \"north-east\" ] .\n\n",
+              "isError": true,
+              "message": "Validation result for _sources/model/geopose/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in OrConstraintComponent (http://www.w3.org/ns/shacl#OrConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>\n  \tFocus Node: Literal(\"north-east\")\n  \tValue Node: Literal(\"north-east\")\n  \tMessage: yaw is a datatype property with range double: its values are compatible literals.\n  "
+            },
+            {
+              "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b12": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b27": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>": {
+                  "nodes": [
+                    "ex:result2/surv:pose/geopose:angles"
+                  ]
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b28": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>": {
+                  "nodes": [
+                    "ex:result2/surv:pose/geopose:angles/geopose:yaw"
+                  ]
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b11": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b4": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b19": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b20": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b3": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/geopose/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b12: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b27: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: ex:result2/surv:pose/geopose:angles\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b28: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: ex:result2/surv:pose/geopose:angles/geopose:yaw\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b11: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b4: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b19: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b20: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b3: *none*\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/csdm/model/geopose/geopose_examples.ttl",
+        "url": "https://surroundaustralia.github.io/3d-csdm-model/build/tests/csdm/model/geopose/geopose_examples.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/geopose_examples.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "geopose_examples.ttl",
+              "size": 4,
+              "isError": false,
+              "message": "Output Turtle geopose_examples.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/geopose/geopose.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/geopose/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b12": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b27": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>": {
+                  "nodes": [
+                    "ex:result1/surv:pose/geopose:angles"
+                  ]
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b28": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>": {
+                  "nodes": [
+                    "ex:result1/surv:pose/geopose:angles/geopose:yaw"
+                  ]
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b11": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b4": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b19": {
+                  "nodes": []
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b20": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>": {
+                  "nodes": [
+                    "ex:result1/surv:pose/geopose:angles/geopose:pitch"
+                  ]
+                },
+                "_:nc3d86a9960c14b8c8446f6c19f32a680b3": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/geopose/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b12: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b27: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: ex:result1/surv:pose/geopose:angles\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b28: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: ex:result1/surv:pose/geopose:angles/geopose:yaw\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b11: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b4: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b19: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b20: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: ex:result1/surv:pose/geopose:angles/geopose:pitch\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b3: *none*\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  }
+}

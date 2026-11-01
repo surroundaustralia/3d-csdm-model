@@ -1,0 +1,339 @@
+@prefix : <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix com: <https://w3id.org/ogc/utils/label/> .
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix landinfra: <http://www.opengis.net/def/schema/landinfra/core/> .
+@prefix ns1: <https://data.surroundaustralia.com/def/class-example-shapes/> .
+@prefix ont: <https://linked.data.gov.au/def/csdm/surveyfeatures> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix specs: <https://linked.data.gov.au/def/csdm/impspecs/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:AllowableCoordinateReferenceSystem a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+    skos:definition "The set of CRS supported by a cadastral system for survey lodgement."^^rdf:HTML ;
+    skos:prefLabel "Allowable Coordinate Reference System"@en .
+
+:Angle a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:Measure ;
+    skos:prefLabel "Angle Measurement"@en .
+
+:AngleType a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "A type of angle measurement (for example azimuth, bearing or subtended angle), from a relevant jurisdictional codelist. The value of surveyobs:angleType."@en ;
+    skos:prefLabel "Angle Type"@en ;
+    skos:scopeNote "Not an angle measurement: surv:Angle is the measure."@en .
+
+:BoundaryMark a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyMark ;
+    skos:definition """Means a location that defines a boundary corner or boundary alignment. The location will be physically marked unless the location is obstructed by a structure that can not be marked.
+
+A boundary mark MAY be a Geodetic Reference Mark.""" ;
+    skos:prefLabel "Boundary Mark"@en .
+
+:CadastralMark a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyMark ;
+    skos:definition """Any survey mark placed or observed as part of a cadastral survey that is not a boundary mark or a geodetic reference mark
+""" ;
+    skos:prefLabel "Cadastral Mark"@en .
+
+:Distance a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:Measure ;
+    skos:prefLabel "Distance Measurement"@en .
+
+:DistanceType a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "A type of distance measurement, according to assumptions about projections and datum (for example slope, horizontal or ellipsoidal distance), from a relevant jurisdictional codelist. The value of surveyobs:distanceType."@en ;
+    skos:prefLabel "Distance Type"@en ;
+    skos:scopeNote "Not a distance measurement: surv:Distance is the measure."@en .
+
+:MonumentCondition a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+    skos:definition "Means the state of a survey mark at the time it is found during a cadastral survey."@en ;
+    skos:prefLabel "Monument Condition"@en .
+
+:MonumentForm a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+    skos:definition "Physical Form of a monument"@en ;
+    skos:prefLabel "Monument Form"@en .
+
+:NoOccupation a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :Occupation ;
+    skos:definition "Special case where no occupation is observable."@en ;
+    skos:prefLabel "No Occupation"@en .
+
+:ObservedVector a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyedLine,
+        :SurveyedVector ;
+    skos:definition "A vector consisting of one or more reduced and/or adjusted observed measurements.  Observations may include calculation procedures."@en ;
+    skos:prefLabel "Observed Vector"@en ;
+    schema:image [ a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for Observed Vector." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/ObservedVector.png"^^xsd:anyURI ] .
+
+:OccupationMark a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyPoint ;
+    skos:definition "Means a mark used for a cadastral survey to define the location of an occupation feature near a cadastral boundary"@en ;
+    skos:editorialNote "Occupation Marks are not monumented but may be described. Observed Vectors or Direct Position Observations determine the location of the mark." ;
+    skos:prefLabel "Occupation Mark"@en .
+
+:SubtendedAngle a owl:Class ;
+    dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/CSD> ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf <https://purl.org/geojson/topo#Topology> ;
+    skos:definition "A topology of exactly three referenced survey points defining the angle subtended at a vertex point."@en ;
+    skos:prefLabel "Subtended Angle"@en ;
+    skos:scopeNote "The type of the topology of a subtended angle vector (SubtendedAngleVector in the CSD schema)."@en .
+
+:SurveyPointPurpose a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+    skos:definition "The purpose of a recorded survey point in relation to the current survey activity"@en ;
+    skos:prefLabel "Survey Point Purpose"@en .
+
+:SurveyPointQuality a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+    skos:definition "The quality/accuracy class of a recorded survey point in accordance with the relevant jurisdiction standard"@en ;
+    skos:prefLabel "Survey Point Quality"@en .
+
+:SurveyPointState a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+    skos:definition "The state of a recorded survey point in accordance with the relevant jurisdiction standard"@en ;
+    skos:editorialNote "The distinction between survey point state and monument condition may require further explanations and examples." ;
+    skos:prefLabel "Survey Point State"@en .
+
+:Terrain a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :Occupation ;
+    skos:prefLabel "Terrain"@en .
+
+:VectorDeterminationMethod a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+    skos:definition "Each vector MAY state how it was defined using the relevant jurisdictional code list"@en ;
+    skos:prefLabel "Vector Determination Method"@en .
+
+:angle a owl:DatatypeProperty ;
+    dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyObservations> ;
+    rdfs:isDefinedBy ont: ;
+    skos:definition "The observed angle of a vector observation result, given as a number; the kind of angle is given by the angle type of the observation (surveyobs:angleType)."@en ;
+    skos:prefLabel "angle"@en ;
+    skos:scopeNote "Bound to the angle property of survey vector observation results. The examples give decimal degrees."@en .
+
+:distance a owl:DatatypeProperty ;
+    skos:altLabel "Slope Distance" ;
+    skos:definition "The line of sight distance between the instrument and target point"@en ;
+    skos:prefLabel "Distance"@en ;
+    skos:scopeNote "The exchange encoding gives the distance as a number (on surveyed vectors and on observation results), so no object range is asserted; surv:Distance describes the measure conceptually."@en .
+
+:form a owl:ObjectProperty ;
+    rdfs:domain :Monument ;
+    rdfs:range skos:Concept ;
+    skos:definition "Physical form of monument using code list"@en ;
+    skos:prefLabel "Monument physical form"@en ;
+    skos:scopeNote "Values are concepts from a MonumentForm codelist."@en .
+
+:from a owl:ObjectProperty ;
+    rdfs:range :SurveyPoint ;
+    skos:definition "Start point for a survey line"@en ;
+    skos:prefLabel "from"@en .
+
+:fromSurvey a owl:ObjectProperty ;
+    dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyFeatures> ;
+    rdfs:domain :AdoptedVector ;
+    rdfs:isDefinedBy ont: ;
+    skos:definition "The survey (cadastral survey dataset or survey plan) from which an adopted vector was adopted."@en ;
+    skos:prefLabel "from survey"@en .
+
+:geodeticid a rdf:Property ;
+    dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyFeatures> ;
+    rdfs:domain :GeodeticReferenceMark ;
+    rdfs:isDefinedBy ont: ;
+    skos:definition "The identifier of a geodetic reference mark in the jurisdictional geodetic network."@en ;
+    skos:prefLabel "geodetic identifier"@en ;
+    skos:scopeNote "The exchange schema allows a compound name (com:CompoundName) or a plain string, so neither an object nor a datatype property is asserted."@en .
+
+:horizontalAngle a owl:DatatypeProperty ;
+    rdfs:domain :SurveyedLine ;
+    skos:definition "The horizontal angle of the target point relative to the setup bearing"@en ;
+    skos:prefLabel "horizontal angle"@en ;
+    skos:scopeNote "Given as a number; surv:Angle describes the measure conceptually."@en .
+
+:provenance a rdf:Property ;
+    rdfs:range :SurveyPointProvenance ;
+    skos:definition "Survey point provenance"@en ;
+    skos:prefLabel "provenance"@en .
+
+:purpose a owl:ObjectProperty ;
+    rdfs:range skos:Concept ;
+    skos:definition "Purpose of an entity using relevant codelist"@en ;
+    skos:prefLabel "purpose"@en ;
+    skos:scopeNote "Values are concepts from a SurveyPointPurpose codelist."@en .
+
+:references a owl:objectProperty ;
+    skos:prefLabel "references"@en .
+
+:replaces a owl:ObjectProperty ;
+    rdfs:domain :Monument ;
+    rdfs:range :Monument ;
+    skos:definition "Reference to description of previous monument"@en ;
+    skos:prefLabel "replaces"@en .
+
+:setup a owl:ObjectProperty ;
+    rdfs:range <https://linked.data.gov.au/def/csdm/surveyobs/Setup> ;
+    skos:definition "The instrument setup at a survey point."@en ;
+    skos:historyNote "Previously declared as a datatype property; its shape (sh:class Setup) and examples use a setup resource."@en ;
+    skos:prefLabel "setup"@en .
+
+:state a owl:ObjectProperty ;
+    rdfs:range skos:Concept ;
+    skos:definition "State of survey point"@en ;
+    skos:prefLabel "state"@en ;
+    skos:scopeNote "Values are concepts from a SurveyPointState codelist. The exchange schema gives state on the monument description (monumentedBy); earlier model examples give it on the survey mark, so no domain is asserted."@en .
+
+:target a owl:ObjectProperty ;
+    rdfs:range :SurveyPoint ;
+    skos:definition "Target (end) point for a survey line"@en ;
+    skos:prefLabel "target"@en .
+
+:vectorPurpose a owl:ObjectProperty ;
+    rdfs:domain :SurveyedLine ;
+    rdfs:range skos:Concept ;
+    skos:definition "Purpose of vector, using relevant codelist"@en ;
+    skos:prefLabel "purpose for a survey vector"@en ;
+    skos:scopeNote "Values are concepts from a VectorDeterminationMethod or vector purpose codelist."@en .
+
+:verticalAngle a owl:DatatypeProperty ;
+    rdfs:domain :SurveyedLine ;
+    skos:definition "The vertical angle of the target point"@en ;
+    skos:prefLabel "vertical angle"@en ;
+    skos:scopeNote "Given as a number; surv:Angle describes the measure conceptually."@en .
+
+:AdoptedVector a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyedLine,
+        :SurveyedVector ;
+    skos:definition "A vector included in a CSD that has previously been observed and included in an existing CSD or Survey Plan."@en ;
+    skos:prefLabel "Adopted Vector"@en .
+
+:GeodeticReferenceMark a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyMark ;
+    skos:definition "Means a mark that connects a survey to the jurisdictional geodetic network, vertical or horizontal."@en ;
+    skos:prefLabel "Geodetic Reference Mark"@en .
+
+:SurveyPointProvenance a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
+    skos:definition "A survey point MAY state the source of the point, and that it may be declared using a relevant jurisdictional code list or a jurisdictional pattern"@en ;
+    skos:prefLabel "Survey Point Provenance"@en .
+
+:condition a owl:ObjectProperty ;
+    rdfs:domain :Monument ;
+    rdfs:range skos:Concept ;
+    skos:definition "Condition of a monument when found, using a relevant jurisdictional codelist"@en ;
+    skos:prefLabel "monument condition"@en ;
+    skos:scopeNote "Values are concepts from a MonumentCondition codelist."@en .
+
+:monumentedBy a owl:ObjectProperty ;
+    rdfs:domain :SurveyMark ;
+    rdfs:range :Monument ;
+    skos:definition "Reference to physical monument description"@en ;
+    skos:prefLabel "monumented by"@en .
+
+:Occupation a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:Feature ;
+    skos:definition """Means those long-established features that might be used to determine the limits of an occupier’s land, and that are used to exclude possession by others, e.g., fences, walls, trees, hedges, buildings, ditches, or other artificial things; and natural land features such as a water body.
+
+An occupation feature is disjoint from (has no common elements with) a boundary.""" ;
+    skos:prefLabel "Occupation Feature"@en .
+
+:SurveyedVector a owl:Class ;
+    dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyFeatures> ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyedLine ;
+    skos:definition "A vector between two survey points recorded in a cadastral survey dataset, with a purpose, an optional distance and comment. The common superclass of observed and adopted vectors."@en ;
+    skos:prefLabel "Surveyed Vector"@en .
+
+:CadastralFeature a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:Feature ;
+    skos:definition "This is an abstract feature to identify elements of the Cadastral Survey Conceptual Model"@en ;
+    skos:prefLabel "Cadastral Feature"@en ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/SurveyFeatures.png> ;
+    schema:image [ a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for Cadastral Feature." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/SurveyFeatures.png"^^xsd:anyURI ] .
+
+:SurveyMark a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty com:name ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :monumentedBy ],
+        :SurveyPoint ;
+    owl:equivalentClass landinfra:SurveyMark ;
+    skos:definition "A SurveyMark is a physically located object which by its form defines a point on the surface of the Earth and which is stable during surveying operations"@en ;
+    skos:editorialNote "The purpose of the mark is relative the CSD - so the same identified object may have different types in different CSDs - in which case how does the aggregated data record the purpose?" ;
+    skos:prefLabel "Survey Mark"@en ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/surveymark.png> .
+
+:SurveyPoint a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :CadastralFeature ;
+    skos:definition "Any point of interest in a survey. It may relate to a boundary corner (marked or unmarked), a cadastral mark, a geodetic reference mark, or an occupation mark"@en ;
+    skos:prefLabel "Survey Point"@en .
+
+:Monument a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :condition ],
+        :CadastralFeature ;
+    skos:definition "An object that is placed in the ground, or referred to, for the purpose of identifying a survey point in a cadastral survey."^^rdf:HTML ;
+    skos:prefLabel "Monument"@en .
+
+:SurveyedLine a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :CadastralFeature ;
+    skos:definition "Means a geometric object that has magnitude (or length) and direction. For a cadastral survey system the geometric object consists of a set of reduced survey observations between two survey points. "^^rdf:HTML,
+        "A line of survey between an instrument location and a target point"@en ;
+    skos:prefLabel "Surveyed Line"@en ;
+    skos:scopeNote "To keep consistent with the paradigm of a line existing between two points, and to avoid duplication of information the instrument location is a special type of feature with a point geometry that may have several related observations and a link to setup information. " .
+
+ont: a owl:Ontology ;
+    skos:definition "Feature Types defined by Cadastral Surveys"@en ;
+    skos:prefLabel "Survey Features Model"@en ;
+    ns1:implExample [ a prof:ResourceDescriptor ;
+            rdfs:label "Package Dependencies Diagram" ;
+            dct:conformsTo specs:ClassContextDiagram,
+                specs:UML ;
+            prof:hasArtifact "https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/survey_package_diagram.png" ] .
+

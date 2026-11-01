@@ -1,0 +1,72 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reqmetamodel: <https://linked.data.gov.au/def/csdm/reqmetamodel/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+owl:Class_Examples a rdfs:Class,
+        sh:NodeShape ;
+    rdfs:label "Class with examples" ;
+    rdfs:subClassOf owl:Class ;
+    sh:property reqmetamodel:canonicalShape ;
+    sh:targetClass owl:Class .
+
+<https://data.surroundaustralia.com/def/reqmetamodel> a owl:Ontology ;
+    owl:imports <http://datashapes.org/dash>,
+        <http://topbraid.org/skos.shapes>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/dx/prof>,
+        <http://www.w3.org/ns/dx/prof.shapes> ;
+    owl:versionInfo "Created with TopBraid Composer" .
+
+reqmetamodel:commentShape a sh:PropertyShape ;
+    sh:name "Comment" ;
+    sh:nodeKind xsd:string ;
+    sh:path rdfs:comment ;
+    sh:targetSubjectsOf rdfs:comment .
+
+reqmetamodel:implExample a rdf:Property ;
+    rdfs:label "Implementation Example" ;
+    rdfs:comment "Implementation examples use a PROF ProfileResource association class which allows for definition of role, conformance, format metadata." ;
+    rdfs:range prof:ResourceDescriptor ;
+    rdfs:subPropertyOf skos:example .
+
+rdf:Property a sh:NodeShape ;
+    sh:property owl:Class-implExample,
+        reqmetamodel:canonicalShape .
+
+owl:Class a sh:NodeShape ;
+    sh:property owl:Class-implExample,
+        reqmetamodel:canonicalShape ;
+    sh:targetSubjectsOf reqmetamodel:canonicalExample .
+
+owl:Class-implExample a sh:PropertyShape ;
+    dash:viewer dash:DetailsViewer ;
+    sh:class prof:ResourceDescriptor ;
+    sh:description "As a PROF resource descriptor" ;
+    sh:group reqmetamodel:PropertyGroup_Examples ;
+    sh:name "implementation example" ;
+    sh:path reqmetamodel:implExample .
+
+prof:ResourceDescriptor sh:property prof:ResourceDescriptor-format .
+
+reqmetamodel:PropertyGroup_Examples a sh:PropertyGroup ;
+    rdfs:label "Examples" .
+
+reqmetamodel:canonicalExample a rdf:Property ;
+    rdfs:label "Canonical RDF Example" ;
+    rdfs:comment "A canonical example is an RDF instance satisfying a OWL or RDFS schema element" ;
+    rdfs:range rdfs:Resource ;
+    rdfs:subPropertyOf skos:example .
+
+reqmetamodel:canonicalShape a sh:PropertyShape ;
+    dash:viewer dash:DetailsViewer ;
+    sh:group reqmetamodel:PropertyGroup_Examples ;
+    sh:name "canonical example" ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path reqmetamodel:canonicalExample .
+

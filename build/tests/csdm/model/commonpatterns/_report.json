@@ -1,0 +1,481 @@
+{
+  "title": "Validation report for icsm.csdm.model.commonpatterns - CSDM Common Patterns",
+  "bblockName": "CSDM Common Patterns",
+  "bblockId": "icsm.csdm.model.commonpatterns",
+  "generated": "2026-11-01T23:45:25.757064+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/model/commonpatterns/tests/measure-without-value-fail.ttl",
+        "url": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/tests/measure-without-value-fail.ttl",
+        "language": "ttl"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using measure-without-value-fail.ttl from test resources"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "graph": "@prefix : <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://linked.data.gov.au/def/csdm/examples/commonpatterns/distance2> ;\n            sh:resultMessage \"A Measure has exactly one numeric value.\"@en ;\n            sh:resultPath :value ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:maxCount 1 ;\n                    sh:message \"A Measure has exactly one numeric value.\"@en ;\n                    sh:minCount 1 ;\n                    sh:node :NumericLiteral ;\n                    sh:path :value ] ] .\n\n",
+              "isError": true,
+              "message": "Validation result for _sources/model/commonpatterns/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:maxCount Literal(\"1\", datatype=xsd:integer) ; sh:message Literal(\"A Measure has exactly one numeric value.\", lang=en) ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:node :NumericLiteral ; sh:path :value ]\n  \tFocus Node: ex:distance2\n  \tResult Path: :value\n  \tMessage: A Measure has exactly one numeric value.\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "focusNodes": {
+                ":NumericLiteral": {
+                  "nodes": []
+                },
+                "_:n8e15a641a3db4f57a4a89f7ff4cca643b3": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:n8e15a641a3db4f57a4a89f7ff4cca643b4": {
+                  "nodes": []
+                },
+                ":QualityMeasureShape": {
+                  "nodes": [
+                    "ex:distance2/commonpatterns:qualityMeasure"
+                  ]
+                },
+                ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                ":QualityClassShape": {
+                  "nodes": []
+                },
+                ":MeasureShape": {
+                  "nodes": [
+                    "ex:distance2"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape _:n8e15a641a3db4f57a4a89f7ff4cca643b3: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape _:n8e15a641a3db4f57a4a89f7ff4cca643b4: *none*\n - Shape :QualityMeasureShape: ex:distance2/commonpatterns:qualityMeasure\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape :QualityClassShape: *none*\n - Shape :MeasureShape: ex:distance2\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": [
+                    "ex:distance2"
+                  ]
+                },
+                "_:nc9c4e937cb27466aa4c235e1ab23e880b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
+                  "nodes": []
+                },
+                "_:nc9c4e937cb27466aa4c235e1ab23e880b5": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
+                  "nodes": [
+                    "ex:distance2"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
+                  "nodes": [
+                    "ex:distance2/commonpatterns:qualityMeasure"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance2\n - Shape _:nc9c4e937cb27466aa4c235e1ab23e880b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:nc9c4e937cb27466aa4c235e1ab23e880b5: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance2\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:distance2/commonpatterns:qualityMeasure\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "focusNodes": {
+                ":CompoundNameShape": {
+                  "nodes": []
+                },
+                ":NamePartShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/model/commonpatterns/tests/quality-class-literal-fail.ttl",
+        "url": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/tests/quality-class-literal-fail.ttl",
+        "language": "ttl"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using quality-class-literal-fail.ttl from test resources"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "graph": "@prefix : <https://linked.data.gov.au/def/csdm/commonpatterns/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode \"B\" ;\n            sh:resultMessage \"A quality class is a reference (IRI) to a codelist concept.\"@en ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape :QualityClassShape ;\n            sh:value \"B\" ] .\n\n",
+              "isError": true,
+              "message": "Validation result for _sources/model/commonpatterns/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: :QualityClassShape\n  \tFocus Node: Literal(\"B\")\n  \tValue Node: Literal(\"B\")\n  \tMessage: A quality class is a reference (IRI) to a codelist concept.\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "focusNodes": {
+                ":NumericLiteral": {
+                  "nodes": []
+                },
+                "_:n8e15a641a3db4f57a4a89f7ff4cca643b3": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:n8e15a641a3db4f57a4a89f7ff4cca643b4": {
+                  "nodes": []
+                },
+                ":QualityMeasureShape": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                ":QualityClassShape": {
+                  "nodes": [
+                    "ex:surveyPoint2/commonpatterns:qualityClass"
+                  ]
+                },
+                ":MeasureShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape _:n8e15a641a3db4f57a4a89f7ff4cca643b3: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape _:n8e15a641a3db4f57a4a89f7ff4cca643b4: *none*\n - Shape :QualityMeasureShape: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape :QualityClassShape: ex:surveyPoint2/commonpatterns:qualityClass\n - Shape :MeasureShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode \"B\" ;\n            sh:resultMessage \"qualityClass is an object property: its values are resources, not literals.\"@en ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;\n            sh:sourceShape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource> ;\n            sh:value \"B\" ] .\n\n",
+              "isError": true,
+              "message": "Validation result for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>\n  \tFocus Node: Literal(\"B\")\n  \tValue Node: Literal(\"B\")\n  \tMessage: qualityClass is an object property: its values are resources, not literals.\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": []
+                },
+                "_:nc9c4e937cb27466aa4c235e1ab23e880b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
+                  "nodes": []
+                },
+                "_:nc9c4e937cb27466aa4c235e1ab23e880b5": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
+                  "nodes": [
+                    "ex:surveyPoint2/commonpatterns:qualityClass"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape _:nc9c4e937cb27466aa4c235e1ab23e880b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:nc9c4e937cb27466aa4c235e1ab23e880b5: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: ex:surveyPoint2/commonpatterns:qualityClass\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "focusNodes": {
+                ":CompoundNameShape": {
+                  "nodes": []
+                },
+                ":NamePartShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/csdm/model/commonpatterns/commonpatterns_examples.ttl",
+        "url": "https://surroundaustralia.github.io/3d-csdm-model/build/tests/csdm/model/commonpatterns/commonpatterns_examples.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/commonpatterns_examples.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "commonpatterns_examples.ttl",
+              "size": 6,
+              "isError": false,
+              "message": "Output Turtle commonpatterns_examples.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/commonpatterns/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "focusNodes": {
+                ":NumericLiteral": {
+                  "nodes": []
+                },
+                "_:n8e15a641a3db4f57a4a89f7ff4cca643b3": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:n8e15a641a3db4f57a4a89f7ff4cca643b4": {
+                  "nodes": []
+                },
+                ":QualityMeasureShape": {
+                  "nodes": [
+                    "ex:distance1/commonpatterns:qualityMeasure",
+                    "ex:surveyPoint1/commonpatterns:qualityMeasure"
+                  ]
+                },
+                ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                ":QualityClassShape": {
+                  "nodes": [
+                    "ex:class-b"
+                  ]
+                },
+                ":MeasureShape": {
+                  "nodes": [
+                    "ex:distance1"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape _:n8e15a641a3db4f57a4a89f7ff4cca643b3: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape _:n8e15a641a3db4f57a4a89f7ff4cca643b4: *none*\n - Shape :QualityMeasureShape: ex:distance1/commonpatterns:qualityMeasure,ex:surveyPoint1/commonpatterns:qualityMeasure\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape :QualityClassShape: ex:class-b\n - Shape :MeasureShape: ex:distance1\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
+                  "nodes": [
+                    "ex:distance1/commonpatterns:value"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": [
+                    "ex:distance1"
+                  ]
+                },
+                "_:nc9c4e937cb27466aa4c235e1ab23e880b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
+                  "nodes": []
+                },
+                "_:nc9c4e937cb27466aa4c235e1ab23e880b5": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
+                  "nodes": [
+                    "ex:distance1"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
+                  "nodes": [
+                    "ex:distance1/commonpatterns:qualityMeasure",
+                    "ex:surveyPoint1/commonpatterns:qualityMeasure"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
+                  "nodes": [
+                    "ex:class-b"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: ex:distance1/commonpatterns:value\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance1\n - Shape _:nc9c4e937cb27466aa4c235e1ab23e880b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:nc9c4e937cb27466aa4c235e1ab23e880b5: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance1\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:distance1/commonpatterns:qualityMeasure,ex:surveyPoint1/commonpatterns:qualityMeasure\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: ex:class-b\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "focusNodes": {
+                ":CompoundNameShape": {
+                  "nodes": []
+                },
+                ":NamePartShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  }
+}

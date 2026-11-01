@@ -1,0 +1,45 @@
+
+
+{
+  "itemIdentifier": "icsm.csdm.utility.attributions",
+  "name": "CSDM Attributions",
+  "abstract": "Persons, organisations and groups referenced for attribution of the CSDM.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "Utility: design process and documentation",
+  "highlighted": false,
+  "concept": [
+    "https://linked.data.gov.au/dataset/csdm/attributions"
+  ],
+  "dependsOn": [
+    "ogc.skos.conceptScheme"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": {
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ]
+  },
+  "dateOfLastChange": "2026-11-01",
+  "ontology": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/utility/attributions/ontology.ttl",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/utility/attributions/",
+  "validationPassed": true,
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-model",
+  "gitPath": "_sources/utility/attributions"
+}

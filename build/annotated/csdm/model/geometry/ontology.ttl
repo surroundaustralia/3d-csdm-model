@@ -1,0 +1,272 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix geometry: <https://linked.data.gov.au/def/csdm/geometry/> .
+@prefix ont: <https://linked.data.gov.au/def/csdm/geometry> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sr: <https://linked.data.gov.au/def/csdm/spatial-representation/> .
+@prefix topo: <https://purl.org/geojson/topo#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+geo:MultiSolid rdfs:subClassOf geometry:AbstractSolidGeometry .
+
+geo:Shell rdfs:subClassOf geometry:AbstractSolidGeometry .
+
+geometry:3DSpatialUnit a owl:Class ;
+    rdfs:label "3D Spatial Unit" ;
+    rdfs:comment "A 3D spatial unit is a feature that may be described by one or more geometries from which a 3D extent may be inferred. This caters for the cases of 3D objects described by planar or linear geometries and extents.  This recognises that although Cadastral Parcels are the core concern here, in general such 3D spatial units may be described for multiple purposes.  " ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:Feature ;
+    skos:definition "A general 3D spatial unit is an abstract represented a closed solid or multi-solid or other valid geometry from which a solid can be derived." ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/3DSpatialUnit.png> ;
+    schema:workExample [ a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for 3D Spatial Unit." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/3DSpatialUnit.png"^^xsd:anyURI ] .
+
+geometry:BoundaryEdge a owl:Class ;
+    rdfs:label "Boundary Edge" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geometry:BoundaryFeature ;
+    skos:closeMatch topo:Edge ;
+    skos:definition "A Boundary Line is a feature whose geometry is a connected set of lines representing the common part of two polygons share this set of oriented lines.  As a feature it can participate in topological relationships between features that may, or may not, have planar geometry representations, and observations about the nature of the boundary can be made. The inner and outer features may be swapped by inverting the orientation of the geometry primitive, thus a single orientable boundary line may be used to partially define boundaries of both touching features. An oriented linear ring geometry representation for the planar extend of a bounded feature may be calculated from the geometries of the set of boundary features, using the inward or outward topology to adjust orientation accoridingly. " .
+
+geometry:BoundaryFace a owl:Class ;
+    rdfs:label "Boundary Face" ;
+    rdfs:comment "Note the outward feature may be absent, and if absent the optional boolean flag \"isTruncated\" may be set to true indicate that the geometry is a nominal closure for either an unbounded or impractically large extent." ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geometry:BoundaryFeature ;
+    skos:closeMatch topo:Face ;
+    skos:definition "A Boundary Face is a feature whose geometry is the orientable (possibly composite) surface where two solids touch.  As a feature it can participate in topological relationships between features that may, or may not, have solid geometry representations, and observations about the nature of the face can be made. The inner and outer features may be swapped by inverting the orientation of the geometry primitive, thus a single orientable boundary face may be used to define boundary faces of both touching features. The shell of a feature may be computed from the set of faces defining boundaries. " ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/boundary_face.png> ;
+    schema:workExample [ a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for Boundary Face." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/boundary_face.png"^^xsd:anyURI ],
+        [ a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for Boundary Face." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/face.png"^^xsd:anyURI ],
+        [ a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for Boundary Face." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/face2.png"^^xsd:anyURI ],
+        [ a schema:TextObject ;
+            schema:encodingFormat "text/turtle" ;
+            schema:text """
+      surveyobs_examples:blue_top_boundary
+        a geometry:BoundaryFace ;
+        geo:hasGeometry surveyobs_examples:blue_top ;
+        geometry:touchesInward examples:cp1 ;
+        rdfs:label "blue_top boundary" ;
+        skos:editorialNote "Example of a vertically unbounded boundary with a nominal solid geometry." ;
+        geometry:isTruncated true ;
+      .
+    """ ] .
+
+geometry:BoundaryNode a owl:Class ;
+    rdfs:label "Boundary Node" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geometry:BoundaryFeature ;
+    skos:definition "A Boundary Node is a feature whose geometry is a single Point representing the touching of two or more features at a single node.  As a feature it can participate in topological relationships between features that may, or may not, have planar geometry representations. " ;
+    skos:editorialNote "Statement required regarding the topology here - are we interest in the touching features or the edges of those features - those edges may not be separately represented so it should be the bounded features.  If so - how does one identify the edges when building a topology?" .
+
+geometry:ExtensionRule a owl:Class ;
+    rdfs:label "Extension Rule" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty dc:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty geometry:extension ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty geometry:isOutward ],
+        geometry:AbstractSolidGeometry ;
+    skos:closeMatch sr:VerticalBoundaryDefinition ;
+    skos:definition "The description of an a limit for extension of a geometric object to form object of higher dimensionality (e.g. solid from a surface, line or point, line from a point).  Implementations must provide a conversion function to an equivalent higher dimensional object bounded by appropriate horizons." .
+
+geometry:ExtrudedCurve a owl:Class ;
+    rdfs:label "Extruded Curve" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:OrientableCurve,
+        geometry:ExtrudedGeometry ;
+    skos:definition "A volume defined by a Curve extended in 2 additional dimensions." .
+
+geometry:ExtrudedSurface a owl:Class ;
+    rdfs:label "Extruded Surface" ;
+    rdfs:comment "Is this a plane only - assumption is its extended from a surface, and that surface can be defined as a plane if this is the intended implementation." ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:OrientableSurface,
+        geometry:ExtrudedGeometry ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/face_truncated.png> .
+
+geometry:FeatureCollection a owl:Class ;
+    rdfs:label "Feature Collection" ;
+    dcterms:description "A Feature containing a collection of subsidiary features, possibly defining some common characteristics." ;
+    rdfs:comment "Implementable using GeoJSON FeatureCollection schema" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:Feature .
+
+geometry:asGMLTopo a owl:DatatypeProperty ;
+    rdfs:label "asGMLTopo"@en ;
+    dc:description "The GML serialization of feature relationship topology"@en ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range geo:gmlLiteral ;
+    rdfs:subPropertyOf geo:hasSerialization ;
+    skos:definition "The GML serialization of topology"@en ;
+    skos:historyNote "Formerly declared as <http://www.opengis.net/ont/geosparql#asGMLTopo> in the GeoSPARQL namespace."@en ;
+    skos:prefLabel "asGMLTopo"@en ;
+    skos:scopeNote "The Feature topology should be described using GML with references to the GML objects in the feature's hasGeometry property"@en .
+
+geometry:baseSurface a owl:ObjectProperty ;
+    rdfs:label "base surface" ;
+    rdfs:range geo:OrientableSurface ;
+    skos:closeMatch sr:inputFootprintRef .
+
+geometry:boundary a owl:ObjectProperty ;
+    rdfs:label "boundary" ;
+    rdfs:comment "Typically surface would be a nominal ground surface.  Note a simple LinearRing is a subclass of the CompositeCurve range of this property and may have coordinateDimension 2 or 3. " ;
+    rdfs:range geo:CompositeCurve ;
+    rdfs:subPropertyOf geo:hasGeometry ;
+    skos:definition "The boundary line for a surface footprint of a potentially 3D object. The surface is arbitrary and specific to the application domain." .
+
+geometry:exterior a owl:ObjectProperty ;
+    rdfs:label "exterior" ;
+    rdfs:domain owl:Thing .
+
+geometry:extrusion a owl:ObjectProperty ;
+    rdfs:label "extrusion" ;
+    rdfs:isDefinedBy ont: ;
+    skos:closeMatch sr:verticalBoundaryDefinitions ;
+    skos:definition "Description of extrusion requirements, typically a distance." ;
+    skos:editorialNote "A extrusion description may be limited to an orientation flag (isOutward) in which case local system rules may define the effective limit, if any. Alternatively a text description of specific requirements may be provided.  Implementations may extend this with explit models of rules for extrusion." ;
+    skos:historyNote "Formerly declared as <http://www.w3.org/2004/02/skos/core#extrusion> in the SKOS namespace."@en .
+
+geometry:hasGeometryPart a owl:ObjectProperty ;
+    rdfs:label "has geometry part" ;
+    rdfs:domain geo:Feature ;
+    rdfs:isDefinedBy geo:,
+        <http://www.opengis.net/spec/geosparql/1.0/> ;
+    rdfs:range geo:Geometry ;
+    skos:definition "A component of a Feature's geometry." ;
+    skos:scopeNote "A component geometry part may particpate in the definition of other Features, such as shared boundary." .
+
+geometry:hasTopology a owl:ObjectProperty ;
+    rdfs:label "has topology" ;
+    dc:description "Topological representation of feature relationships using ISO19107 topology primitives" ;
+    rdfs:domain geo:Feature ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range geometry:BoundaryFeature ;
+    skos:closeMatch geojson:topology ;
+    skos:definition "Representation of topological relationships to other features" .
+
+geometry:isTruncated a owl:AnnotationProperty ;
+    rdfs:label "is truncated (nominal boundary)" ;
+    rdfs:range xsd:boolean .
+
+geometry:nodeFrom a owl:AnnotationProperty ;
+    rdfs:label "node from" ;
+    rdfs:comment "equivalent to a GML directedNode with orientation \"+\"" ;
+    rdfs:subPropertyOf geometry:directedNode ;
+    skos:relatedMatch topo:directedReferences .
+
+geometry:nodeTo a owl:AnnotationProperty ;
+    rdfs:label "node to" ;
+    rdfs:subPropertyOf geometry:directedNode ;
+    skos:definition "equivalent to a GML directedNode with orientation \"-\"" ;
+    skos:relatedMatch topo:directedReferences .
+
+geometry:solidMember a owl:ObjectProperty ;
+    rdfs:label "solid member" ;
+    rdfs:domain geo:CompositeSolid ;
+    rdfs:range geo:Solid ;
+    skos:relatedMatch topo:AggregateSolid .
+
+geometry:surfaceMember a owl:ObjectProperty ;
+    rdfs:label "surface member" ;
+    rdfs:domain geo:CompositeSurface ;
+    rdfs:range geo:OrientableSurface ;
+    skos:relatedMatch topo:Shell .
+
+geometry:touchesInward a owl:ObjectProperty ;
+    rdfs:label "touchesInward" ;
+    rdfs:domain geometry:BoundaryFeature ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range geo:Feature ;
+    rdfs:subPropertyOf geo:sfTouches ;
+    skos:definition "the subject features touches the object feature in the inward direction relative to the orientation of the geometry specified by the subject features hasGeometry subject." ;
+    skos:editorialNote "Property chain axioms could be defined stating that if A hasGeometry G and A geometry:touchesInward X and A geometry:touchesOutward Y then X touches Y, X hasBoundary G, Y hasBoundary G. " ;
+    skos:historyNote "Formerly declared as <http://www.opengis.net/ont/geosparql#touchesInward> in the GeoSPARQL namespace."@en ;
+    skos:prefLabel "touches feature Inward" .
+
+geometry:touchesOutward a owl:ObjectProperty ;
+    rdfs:label "touchesOutward" ;
+    rdfs:domain geometry:BoundaryFeature ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range geo:Feature ;
+    rdfs:subPropertyOf geo:sfTouches ;
+    skos:definition "the subject feature touches the object feature in the outward direction relative to the orientation of the subject feature hasGeometry subject." ;
+    skos:historyNote "Formerly declared as <http://www.opengis.net/ont/geosparql#touchesOutward> in the GeoSPARQL namespace."@en .
+
+geo:Solid rdfs:subClassOf geometry:AbstractSolidGeometry .
+
+geometry:extension a owl:DatatypeProperty ;
+    rdfs:label "extension" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:decimal ;
+    skos:closeMatch sr:value ;
+    skos:definition "The extension of an extruded geometry in the defined orientation, using the units of measure of the coordinate system of the base geometry." ;
+    skos:historyNote "Formerly declared as <http://www.opengis.net/ont/geosparql#extension> in the GeoSPARQL namespace."@en .
+
+geometry:isOutward a owl:DatatypeProperty ;
+    rdfs:label "isOutward" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:boolean ;
+    skos:definition "true if orientation of extension is outward of oriented base geometry." ;
+    skos:historyNote "Formerly declared as <http://www.opengis.net/ont/geosparql#isOutward> in the GeoSPARQL namespace."@en ;
+    skos:relatedMatch sr:direction .
+
+geometry:ExtrudedGeometry a owl:Class ;
+    rdfs:label "Extruded Geometry" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geometry:AbstractSolidGeometry ;
+    skos:closeMatch sr:DerivedGeometry ;
+    skos:definition "A higher dimension geometry generated by extending from a lower dimensional primitive."^^rdf:HTML .
+
+geometry:directedNode a owl:AnnotationProperty ;
+    rdfs:label "directed node" ;
+    skos:closeMatch topo:directedReferences .
+
+geometry:AbstractSolidGeometry a owl:Class ;
+    rdfs:label "Abstract Solid Geometry" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:Geometry ;
+    skos:closeMatch topo:Solid ;
+    skos:definition "Abstract superclass for the set of 3-Dimensional Geometric Primitives  which may be used to define 3D geometries and calculate alternative representations of interior, face and topology of an object in 3D cartesian space." ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/SolidGeometry.png> .
+
+geometry:BoundaryFeature a owl:Class ;
+    rdfs:label "Boundary Feature" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:Feature ;
+    skos:definition "A Boundary Feature is a topological concept - an object relates to a specific geometry type and adds information about the orientation of the geometry relative to topologically connected features. Note that a Featuredefined without specifiying the underlying geometry if required, allowing for example the geometry to be measured or calculated by operations on the geometries of related features." .
+
+ont: a owl:Ontology ;
+    rdfs:label "Geometry Primitives Model" ;
+    rdfs:seeAlso sr:,
+        <https://purl.org/geojson/topo> ;
+    owl:versionInfo "This is a candidate extension for GeoSPARQL 1.1 to support topology in 3D features." ;
+    skos:definition "This extends GeoSPARQL to provide a names subset of ISO 19107 concepts for 3D solids and support 3D topology amongst features. It is a companion to the Simple Features model for interoperability between 3D applications." ;
+    skos:historyNote "Absorbs the placeholder GeoSPARQL 3D profile module (https://www.opengis.net/def/profiles/geosparql3d, retired 2026-10-30), which declared no terms of its own. Terms formerly declared in the GeoSPARQL and SKOS namespaces (asGMLTopo, extension, isOutward, touchesInward, touchesOutward, extrusion) are now in the geometry namespace."@en ;
+    skos:scopeNote "The 3D CSDM exchange encoding represents geometry topology with the Topo-Feature ontology (https://purl.org/geojson/topo) and vertical extents and extrusion with the spatial-representation ontology (https://linked.data.gov.au/def/csdm/spatial-representation/). Corresponding terms are mapped with skos:closeMatch and skos:relatedMatch."@en ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/geosparql3D.png> .
+

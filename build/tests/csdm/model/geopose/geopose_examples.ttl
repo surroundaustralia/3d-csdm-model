@@ -1,0 +1,8 @@
+@prefix ex: <https://linked.data.gov.au/def/csdm/examples/geopose/> .
+@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .
+@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:result1 surv:pose [ geopose:angles [ geopose:pitch -0.001 ;
+                    geopose:yaw 231.38 ] ] .
+

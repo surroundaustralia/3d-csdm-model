@@ -1,0 +1,56 @@
+@prefix : <https://linked.data.gov.au/def/csdm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix lode: <https://w3id.org/lode/ns/pylode/> .
+@prefix ont: <https://linked.data.gov.au/def/csdm> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ont: a prof:Profile ;
+    rdfs:label "ICSM Conceptual Model for 3D Cadastral Survey Dataset Submissions" ;
+    dcterms:created "2022-03-18"^^xsd:date ;
+    dcterms:dateAccepted "2022-03-18"^^xsd:date ;
+    dcterms:issued "2022-03-18"^^xsd:date ;
+    rdfs:comment "Profiles the CSDM modules (common patterns, geometry, GeoPose, container, survey features, survey observations, survey provenance; parcels as an alignment to OGC Land Parcels) and the components the exchange encoding reuses: OGC Land Parcels, the spatial-representation ontology, Topo-Feature and the OGC Utility compoundName ontology."@en ;
+    owl:versionInfo "1.0" ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+            rdfs:label "pylode config" ;
+            dcterms:format "text/turtle" ;
+            prof:hasArtifact <https://icsm-au.github.io/3d-csdm/pylode.ttl> ;
+            prof:hasRole lode:config ] ;
+    prof:isProfileOf :commonpatterns,
+        :container,
+        :geometryprim,
+        :parcels,
+        <https://linked.data.gov.au/def/csdm/spatial-representation/>,
+        :surveyfeatures,
+        :surveyobs,
+        :surveyprov,
+        <https://linked.data.gov.au/def/csdm/utils/geopose>,
+        <https://purl.org/geojson/topo>,
+        <https://w3id.org/ogc/ladm/parcels>,
+        <https://w3id.org/ogc/utils/label> ;
+    schema:category "2023",
+        "Draft",
+        "ICSM Implementation Specification" ;
+    schema:contributor "Adrian White",
+        "Andrew Hunter",
+        "Byron Cochrane",
+        "Jeff Needham",
+        "Matthew Purss",
+        "Murray Dolling",
+        "Nicholas J. Car",
+        "Roger Fraser",
+        "Simon Opper" ;
+    schema:creator "Rob Atkinson" ;
+    schema:identifier "21-CAD" ;
+    schema:publisher "Intergovernmental Committee on Surveying and Mapping" ;
+    schema:workExample [ a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "CSDM Supermodel modules dependency diagram." ;
+            schema:contentUrl "http://www.plantuml.com/plantuml/png/V59DRXDD4DtFAPwojbVVxbiW1Xk25CYOT9IDvKLvkh17wUvgLTSu35o6it0oPWPYB2IoVJ-lNbNtwsAariTGLTLsNRltM9CHt94o5pn8I_i-a0wxQkjk6WVNnHmODqcU0li3ez43fUuhMIS9RYZ6STJU7ncRk-O1JJ89SfZzZQknXEDKH1TezeNrDFiMS3J5Bb0dZxgrdanqihZRsH4fMTV-jkAMxKdqSUJVVh4HwYGLcC2E_2_jkSTpDvNFNVXxm-PwXMiMjwdlFdtOLLMczf767QzMRlqHhi-iKJo7AtohWErAOfI4-IAHa_swGIOprh5H4eFlb5iB0qgViwYnntw0s94LnIXvKbzsKzX_wsbqPDC18uvxoNDXlA7IjS-5P-cv8aRJ9R4YJyMK0ZQaBOSPTBsUUC0x9kkLns4_lf_1YpSe5-8fzCI9Kij_yb-ciUppyXLU_4Bu7vup9ryWwMTlPOm28103mTvN-I0jBVsxLa8Oa4nOhhCmitTcTstXXESyd2RraA09gCqTVQesIvB-5pk7yWarV5hUJ2CR6COBQxPEnMu_W8SF5B-2a9pTWON75BFE1ML-jCPSaQb_6D22EvdsP_uiSb7tjh-Frtay"^^xsd:anyURI ;
+            schema:name "Modules Dependency Diagram" ] .
+

@@ -1,0 +1,73 @@
+@prefix : <https://linked.data.gov.au/def/csdm/utils/geopose/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ont: <https://linked.data.gov.au/def/csdm/utils/geopose> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:angles a owl:ObjectProperty ;
+    rdfs:label "angles"@en ;
+    rdfs:domain :Pose ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :Angles ;
+    skos:definition "The orientation of a pose."@en .
+
+:h a owl:DatatypeProperty ;
+    rdfs:label "height"@en ;
+    rdfs:domain :Position ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:double ;
+    skos:definition "The height of a position."@en ;
+    skos:scopeNote "GeoPose Basic defines h as the height above the WGS 84 ellipsoid, in metres."@en .
+
+:pitch a owl:DatatypeProperty ;
+    rdfs:label "pitch"@en ;
+    rdfs:domain :Angles ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:double ;
+    skos:definition "The rotation about the lateral axis, in degrees."@en .
+
+:position a owl:ObjectProperty ;
+    rdfs:label "position"@en ;
+    rdfs:domain :Pose ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :Position ;
+    skos:definition "The position of a pose."@en .
+
+:roll a owl:DatatypeProperty ;
+    rdfs:label "roll"@en ;
+    rdfs:domain :Angles ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:double ;
+    skos:definition "The rotation about the longitudinal axis, in degrees."@en .
+
+:yaw a owl:DatatypeProperty ;
+    rdfs:label "yaw"@en ;
+    rdfs:domain :Angles ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:double ;
+    skos:definition "The rotation about the vertical axis, in degrees."@en .
+
+:Pose a owl:Class ;
+    rdfs:label "Pose"@en ;
+    rdfs:isDefinedBy ont: ;
+    skos:definition "A position and orientation, following the OGC GeoPose Basic-YPR structure."@en .
+
+:Position a owl:Class ;
+    rdfs:label "Position"@en ;
+    rdfs:isDefinedBy ont: ;
+    skos:definition "The position of a pose: latitude, longitude and height."@en .
+
+:Angles a owl:Class ;
+    rdfs:label "Angles"@en ;
+    rdfs:isDefinedBy ont: ;
+    skos:definition "The orientation of a pose as yaw, pitch and roll angles."@en .
+
+ont: a owl:Ontology ;
+    rdfs:label "CSDM GeoPose"@en ;
+    dct:description "Classes and properties for a GeoPose (position and orientation) following the OGC GeoPose 1.0 Basic-YPR structure: a position (latitude, longitude, height) and orientation angles (yaw, pitch, roll)."@en ;
+    dct:source <https://www.ogc.org/standards/geopose/> ;
+    owl:versionInfo "0.1" ;
+    skos:scopeNote "Latitude and longitude use http://www.w3.org/2003/01/geo/wgs84_pos#lat and #long. In the 3D CSDM exchange schema only the angles are used (pose-lenient: yaw mandatory, pitch and roll optional)."@en .
+

@@ -1,0 +1,13 @@
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix ex: <https://linked.data.gov.au/def/csdm/examples/commonpatterns/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:distance1 a commonpatterns:Measure ;
+    commonpatterns:qualityMeasure 0.005 ;
+    commonpatterns:value 101.234 .
+
+ex:surveyPoint1 rdfs:label "PM 12345" ;
+    commonpatterns:qualityClass ex:class-b ;
+    commonpatterns:qualityMeasure 0.02 .
+

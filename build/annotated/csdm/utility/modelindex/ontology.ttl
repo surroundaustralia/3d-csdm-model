@@ -1,0 +1,59 @@
+@prefix commonpatterns: <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix container: <https://linked.data.gov.au/def/csdm/container/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geometry: <https://linked.data.gov.au/def/csdm/geometry/> .
+@prefix ont: <https://linked.data.gov.au/def/csdm/modelindex> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix parcel: <https://linked.data.gov.au/def/csdm/parcels/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix surveyobs: <https://linked.data.gov.au/def/csdm/surveyobs/> .
+@prefix survprov: <https://linked.data.gov.au/def/csdm/surveyprov/> .
+
+commonpatterns:Measure rdfs:subClassOf container:StandardClass .
+
+container:CSD rdfs:subClassOf container:ClassIn3DCadastre .
+
+geometry:3DSpatialUnit rdfs:subClassOf container:GeoSPARQL-3D .
+
+geometry:AbstractSolidGeometry rdfs:subClassOf container:GeoSPARQL-3D .
+
+geometry:BoundaryFeature rdfs:subClassOf container:GeoSPARQL-3D .
+
+parcel:ParcelModel rdfs:subClassOf container:ClassIn3DCadastre .
+
+surv:CadastralFeature rdfs:subClassOf container:ClassIn3DCadastre .
+
+surveyobs:SurveyObservation rdfs:subClassOf container:ClassIn3DCadastre .
+
+survprov:SurveyProvenanceObject rdfs:subClassOf container:ClassIn3DCadastre .
+
+container:StandardClass a owl:Class ;
+    rdfs:label "Key Class used by 3D Cadastre Model" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf container:ModelledElement ;
+    skos:definition "This class is just to provide a highlight for key class types used by 3D Cadastre model" .
+
+container:ModelledElement a owl:Class ;
+    rdfs:label "SelectableModelElement" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf owl:Thing .
+
+container:GeoSPARQL-3D a owl:Class ;
+    rdfs:label "GeoSPARQL 1.2 (3D profile)" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf container:ClassIn3DCadastre ;
+    skos:definition "This class represents a container for objects described by the 3D profile of ISO19107 as a GeoSPARQL 1.2 extension candidate." .
+
+ont: a owl:Ontology ;
+    rdfs:label "CSDM Model Index"@en ;
+    dct:description "Classification of 3D CSDM model elements used to organise and select elements in the model documentation. Not part of the domain model."@en ;
+    dct:source <https://github.com/icsm-au/3d-csdm/blob/main/csdm_model/container.ttl> ;
+    skos:historyNote "Moved from the container module (https://linked.data.gov.au/def/csdm/container) on 2026-10-30. Class IRIs are unchanged."@en .
+
+container:ClassIn3DCadastre a owl:Class ;
+    rdfs:label "Class defined in 3D Cadastre Model" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf container:ModelledElement .
+

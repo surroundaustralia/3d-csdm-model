@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for icsm.csdm.utility.ontexamples - Ontology Example Shapes",
+  "bblockName": "Ontology Example Shapes",
+  "bblockId": "icsm.csdm.utility.ontexamples",
+  "generated": "2026-11-01T23:45:15.818448+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

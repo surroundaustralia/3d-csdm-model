@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for icsm.csdm.model.all - 3D Cadastral Survey Data Model (complete)",
+  "bblockName": "3D Cadastral Survey Data Model (complete)",
+  "bblockId": "icsm.csdm.model.all",
+  "generated": "2026-11-01T23:45:36.763680+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

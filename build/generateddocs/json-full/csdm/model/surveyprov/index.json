@@ -1,0 +1,91 @@
+
+
+{
+  "itemIdentifier": "icsm.csdm.model.surveyprov",
+  "name": "CSDM Survey Provenance",
+  "abstract": "Survey provenance modelling for cadastral surveys - a profile of PROV-O.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "2. Modules",
+  "highlighted": false,
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/surveyprov"
+  ],
+  "dependsOn": [
+    "icsm.csdm.model.commonpatterns",
+    "icsm.csdm.model.surveyobs",
+    "ogc.bbr.utils.compoundName.ontology",
+    "ogc.model.cross-domain.prof",
+    "ogc.model.cross-domain.prov"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": {
+    "icsm.csdm.model.commonpatterns": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/shapes.shacl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/owl-consistency.shapes.ttl"
+    ],
+    "ogc.bbr.utils.compoundName.ontology": [
+      "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+    ],
+    "icsm.csdm.model.surveyobs": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/owl-consistency.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/vector_observations.shapes.ttl"
+    ],
+    "icsm.csdm.model.geopose": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/owl-consistency.shapes.ttl"
+    ],
+    "icsm.csdm.model.surveyfeatures": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/survey_features.shapes.ttl"
+    ],
+    "icsm.csdm.model.geometry": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/geometryprimitives.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/owl-consistency.shapes.ttl"
+    ],
+    "ogc.geo.topo.ontology": [
+      "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+    ],
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ]
+  },
+  "dateOfLastChange": "2026-11-01",
+  "ontology": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/surveyprov/ontology.ttl",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyprov/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/surroundaustralia/3d-csdm-model/blob/main/build/tests/csdm/model/surveyprov/",
+  "examples": [
+    {
+      "title": "survey activity examples",
+      "content": "Example data from `csdm_model/examples/survey_activity_examples.ttl`.",
+      "base-output-filename": "survey_activity_examples",
+      "snippets": [
+        {
+          "language": "turtle",
+          "ref": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyprov/examples/survey_activity_examples.ttl",
+          "url": "https://surroundaustralia.github.io/3d-csdm-model/build/tests/csdm/model/surveyprov/survey_activity_examples.ttl",
+          "sizeBytes": 3434,
+          "code": "# baseURI: https://linked.data.gov.au/def/csdm/surveyactivity/examples\n# imports: https://w3id.org/ogc/utils/label\n# imports: https://linked.data.gov.au/def/csdm/surveyprov\n\n@prefix : <https://linked.data.gov.au/def/csdm/surveyactivity/examples/> .\n@prefix com: <https://w3id.org/ogc/utils/label/> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix prov: <http://www.w3.org/ns/prov#> .\n@prefix survprov: <https://linked.data.gov.au/def/csdm/surveyprov/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<https://linked.data.gov.au/def/csdm/surveyactivity/examples>\n  a owl:Ontology ;\n  rdfs:comment \"Provides a set of arbitrary examples showing the use of the PROV model as a logical model for a sequence of activities influencing a data object\" ;\n  rdfs:label \"Survey Activity model examples\" ;\n  owl:imports <https://w3id.org/ogc/utils/label> ;\n  owl:imports <https://linked.data.gov.au/def/csdm/surveyprov> ;\n  owl:versionInfo \"Created with TopBraid Composer\" ;\n.\n:AH\n  a survprov:CadastralSurveyor ;\n  rdfs:label \"Andrew Hunter\" ;\n.\n:LINZ\n  a prov:Organization ;\n  rdfs:label \"LINZ\" ;\n.\n:LandOnlineNZ\n  a prov:SoftwareAgent ;\n  rdfs:label \"LandOnline NZ\" ;\n  prov:actedOnBehalfOf :LINZ ;\n.\n:NZ_TA_223\n  a skos:Concept ;\n  rdfs:label \"NZ TA Certification - section 223\" ;\n  skos:scopeNote \"Section 223 certification expires after 3 years.\" ;\n.\n:SurveyActivities_ICSM_common\n  a survprov:SurveyActivityType ;\n  rdfs:label \"SurveyActivityType - ICSM common\" ;\n  skos:hasTopConcept :SurveyLodgement ;\n  skos:hasTopConcept :SurveyRegistration ;\n.\n:SurveyActivityType_NZ\n  a survprov:SurveyActivityType ;\n  rdfs:label \"Survey ActivityNZ\" ;\n  skos:hasTopConcept :SurveyApprovalDate ;\n  skos:hasTopConcept :SurveyLodgement ;\n  skos:hasTopConcept :SurveyRegistration ;\n  skos:hasTopConcept :TACert ;\n.\n:SurveyApprovalDate\n  a skos:Concept ;\n  rdfs:label \"NZ Survey Approval Date\" ;\n  skos:definition \"LINZ when survey information is approved to be integrated into the cadastre.\" ;\n.\n:SurveyApproval_1\n  a survprov:SurveyApproval ;\n  rdfs:label \"Survey Approval\" ;\n  prov:endedAtTime \"2021-01-01\"^^xsd:date ;\n  prov:generated :SurveyExample ;\n  prov:wasInfluencedBy :SurveyLodged_1 ;\n.\n:SurveyExample\n  a survprov:CSD ;\n  rdfs:label \"Survey 1 submitted CSD\" ;\n  prov:wasAttributedTo :AH ;\n  prov:wasGeneratedBy :SurveyLodged_1 ;\n  prov:wasInfluencedBy :SurveyApproval_1 ;\n.\n:SurveyLodged_1\n  a survprov:SurveyLodged ;\n  rdfs:label \"LandOnlineLodgement\" ;\n  prov:endedAtTime \"2020-06-22\"^^xsd:date ;\n  prov:generated :SurveyExample ;\n  prov:wasAssociatedWith :LandOnlineNZ ;\n  prov:wasAttributedTo :AH ;\n.\n:SurveyLodgement\n  a skos:Concept ;\n  rdfs:label \"Survey Lodgement\" ;\n.\n:SurveyRegistration\n  a skos:Concept ;\n  rdfs:label \"Survey Registration\" ;\n  skos:definition \"Plan is registered and titles issued.\" ;\n  skos:editorialNote \"This is an example of a candidate for common ICSM terminology - this process has not been done - and does no affect data model directly, but will need to be considered as part of an implementation phase.\" ;\n.\n:TACert\n  a skos:Concept ;\n  rdfs:label \"NZ TA Certification\" ;\n  skos:narrower :NZ_TA_223 ;\n  skos:scopeNote \"Certification is attached as a supporting document.\" ;\n.\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-model",
+  "gitPath": "_sources/model/surveyprov"
+}

@@ -1,0 +1,150 @@
+{
+  "metaRegistry": "https://w3id.org/ogc/bblocks/meta-register.json",
+  "name": "Utility Building Blocks",
+  "abstract": "General purpose patterns for reuse\n",
+  "description": "Things that are common, but not scoped OGC.  Labelling - such as different forms of multi-part and multilingual labels\n",
+  "modified": "2026-10-30T12:54:03.932619",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
+      "shortCommitId": "\"862052",
+      "date": "2026-10-26T21:53:11+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/ogcincubator/bblocks-utility",
+  "gitHubRepository": "https://github.com/ogcincubator/bblocks-utility/blob/master/",
+  "baseURL": "https://ogcincubator.github.io/bblocks-utility/",
+  "viewerURL": "https://ogcincubator.github.io/bblocks-utility/",
+  "validationReport": "https://ogcincubator.github.io/bblocks-utility/build/tests/report.html",
+  "validationReportJson": "https://ogcincubator.github.io/bblocks-utility/build/tests/report.json",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json",
+    "https://ogcincubator.github.io/cross-domain-model/build/register.json",
+    "https://ogcincubator.github.io/bblocks-skos/build/register.json"
+  ],
+  "bblocks": [
+    {
+      "itemIdentifier": "ogc.bbr.utils.compoundName.ontology",
+      "name": "Compound Name Model",
+      "highlighted": true,
+      "abstract": "Ontology and SHACL rules for compound names: names made of typed name parts, with rules for how the parts relate to the formatted name.",
+      "status": "under-development",
+      "dateTimeAddition": "2026-10-26T00:00:00Z",
+      "itemClass": "model",
+      "version": "0.1",
+      "concept": [
+        "https://w3id.org/ogc/utils/label"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.model.cross-domain.dcterms"
+      ],
+      "sources": [],
+      "tags": [
+        "utils"
+      ],
+      "shaclShapes": {
+        "ogc.bbr.utils.compoundName.ontology": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+        ]
+      },
+      "dateOfLastChange": "2026-10-30",
+      "ontology": "https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-utility/blob/master/build/tests/bbr/utils/compoundName/ontology/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-utility/build/generateddocs/markdown/bbr/utils/compoundName/ontology/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-utility/build/generateddocs/json-full/bbr/utils/compoundName/ontology/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-utility/bblock/ogc.bbr.utils.compoundName.ontology"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.bbr.utils.compoundName.schema",
+      "name": "Compound Name",
+      "highlighted": true,
+      "abstract": "A multiple part name, consisting of a set of strings with functional roles that can be combined into single string using a template.",
+      "status": "under-development",
+      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemClass": "schema",
+      "register": "icsm-csdm",
+      "version": "0.1",
+      "dateOfLastChange": "2026-10-30",
+      "link": "https://github.com/icsm-au/3d-csdm-schema",
+      "sources": [
+        {
+          "title": "CSDM model",
+          "link": "https://github.com/icsm-au/3d-csdm"
+        }
+      ],
+      "maturity": "development",
+      "scope": "unstable",
+      "tags": [
+        "utils"
+      ],
+      "dependsOn": [
+        "bblocks://ogc.bbr.utils.compoundName.ontology",
+        "bblocks://ogc.ogc-utils.iri-or-curie"
+      ],
+      "shaclShapes": {
+        "ogc.bbr.utils.compoundName.ontology": [
+          "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+        ]
+      },
+      "ldContext": "https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema/context.jsonld",
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/schema/schema.json",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/schema/context.jsonld",
+      "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/schema/resolvedProperties.json",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/schema/",
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/bblocks-utility/blob/master/build/tests/bbr/utils/compoundName/schema/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/bblocks-utility/build/generateddocs/markdown/bbr/utils/compoundName/schema/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/bblocks-utility/build/generateddocs/json-full/bbr/utils/compoundName/schema/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/bblocks-utility/bblock/ogc.bbr.utils.compoundName.schema"
+        }
+      }
+    }
+  ],
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-utility/build/annotated/_cache",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks-utility/build/register.json",
+      "type": "application/json",
+      "title": "This Building Blocks Register in JSON format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks-utility/build/bblocks.ttl",
+      "type": "text/turtle",
+      "title": "This Building Blocks Register in RDF Turtle format"
+    },
+    {
+      "rel": "self",
+      "href": "https://ogcincubator.github.io/bblocks-utility/build/bblocks.jsonld",
+      "type": "application/ld+json",
+      "title": "This Building Blocks Register in JSON-LD format"
+    }
+  ]
+}

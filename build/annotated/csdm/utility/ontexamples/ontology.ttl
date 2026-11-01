@@ -1,0 +1,101 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://datashapes.org/owl2shacl#> .
+@prefix ontologyprojects: <http://teamwork.topbraidlive.org/ontologyprojects#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://evn.topbraidlive.org/evnprojects#ProjectType> a rdfs:Class .
+
+<http://evn.topbraidlive.org/evnprojects#Taxonomy> a rdfs:Class .
+
+sh:SPARQLrule a rdfs:Class ;
+    rdfs:label "SPARQL rule" ;
+    rdfs:subClassOf owl:Thing .
+
+dc:format a rdf:Property .
+
+dc:relation a rdf:Property .
+
+dct:Standard a owl:Class ;
+    rdfs:subClassOf owl:Thing .
+
+dct:conformsTo a owl:ObjectProperty .
+
+dct:relation a rdf:Property .
+
+prof:ResourceDescriptor rdfs:subClassOf owl:Thing .
+
+<https://data.surroundaustralia.com/def/class-example-shapes/editorialforresource> a sh:NodeShape ;
+    rdfs:label "editorial notes" ;
+    rdfs:comment "allow skos:editorial notes for any resource"^^rdf:HTML ;
+    sh:property <https://data.surroundaustralia.com/def/class-example-shapes/editorialforresource-comment>,
+        <https://data.surroundaustralia.com/def/class-example-shapes/editorialforresource-editorialNote> ;
+    sh:targetClass rdfs:Resource,
+        owl:Class .
+
+<https://data.surroundaustralia.com/def/class-example-shapes/imgForResource> a sh:NodeShape ;
+    rdfs:label "img for resource" ;
+    rdfs:comment "allow simple image attached to any resource" ;
+    sh:property <https://data.surroundaustralia.com/def/class-example-shapes/imgForResource-Graphic> ;
+    sh:targetClass rdfs:Resource,
+        owl:Class .
+
+owl:Class-definition a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:group skos:DefinitionPropertyGroup ;
+    sh:maxCount 1 ;
+    sh:name "definition" ;
+    sh:path skos:definition .
+
+foaf:depiction a rdfs:Resource,
+        owl:ObjectProperty ;
+    rdfs:label "Depiction" .
+
+<https://data.surroundaustralia.com/def/class-example-shapes/editorialforresource-comment> a sh:PropertyShape ;
+    dash:viewer dash:LiteralViewer ;
+    sh:datatype xsd:string ;
+    sh:description "Comment" ;
+    sh:group skos:NotesPropertyGroup ;
+    sh:name "comment" ;
+    sh:path rdfs:comment .
+
+<https://data.surroundaustralia.com/def/class-example-shapes/editorialforresource-editorialNote> a sh:PropertyShape ;
+    dash:viewer dash:LiteralViewer ;
+    sh:datatype xsd:string ;
+    sh:description "Editorial notes will be highlighted as open issues in documents" ;
+    sh:group skos:NotesPropertyGroup ;
+    sh:name "editorial note" ;
+    sh:path skos:editorialNote .
+
+<https://data.surroundaustralia.com/def/class-example-shapes/imgForResource-Graphic> a sh:PropertyShape ;
+    dash:viewer dash:ImageViewer ;
+    sh:group <http://topbraid.org/skos.shapes#DisplayPropertyGroup> ;
+    sh:name "Graphic" ;
+    sh:nodeKind sh:IRI ;
+    sh:order 1.0 ;
+    sh:path foaf:depiction .
+
+<https://data.surroundaustralia.com/def/ontexamples/shapes> a ontologyprojects:ProjectType,
+        owl:Ontology,
+        prov:Entity ;
+    rdfs:label "Example Viewer" ;
+    ns1:createPropertyShapeURIsWithPrefixes true ;
+    teamwork:externalGraphURI <https://data.surroundaustralia.com/def/ontexamples/shapes> ;
+    rdfs:comment "Edited version of PROF shapes for creating example resources conveniently" ;
+    owl:imports <http://surroundaustralia.com/ns/platform/shapes>,
+        <http://www.w3.org/ns/dx/prof>,
+        <https://data.surroundaustralia.com/def/reqmetamodel>,
+        <https://linked.data.gov.au/def/csdm/impspecs> .
+
+owl:Class sh:property owl:Class-definition .
+

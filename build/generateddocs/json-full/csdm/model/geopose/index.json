@@ -1,0 +1,60 @@
+
+
+{
+  "itemIdentifier": "icsm.csdm.model.geopose",
+  "name": "CSDM GeoPose",
+  "abstract": "RDF terms for the GeoPose Basic-YPR structure (position and yaw, pitch, roll angles) used by 3D CSDM survey observation results.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-30T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "1. Foundations",
+  "highlighted": false,
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/utils/geopose"
+  ],
+  "sources": [
+    {
+      "title": "OGC GeoPose",
+      "link": "https://www.ogc.org/standards/geopose/"
+    },
+    {
+      "title": "3D CSDM common: SurveyObservations schema",
+      "link": "https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyObservations"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "geopose",
+    "ontology"
+  ],
+  "shaclShapes": {
+    "icsm.csdm.model.geopose": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/owl-consistency.shapes.ttl"
+    ]
+  },
+  "dateOfLastChange": "2026-11-01",
+  "ontology": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/geopose/ontology.ttl",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/surroundaustralia/3d-csdm-model/blob/main/build/tests/csdm/model/geopose/",
+  "examples": [
+    {
+      "title": "Pose of a survey vector observation result",
+      "content": "The RDF form of `hasResult.pose` in the 3d-csdm-common CSD example: yaw and pitch angles.",
+      "base-output-filename": "geopose_examples",
+      "snippets": [
+        {
+          "language": "turtle",
+          "ref": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/examples/geopose_examples.ttl",
+          "url": "https://surroundaustralia.github.io/3d-csdm-model/build/tests/csdm/model/geopose/geopose_examples.ttl",
+          "sizeBytes": 459,
+          "code": "@prefix geopose: <https://linked.data.gov.au/def/csdm/utils/geopose/> .\n@prefix surv:    <https://linked.data.gov.au/def/csdm/surveyfeatures/> .\n@prefix ex:      <https://linked.data.gov.au/def/csdm/examples/geopose/> .\n\n# The pose of a survey vector observation result, from the 3d-csdm-common CSD example (hasResult.pose).\nex:result1\n  surv:pose [\n      geopose:angles [\n          geopose:yaw 231.38 ;\n          geopose:pitch -0.001 ;\n        ] ;\n    ] ;\n.\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-model",
+  "gitPath": "_sources/model/geopose"
+}

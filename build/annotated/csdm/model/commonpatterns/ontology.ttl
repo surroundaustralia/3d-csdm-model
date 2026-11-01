@@ -1,0 +1,93 @@
+@prefix : <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix com: <https://w3id.org/ogc/utils/label/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ont: <https://linked.data.gov.au/def/csdm/commonpatterns> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:CompoundName a owl:Class ;
+    rdfs:label "CompoundName (deprecated)"@en ;
+    dct:isReplacedBy com:CompoundName ;
+    rdfs:isDefinedBy ont: ;
+    owl:deprecated true ;
+    owl:equivalentClass com:CompoundName .
+
+:NamePart a owl:Class ;
+    rdfs:label "Name Part (deprecated)"@en ;
+    dct:isReplacedBy com:NamePart ;
+    rdfs:isDefinedBy ont: ;
+    owl:deprecated true ;
+    owl:equivalentClass com:NamePart .
+
+:RelevantJurisdictionalCodelist a owl:Class ;
+    rdfs:label "Relevant Jurisdictional Codelist"@en ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf skos:ConceptScheme,
+        :Common ;
+    skos:definition "A codelist that will be defined in each implementing jurisdiction"@en .
+
+:Report a owl:Class ;
+    rdfs:label "Report"@en ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf prof:ResourceDescriptor,
+        :Common ;
+    skos:definition "An arbitrary report of a known type, with metadata about its purpose and format as required."@en ;
+    skos:editorialNote "Logical model using the ResourceDescriptor pattern from the Profiles vocabulary to allow specification of what form the report or document is in."@en .
+
+:name a owl:ObjectProperty ;
+    rdfs:label "Name (deprecated)"@en ;
+    dct:isReplacedBy com:name ;
+    rdfs:isDefinedBy ont: ;
+    owl:deprecated true ;
+    owl:equivalentProperty com:name .
+
+:qualityClass a owl:ObjectProperty ;
+    rdfs:label "Quality Class"@en ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range skos:Concept ;
+    skos:definition "A reference to a code indicating a quality class"@en ;
+    skos:scopeNote "Values are concepts from a relevant jurisdictional codelist of quality or accuracy classes."@en .
+
+:Measure a owl:Class ;
+    rdfs:label "Qualified Measurement"@en ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :qualityMeasure ],
+        :Common ;
+    skos:definition "A measured value with at most one numeric quality measure."@en .
+
+:qualityMeasure a owl:DatatypeProperty ;
+    rdfs:label "Quality Measure"@en ;
+    rdfs:isDefinedBy ont: ;
+    skos:definition "a numeric quality measure"@en ;
+    skos:scopeNote "No rdfs:range is asserted: JSON numbers mapped through JSON-LD become xsd:double or xsd:integer literals (for example the ptQualityMeasure property of survey points). The original module declared xsd:decimal."@en,
+        "This has not been fully modelled - a placeholder - for an ISO 19157 DQV concept"@en .
+
+:value a owl:DatatypeProperty ;
+    rdfs:label "value"@en ;
+    rdfs:domain :Measure ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:decimal ;
+    skos:definition "The numeric value of a qualified measurement."@en .
+
+:Common a owl:Class ;
+    rdfs:label "Common Implementation Patterns"@en ;
+    rdfs:isDefinedBy ont: ;
+    skos:definition "SuperClass for common implementations patterns not provided by existing standards"@en ;
+    skos:prefLabel "Common Reusable Patterns"@en .
+
+ont: a owl:Ontology ;
+    rdfs:label "CSDM Common Patterns"@en ;
+    dct:description "Common implementation patterns used by the 3D Cadastral Survey Data Model that are not directly supported by other standards: qualified measures, quality indicators, jurisdictional codelists and reports. Compound names are defined by the OGC Utility compoundName ontology."@en ;
+    dct:source <https://github.com/icsm-au/3d-csdm/blob/main/csdm_model/commonpatterns.ttl> ;
+    dct:title "CSDM Common Patterns"@en ;
+    owl:versionInfo "0.2" ;
+    skos:historyNote "Version 0.2 re-establishes the module in the 3D CSDM common register. The compound name terms moved to https://w3id.org/ogc/utils/label/ and are kept here only as deprecated equivalents."@en .
+

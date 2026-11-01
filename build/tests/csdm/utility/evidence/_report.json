@@ -1,0 +1,2179 @@
+{
+  "title": "Validation report for icsm.csdm.utility.evidence - CSDM Design Evidence",
+  "bblockName": "CSDM Design Evidence",
+  "bblockId": "icsm.csdm.utility.evidence",
+  "generated": "2026-11-01T23:45:44.987564+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/csdm/utility/evidence/canonical_examples_closure.ttl",
+        "url": "https://surroundaustralia.github.io/3d-csdm-model/build/tests/csdm/utility/evidence/canonical_examples_closure.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/canonical_examples_closure.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "canonical_examples_closure.ttl",
+              "size": 56,
+              "isError": false,
+              "message": "Output Turtle canonical_examples_closure.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/utility/ontexamples/shapes_4_modelexamples.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl\n - /github/workspace/_sources/utility/reqmetamodel/reqmetamodel.shapes.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl\n - https://www.w3.org/ns/sosa/sosa.ttl\n - /github/workspace/_sources/model/all/csdm.ttl\n - /github/workspace/_sources/utility/impspecs/impspecs.ttl\n - /github/workspace/_sources/model/geopose/geopose.ttl\n - /github/workspace/_sources/model/parcelsalignment/parcelsalignment.ttl\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - /github/workspace/_sources/model/surveyfeatures/surveyfeats.ttl\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl\n - /github/workspace/_sources/model/geometry/geometryprim.ttl\n - /github/workspace/_sources/model/container/container.ttl\n - https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl\n - /github/workspace/_sources/model/surveyprov/surveyprov.ttl\n - https://www.w3.org/ns/prov-o\n - /github/workspace/_sources/model/surveyobs/surveyobs.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/commonpatterns/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "focusNodes": {
+                ":NumericLiteral": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n761adbc17fed4e3c8e3fd9003a17d273b4": {
+                  "nodes": []
+                },
+                ":QualityMeasureShape": {
+                  "nodes": []
+                },
+                "_:n761adbc17fed4e3c8e3fd9003a17d273b3": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                ":QualityClassShape": {
+                  "nodes": []
+                },
+                ":MeasureShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n761adbc17fed4e3c8e3fd9003a17d273b4: *none*\n - Shape :QualityMeasureShape: *none*\n - Shape _:n761adbc17fed4e3c8e3fd9003a17d273b3: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :QualityClassShape: *none*\n - Shape :MeasureShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
+                  "nodes": []
+                },
+                "_:n8cf99ed50dcb4e88a5aa7ccb8ecf8824b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
+                  "nodes": []
+                },
+                "_:n8cf99ed50dcb4e88a5aa7ccb8ecf8824b5": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape _:n8cf99ed50dcb4e88a5aa7ccb8ecf8824b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n - Shape _:n8cf99ed50dcb4e88a5aa7ccb8ecf8824b5: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "focusNodes": {
+                ":CompoundNameShape": {
+                  "nodes": []
+                },
+                ":NamePartShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/container/container.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/container/container.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/container/container.shapes.ttl",
+              "focusNodes": {
+                "container:CSD": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/container/container.shapes.ttl:\n - Shape container:CSD: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/container/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/container/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/container/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#locality-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#observedVectors-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#compoundCRS-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#verticalDatum-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyType-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#points-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#annotations-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#bearingRotation-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#supportingDocuments-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#parcels-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedObservations-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedVectors-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#referencedCSD-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationFeatures-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyProvenance-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescriptors-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationObservations-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#horizontalCRS-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#purpose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#vectorObservations-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#adminUnit-resource>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/container/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#locality-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#observedVectors-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#compoundCRS-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#verticalDatum-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyType-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#points-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#annotations-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#bearingRotation-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#supportingDocuments-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#parcels-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedObservations-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedVectors-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#referencedCSD-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationFeatures-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyProvenance-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescriptors-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationObservations-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#horizontalCRS-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#purpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#vectorObservations-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adminUnit-resource>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/geometry/geometryprimitives.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/geometry/geometryprimitives.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/geometry/geometryprimitives.shapes.ttl",
+              "focusNodes": {
+                ":SolidTopology": {
+                  "nodes": []
+                },
+                ":ExtrudedSurface": {
+                  "nodes": []
+                },
+                ":AbstractSolidGeometry": {
+                  "nodes": []
+                },
+                "geo:Geometry/sh:not": {
+                  "nodes": []
+                },
+                "geo:Feature": {
+                  "nodes": []
+                },
+                ":ExtrudedGeometry": {
+                  "nodes": []
+                },
+                ":3DSpatialUnit": {
+                  "nodes": []
+                },
+                ":ExtrudedCurve": {
+                  "nodes": []
+                },
+                ":ExtensionRule": {
+                  "nodes": []
+                },
+                ":BoundaryEdge": {
+                  "nodes": []
+                },
+                "geo:Geometry": {
+                  "nodes": []
+                },
+                "geo:Feature/sh:not": {
+                  "nodes": []
+                },
+                ":Face": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:\n - Shape :SolidTopology: *none*\n - Shape :ExtrudedSurface: *none*\n - Shape :AbstractSolidGeometry: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape geo:Feature: *none*\n - Shape :ExtrudedGeometry: *none*\n - Shape :3DSpatialUnit: *none*\n - Shape :ExtrudedCurve: *none*\n - Shape :ExtensionRule: *none*\n - Shape :BoundaryEdge: *none*\n - Shape geo:Geometry: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape :Face: *none*\n - Shape geo:Geometry/sh:not: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/geometry/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/geometry/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/geometry/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>": {
+                  "nodes": []
+                },
+                "_:n02ef4bbf94be468082dd0be70d13371cb6": {
+                  "nodes": []
+                },
+                "_:n02ef4bbf94be468082dd0be70d13371cb7": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*\n - Shape _:n02ef4bbf94be468082dd0be70d13371cb6: *none*\n - Shape _:n02ef4bbf94be468082dd0be70d13371cb7: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl",
+              "focusNodes": {
+                ":OrientedReferenceShape": {
+                  "nodes": []
+                },
+                ":OrientedArcShape": {
+                  "nodes": []
+                },
+                ":RadiusRequiredShape": {
+                  "nodes": []
+                },
+                ":DirectedReferencesShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :OrientedReferenceShape: *none*\n - Shape :OrientedArcShape: *none*\n - Shape :RadiusRequiredShape: *none*\n - Shape :DirectedReferencesShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/surveyfeatures/survey_features.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/surveyfeatures/survey_features.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/surveyfeatures/survey_features.shapes.ttl",
+              "focusNodes": {
+                "surv:SurveyedLine-horizontalAngle/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "surv:Monument": {
+                  "nodes": []
+                },
+                "surv:Occupation": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db3": {
+                  "nodes": []
+                },
+                "surv:NoOccupation": {
+                  "nodes": []
+                },
+                "surv:SurveyMark": {
+                  "nodes": []
+                },
+                "surv:AdoptedVector": {
+                  "nodes": []
+                },
+                "surv:GeodeticReferenceMark": {
+                  "nodes": []
+                },
+                "surv:BoundaryMark": {
+                  "nodes": []
+                },
+                "surv:Setup": {
+                  "nodes": []
+                },
+                "surv:SurveyMarkCondition": {
+                  "nodes": []
+                },
+                "surv:ConditionCode": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db19": {
+                  "nodes": []
+                },
+                "surv:ObservedVector": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-verticalAngle/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:Distance": {
+                  "nodes": []
+                },
+                "surv:Survey": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db12": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db4": {
+                  "nodes": []
+                },
+                "surv:CadastralMark": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db20": {
+                  "nodes": []
+                },
+                "surv:Angle": {
+                  "nodes": []
+                },
+                "surv:InstrumentPoint": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-distance/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:SurveyPoint": {
+                  "nodes": []
+                },
+                "surv:AllowableCoordinateReferenceSystem": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db11": {
+                  "nodes": []
+                },
+                "surv:OccupationMark": {
+                  "nodes": []
+                },
+                "surv:SurveyPointProvenance": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/surveyfeatures/survey_features.shapes.ttl:\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:Monument: *none*\n - Shape surv:Occupation: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db3: *none*\n - Shape surv:NoOccupation: *none*\n - Shape surv:SurveyMark: *none*\n - Shape surv:AdoptedVector: *none*\n - Shape surv:GeodeticReferenceMark: *none*\n - Shape surv:BoundaryMark: *none*\n - Shape surv:Setup: *none*\n - Shape surv:SurveyMarkCondition: *none*\n - Shape surv:ConditionCode: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db19: *none*\n - Shape surv:ObservedVector: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*\n - Shape surv:Distance: *none*\n - Shape surv:Survey: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db12: *none*\n - Shape surv:SurveyedLine: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db4: *none*\n - Shape surv:CadastralMark: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db20: *none*\n - Shape surv:Angle: *none*\n - Shape surv:InstrumentPoint: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*\n - Shape surv:SurveyPoint: *none*\n - Shape surv:AllowableCoordinateReferenceSystem: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db11: *none*\n - Shape surv:OccupationMark: *none*\n - Shape surv:SurveyPointProvenance: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/surveyobs/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/surveyobs/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/surveyobs/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorType-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalDistance-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalAngle-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyClass-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#SurveyVectorObservation-hasResult-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#lastCalibrated-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQuality-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyClass-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#roverSensor-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#DirectPositionObservation-hasResult-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#occupation-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-distance-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorRole-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQuality-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-verticalAngle-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#pose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#horizontalDistance-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#baseSensor-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleType-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceType-resource>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/surveyobs/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorType-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalDistance-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalAngle-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#SurveyVectorObservation-hasResult-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#lastCalibrated-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQuality-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#roverSensor-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#DirectPositionObservation-hasResult-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#occupation-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-distance-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorRole-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQuality-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-verticalAngle-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#pose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#horizontalDistance-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#baseSensor-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleType-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceType-resource>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/surveyobs/vector_observations.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/surveyobs/vector_observations.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/surveyobs/vector_observations.shapes.ttl",
+              "focusNodes": {
+                "surveyobs:OccupationObservation": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b17": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b18": {
+                  "nodes": []
+                },
+                "surv:Occupation": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b9": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b10": {
+                  "nodes": []
+                },
+                "surveyobs:DesignModel": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b27": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b19": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b26": {
+                  "nodes": []
+                },
+                "surveyobs:QualifiedVector/sh:property/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b28": {
+                  "nodes": []
+                },
+                "surveyobs:ParcelBoundaryOccupation": {
+                  "nodes": []
+                },
+                "surveyobs:IFCRef": {
+                  "nodes": []
+                },
+                "surveyobs:QualifiedVector": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b8": {
+                  "nodes": []
+                },
+                "surv:OccupationMark": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/surveyobs/vector_observations.shapes.ttl:\n - Shape surveyobs:OccupationObservation: *none*\n - Shape _:nee097435617b41309680e435159ea277b17: *none*\n - Shape _:nee097435617b41309680e435159ea277b18: *none*\n - Shape surv:Occupation: *none*\n - Shape _:nee097435617b41309680e435159ea277b9: *none*\n - Shape _:nee097435617b41309680e435159ea277b10: *none*\n - Shape surveyobs:DesignModel: *none*\n - Shape _:nee097435617b41309680e435159ea277b27: *none*\n - Shape _:nee097435617b41309680e435159ea277b19: *none*\n - Shape _:nee097435617b41309680e435159ea277b26: *none*\n - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*\n - Shape _:nee097435617b41309680e435159ea277b28: *none*\n - Shape surveyobs:ParcelBoundaryOccupation: *none*\n - Shape surveyobs:IFCRef: *none*\n - Shape surveyobs:QualifiedVector: *none*\n - Shape _:nee097435617b41309680e435159ea277b8: *none*\n - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*\n - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*\n - Shape surv:OccupationMark: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/geopose/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b4": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b3": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b12": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b27": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b20": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b11": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b28": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b19": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/geopose/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b4: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b3: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b12: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b27: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b20: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b11: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b28: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b19: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/prov/#Generation-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedUsage>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Invalidation-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-generated>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-alternateOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInformedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-entity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-specializationOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadGeneration>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadPrimarySource>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#End-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasRevisionOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasStartedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-influencer>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Usage-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadActivity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Activity-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-agent>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadUsage>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Start-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Bundle-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadRole>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasEndedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadMember>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Entity-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedRevision>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#EmptyCollection-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Plan-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-atLocation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedEnd>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-used>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-invalidated>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasAttributedTo>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Collection-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-activity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedStart>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadPlan>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:\n - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*\n - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl",
+              "focusNodes": {
+                ":relatedDisjointWithBroaderTransitive": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:\n - Shape :relatedDisjointWithBroaderTransitive: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:\n - Shape :singlePrefLabel: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/utility/impspecs/speclist.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/utility/impspecs/speclist.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/utility/impspecs/speclist.shapes.ttl",
+              "focusNodes": {
+                "<https://data.surroundaustralia.com/def/speclist/shapes/SpecificationsAsDctStandards>": {
+                  "nodes": [
+                    "<https://linked.data.gov.au/def/csdm/impspecs/Specifications>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/utility/impspecs/speclist.shapes.ttl:\n - Shape <https://data.surroundaustralia.com/def/speclist/shapes/SpecificationsAsDctStandards>: <https://linked.data.gov.au/def/csdm/impspecs/Specifications>\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/csdm/utility/evidence/implementation_examples.ttl",
+        "url": "https://surroundaustralia.github.io/3d-csdm-model/build/tests/csdm/utility/evidence/implementation_examples.ttl",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/implementation_examples.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "implementation_examples.ttl",
+              "size": 186,
+              "isError": false,
+              "message": "Output Turtle implementation_examples.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/utility/ontexamples/shapes_4_modelexamples.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl\n - /github/workspace/_sources/utility/reqmetamodel/reqmetamodel.shapes.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl\n - https://www.w3.org/ns/sosa/sosa.ttl\n - /github/workspace/_sources/model/all/csdm.ttl\n - /github/workspace/_sources/utility/impspecs/impspecs.ttl\n - /github/workspace/_sources/model/geopose/geopose.ttl\n - /github/workspace/_sources/model/parcelsalignment/parcelsalignment.ttl\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - /github/workspace/_sources/model/surveyfeatures/surveyfeats.ttl\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/ontology/ontology.ttl\n - /github/workspace/_sources/model/geometry/geometryprim.ttl\n - /github/workspace/_sources/model/container/container.ttl\n - https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl\n - /github/workspace/_sources/model/surveyprov/surveyprov.ttl\n - https://www.w3.org/ns/prov-o\n - /github/workspace/_sources/model/surveyobs/surveyobs.ttl"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/commonpatterns/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
+              "focusNodes": {
+                ":NumericLiteral": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n761adbc17fed4e3c8e3fd9003a17d273b4": {
+                  "nodes": []
+                },
+                ":QualityMeasureShape": {
+                  "nodes": []
+                },
+                "_:n761adbc17fed4e3c8e3fd9003a17d273b3": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                ":QualityClassShape": {
+                  "nodes": []
+                },
+                ":MeasureShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n761adbc17fed4e3c8e3fd9003a17d273b4: *none*\n - Shape :QualityMeasureShape: *none*\n - Shape _:n761adbc17fed4e3c8e3fd9003a17d273b3: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :QualityClassShape: *none*\n - Shape :MeasureShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
+                  "nodes": []
+                },
+                "_:n8cf99ed50dcb4e88a5aa7ccb8ecf8824b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
+                  "nodes": []
+                },
+                "_:n8cf99ed50dcb4e88a5aa7ccb8ecf8824b5": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape _:n8cf99ed50dcb4e88a5aa7ccb8ecf8824b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n - Shape _:n8cf99ed50dcb4e88a5aa7ccb8ecf8824b5: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
+              "focusNodes": {
+                ":CompoundNameShape": {
+                  "nodes": []
+                },
+                ":NamePartShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/container/container.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/container/container.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/container/container.shapes.ttl",
+              "focusNodes": {
+                "container:CSD": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/container/container.shapes.ttl:\n - Shape container:CSD: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/container/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/container/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/container/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#locality-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#observedVectors-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#compoundCRS-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#verticalDatum-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyType-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#points-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#annotations-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#bearingRotation-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#supportingDocuments-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#parcels-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedObservations-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedVectors-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#referencedCSD-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationFeatures-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyProvenance-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescriptors-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationObservations-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#horizontalCRS-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#purpose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#vectorObservations-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/container.owl-shapes#adminUnit-resource>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/container/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#locality-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#observedVectors-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#compoundCRS-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#verticalDatum-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyType-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#points-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#annotations-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#bearingRotation-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#supportingDocuments-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#parcels-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedObservations-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adoptedVectors-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#referencedCSD-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationFeatures-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyProvenance-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescriptors-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#surveyDescription-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#occupationObservations-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#horizontalCRS-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#purpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#vectorObservations-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/container.owl-shapes#adminUnit-resource>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/geometry/geometryprimitives.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/geometry/geometryprimitives.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/geometry/geometryprimitives.shapes.ttl",
+              "focusNodes": {
+                ":SolidTopology": {
+                  "nodes": []
+                },
+                ":ExtrudedSurface": {
+                  "nodes": []
+                },
+                ":AbstractSolidGeometry": {
+                  "nodes": []
+                },
+                "geo:Geometry/sh:not": {
+                  "nodes": []
+                },
+                "geo:Feature": {
+                  "nodes": []
+                },
+                ":ExtrudedGeometry": {
+                  "nodes": []
+                },
+                ":3DSpatialUnit": {
+                  "nodes": []
+                },
+                ":ExtrudedCurve": {
+                  "nodes": []
+                },
+                ":ExtensionRule": {
+                  "nodes": []
+                },
+                ":BoundaryEdge": {
+                  "nodes": []
+                },
+                "geo:Geometry": {
+                  "nodes": []
+                },
+                "geo:Feature/sh:not": {
+                  "nodes": []
+                },
+                ":Face": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:\n - Shape :SolidTopology: *none*\n - Shape :ExtrudedSurface: *none*\n - Shape :AbstractSolidGeometry: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape geo:Feature: *none*\n - Shape :ExtrudedGeometry: *none*\n - Shape :3DSpatialUnit: *none*\n - Shape :ExtrudedCurve: *none*\n - Shape :ExtensionRule: *none*\n - Shape :BoundaryEdge: *none*\n - Shape geo:Geometry: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape :Face: *none*\n - Shape geo:Geometry/sh:not: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/geometry/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/geometry/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/geometry/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>": {
+                  "nodes": []
+                },
+                "_:n02ef4bbf94be468082dd0be70d13371cb6": {
+                  "nodes": []
+                },
+                "_:n02ef4bbf94be468082dd0be70d13371cb7": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*\n - Shape _:n02ef4bbf94be468082dd0be70d13371cb6: *none*\n - Shape _:n02ef4bbf94be468082dd0be70d13371cb7: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl",
+              "focusNodes": {
+                ":OrientedReferenceShape": {
+                  "nodes": []
+                },
+                ":OrientedArcShape": {
+                  "nodes": []
+                },
+                ":RadiusRequiredShape": {
+                  "nodes": []
+                },
+                ":DirectedReferencesShape": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :OrientedReferenceShape: *none*\n - Shape :OrientedArcShape: *none*\n - Shape :RadiusRequiredShape: *none*\n - Shape :DirectedReferencesShape: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/surveyfeatures/survey_features.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/surveyfeatures/survey_features.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/surveyfeatures/survey_features.shapes.ttl",
+              "focusNodes": {
+                "surv:SurveyedLine-horizontalAngle/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "surv:Monument": {
+                  "nodes": []
+                },
+                "surv:Occupation": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db3": {
+                  "nodes": []
+                },
+                "surv:NoOccupation": {
+                  "nodes": []
+                },
+                "surv:SurveyMark": {
+                  "nodes": []
+                },
+                "surv:AdoptedVector": {
+                  "nodes": []
+                },
+                "surv:GeodeticReferenceMark": {
+                  "nodes": []
+                },
+                "surv:BoundaryMark": {
+                  "nodes": []
+                },
+                "surv:Setup": {
+                  "nodes": []
+                },
+                "surv:SurveyMarkCondition": {
+                  "nodes": []
+                },
+                "surv:ConditionCode": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db19": {
+                  "nodes": []
+                },
+                "surv:ObservedVector": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-verticalAngle/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:Distance": {
+                  "nodes": []
+                },
+                "surv:Survey": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db12": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db4": {
+                  "nodes": []
+                },
+                "surv:CadastralMark": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db20": {
+                  "nodes": []
+                },
+                "surv:Angle": {
+                  "nodes": []
+                },
+                "surv:InstrumentPoint": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-distance/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:SurveyPoint": {
+                  "nodes": []
+                },
+                "surv:AllowableCoordinateReferenceSystem": {
+                  "nodes": []
+                },
+                "_:n4e19c14ee664491ab15ff3f9aa3fd26db11": {
+                  "nodes": []
+                },
+                "surv:OccupationMark": {
+                  "nodes": []
+                },
+                "surv:SurveyPointProvenance": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/surveyfeatures/survey_features.shapes.ttl:\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:Monument: *none*\n - Shape surv:Occupation: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db3: *none*\n - Shape surv:NoOccupation: *none*\n - Shape surv:SurveyMark: *none*\n - Shape surv:AdoptedVector: *none*\n - Shape surv:GeodeticReferenceMark: *none*\n - Shape surv:BoundaryMark: *none*\n - Shape surv:Setup: *none*\n - Shape surv:SurveyMarkCondition: *none*\n - Shape surv:ConditionCode: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db19: *none*\n - Shape surv:ObservedVector: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*\n - Shape surv:Distance: *none*\n - Shape surv:Survey: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db12: *none*\n - Shape surv:SurveyedLine: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db4: *none*\n - Shape surv:CadastralMark: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db20: *none*\n - Shape surv:Angle: *none*\n - Shape surv:InstrumentPoint: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*\n - Shape surv:SurveyPoint: *none*\n - Shape surv:AllowableCoordinateReferenceSystem: *none*\n - Shape _:n4e19c14ee664491ab15ff3f9aa3fd26db11: *none*\n - Shape surv:OccupationMark: *none*\n - Shape surv:SurveyPointProvenance: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/surveyobs/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/surveyobs/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/surveyobs/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorType-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalDistance-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalAngle-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyClass-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#SurveyVectorObservation-hasResult-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#lastCalibrated-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQuality-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyClass-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#roverSensor-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#DirectPositionObservation-hasResult-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#occupation-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-distance-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorRole-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQuality-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-verticalAngle-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#pose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#horizontalDistance-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#baseSensor-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleType-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceType-resource>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/surveyobs/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorType-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalDistance-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-horizontalAngle-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#SurveyVectorObservation-hasResult-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#lastCalibrated-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQuality-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#roverSensor-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#DirectPositionObservation-hasResult-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#occupation-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-distance-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#sensorRole-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleQuality-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceQualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#QualifiedVector-verticalAngle-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#pose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#horizontalDistance-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#baseSensor-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleType-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceAccuracyMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#distanceType-resource>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/surveyobs/vector_observations.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/surveyobs/vector_observations.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/surveyobs/vector_observations.shapes.ttl",
+              "focusNodes": {
+                "surveyobs:OccupationObservation": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b17": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b18": {
+                  "nodes": []
+                },
+                "surv:Occupation": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b9": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b10": {
+                  "nodes": []
+                },
+                "surveyobs:DesignModel": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b27": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b19": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b26": {
+                  "nodes": []
+                },
+                "surveyobs:QualifiedVector/sh:property/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b28": {
+                  "nodes": []
+                },
+                "surveyobs:ParcelBoundaryOccupation": {
+                  "nodes": []
+                },
+                "surveyobs:IFCRef": {
+                  "nodes": []
+                },
+                "surveyobs:QualifiedVector": {
+                  "nodes": []
+                },
+                "_:nee097435617b41309680e435159ea277b8": {
+                  "nodes": []
+                },
+                "surv:OccupationMark": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/surveyobs/vector_observations.shapes.ttl:\n - Shape surveyobs:OccupationObservation: *none*\n - Shape _:nee097435617b41309680e435159ea277b17: *none*\n - Shape _:nee097435617b41309680e435159ea277b18: *none*\n - Shape surv:Occupation: *none*\n - Shape _:nee097435617b41309680e435159ea277b9: *none*\n - Shape _:nee097435617b41309680e435159ea277b10: *none*\n - Shape surveyobs:DesignModel: *none*\n - Shape _:nee097435617b41309680e435159ea277b27: *none*\n - Shape _:nee097435617b41309680e435159ea277b19: *none*\n - Shape _:nee097435617b41309680e435159ea277b26: *none*\n - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*\n - Shape _:nee097435617b41309680e435159ea277b28: *none*\n - Shape surveyobs:ParcelBoundaryOccupation: *none*\n - Shape surveyobs:IFCRef: *none*\n - Shape surveyobs:QualifiedVector: *none*\n - Shape _:nee097435617b41309680e435159ea277b8: *none*\n - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*\n - Shape surveyobs:QualifiedVector/sh:property/sh:or/rdf:first: *none*\n - Shape surv:OccupationMark: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/model/geopose/owl-consistency.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
+              "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b4": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b3": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b12": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b27": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b20": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b11": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b28": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:na87ec3f73a484f0c9d08fe501383a3f5b19": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/model/geopose/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b4: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b3: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b12: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b27: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b20: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b11: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b28: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*\n - Shape _:na87ec3f73a484f0c9d08fe501383a3f5b19: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/sosa/#testResult>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testRequiredTime>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testObservedProperty>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/sosa/#testFeatureOfInterest>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl:\n - Shape <https://www.ogc.org/rules/sosa/#testResult>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testResultNotEmptyNode>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testRequiredTime>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testSimpleResultLiteral>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testObservedProperty>: *none*\n - Shape <https://www.ogc.org/rules/sosa/#testFeatureOfInterest>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/prov/#Generation-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedUsage>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Invalidation-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-generated>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-alternateOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInformedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-entity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-specializationOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadGeneration>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadPrimarySource>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#End-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasRevisionOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasStartedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-influencer>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Usage-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadActivity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Activity-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-agent>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadUsage>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Start-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Bundle-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadRole>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasEndedBy>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadMember>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Entity-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedRevision>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#EmptyCollection-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Plan-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-atLocation>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedEnd>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-used>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-invalidated>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-wasAttributedTo>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#Collection-shape>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-activity>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-qualifiedStart>": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/prov/#prop-hadPlan>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl:\n - Shape <https://www.ogc.org/rules/prov/#Generation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDelegation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInfluence>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasGeneratedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Invalidation-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-generated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-alternateOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedInvalidation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInformedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInfluencedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasDerivedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-entity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-specializationOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedQuotation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAssociation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadGeneration>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPrimarySource>: *none*\n - Shape <https://www.ogc.org/rules/prov/#End-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasRevisionOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasStartedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-influencer>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Usage-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadActivity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Activity-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#InstantaneousEvent-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-agent>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadUsage>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasQuotedFrom>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasInvalidatedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Start-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-actedOnBehalfOf>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Bundle-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadRole>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasEndedBy>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadMember>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Entity-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedDerivation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedRevision>: *none*\n - Shape <https://www.ogc.org/rules/prov/#EmptyCollection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Plan-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-atLocation>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAssociatedWith>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedCommunication>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedEnd>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedAttribution>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-used>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-invalidated>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-wasAttributedTo>: *none*\n - Shape <https://www.ogc.org/rules/prov/#Collection-shape>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-activity>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-qualifiedStart>: *none*\n - Shape <https://www.ogc.org/rules/prov/#prop-hadPlan>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl",
+              "focusNodes": {
+                ":relatedDisjointWithBroaderTransitive": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl:\n - Shape :relatedDisjointWithBroaderTransitive: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl",
+              "focusNodes": {
+                ":singlePrefLabel": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl:\n - Shape :singlePrefLabel: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/utility/impspecs/speclist.shapes.ttl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/utility/impspecs/speclist.shapes.ttl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/utility/impspecs/speclist.shapes.ttl",
+              "focusNodes": {
+                "<https://data.surroundaustralia.com/def/speclist/shapes/SpecificationsAsDctStandards>": {
+                  "nodes": [
+                    "<https://linked.data.gov.au/def/csdm/impspecs/Specifications>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/utility/impspecs/speclist.shapes.ttl:\n - Shape <https://data.surroundaustralia.com/def/speclist/shapes/SpecificationsAsDctStandards>: <https://linked.data.gov.au/def/csdm/impspecs/Specifications>\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  }
+}

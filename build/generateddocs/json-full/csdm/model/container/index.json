@@ -1,0 +1,89 @@
+
+
+{
+  "itemIdentifier": "icsm.csdm.model.container",
+  "name": "CSDM Survey Plan Container",
+  "abstract": "Import closure for the 3D model packages and aggregation containers for exchange objects.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "3. Containers",
+  "highlighted": false,
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/container"
+  ],
+  "dependsOn": [
+    "icsm.csdm.model.commonpatterns",
+    "icsm.csdm.model.geometry",
+    "icsm.csdm.model.surveyfeatures",
+    "icsm.csdm.model.surveyobs",
+    "icsm.csdm.model.surveyprov",
+    "ogc.bbr.utils.compoundName.ontology",
+    "ogc.ladm.land-parcels.ontology",
+    "ogc.model.cross-domain.prov",
+    "ogc.model.cross-domain.sosa",
+    "ogc.skos.concept"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": {
+    "icsm.csdm.model.container": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/container.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/owl-consistency.shapes.ttl"
+    ],
+    "icsm.csdm.model.commonpatterns": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/shapes.shacl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/commonpatterns/owl-consistency.shapes.ttl"
+    ],
+    "ogc.bbr.utils.compoundName.ontology": [
+      "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl"
+    ],
+    "icsm.csdm.model.geometry": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/geometryprimitives.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/owl-consistency.shapes.ttl"
+    ],
+    "ogc.geo.topo.ontology": [
+      "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+    ],
+    "icsm.csdm.model.surveyfeatures": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/survey_features.shapes.ttl"
+    ],
+    "icsm.csdm.model.surveyobs": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/owl-consistency.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/vector_observations.shapes.ttl"
+    ],
+    "icsm.csdm.model.geopose": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/owl-consistency.shapes.ttl"
+    ],
+    "ogc.model.cross-domain.sosa": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/sosa/rules.shacl"
+    ],
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ],
+    "ogc.skos.concept": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/concept/rules.shacl"
+    ],
+    "ogc.skos.common": [
+      "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
+    ]
+  },
+  "dateOfLastChange": "2026-11-01",
+  "ontology": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/container/ontology.ttl",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/container/",
+  "validationPassed": true,
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-model",
+  "gitPath": "_sources/model/container"
+}

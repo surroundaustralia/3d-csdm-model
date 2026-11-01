@@ -1,0 +1,65 @@
+
+
+{
+  "itemIdentifier": "icsm.csdm.model.geometry",
+  "name": "CSDM Geometry Primitives",
+  "abstract": "Extends GeoSPARQL with a named subset of ISO 19107 concepts for 3D solids and 3D topology amongst features. A candidate extension for GeoSPARQL 1.1. Includes the former GeoSPARQL 3D profile placeholder module, and maps its terms to the Topo-Feature and spatial-representation ontologies used by the exchange encoding.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "1. Foundations",
+  "highlighted": false,
+  "concept": [
+    "https://linked.data.gov.au/def/csdm/geometry"
+  ],
+  "dependsOn": [
+    "ogc.geo.topo.ontology",
+    "ogc.ladm.land-parcels.spatialRepresentationDefinition",
+    "ogc.model.cross-domain.geosparql"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": {
+    "icsm.csdm.model.geometry": [
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/geometryprimitives.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/owl-consistency.shapes.ttl"
+    ],
+    "ogc.geo.topo.ontology": [
+      "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+    ]
+  },
+  "dateOfLastChange": "2026-11-01",
+  "ontology": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/geometry/ontology.ttl",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/surroundaustralia/3d-csdm-model/blob/main/build/tests/csdm/model/geometry/",
+  "examples": [
+    {
+      "title": "geometryprimitives examples",
+      "content": "Example data from `csdm_model/examples/geometryprimitives_examples.ttl`.",
+      "base-output-filename": "geometryprimitives_examples",
+      "snippets": [
+        {
+          "language": "turtle",
+          "ref": "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/examples/geometryprimitives_examples.ttl",
+          "url": "https://surroundaustralia.github.io/3d-csdm-model/build/tests/csdm/model/geometry/geometryprimitives_examples.ttl",
+          "sizeBytes": 3078,
+          "code": "# baseURI: https://www.opengis.net/def/csdm/geometryprimitives/examples/\n# imports: https://linked.data.gov.au/def/csdm/geometry.shapes\n# imports: https://data.surroundaustralia.com/def/ontexamples/shapes\n# prefix: examples\n\n@prefix examples: <https://www.opengis.net/def/csdm/geometryprimitives/examples/> .\n@prefix geo: <http://www.opengis.net/ont/geosparql#> .\n@prefix geometry: <https://linked.data.gov.au/def/csdm/geometry/> .\n@prefix owl: <http://www.w3.org/2002/07/owl#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\nexamples:\n  a owl:Ontology ;\n  owl:imports <https://linked.data.gov.au/def/csdm/geometry.shapes> ;\n  owl:imports <https://data.surroundaustralia.com/def/ontexamples/shapes> ;\n  owl:versionInfo \"Created with TopBraid Composer\" ;\n.\nexamples:ExtensionRule_1\n  a <https://linked.data.gov.au/def/csdm/geometry/ExtensionRule> ;\n  geometry:extension 1000.0 ;\n  geometry:isOutward true ;\n  rdfs:label \"ExtrudedSurface_Implicit\" ;\n.\nexamples:ExtrudedSurface_1\n  a <https://linked.data.gov.au/def/csdm/geometry/ExtrudedSurface> ;\n  geo:asGML \"\"\"<gml:Polygon gml:id=\\\"blue_top\\\">\n                        <gml:exterior>\n                            <gml:LinearRing gml:id=\\\"lr1\\\">\n                                <gml:pointProperty xlink:href=\\\"#p1\\\"/>\n                                <gml:pointProperty xlink:href=\\\"#p4\\\"/>\n                                <gml:pointProperty xlink:href=\\\"#p3\\\"/>\n                                <gml:pointProperty xlink:href=\\\"#p2\\\"/>\n                                <gml:pointProperty xlink:href=\\\"#p1\\\"/>\n                            </gml:LinearRing>\n                        </gml:exterior>\n                    </gml:Polygon>\"\"\"^^geo:gmlLiteral ;\n  geo:dimension 3 ;\n  rdfs:comment \"Example with no explicit extrusion information - implement system rules will apply based on surface orientation (e.g. centre of earth to 1000 metres above ground level)\" ;\n  rdfs:label \"ExtrudedSurface_Implicit\" ;\n.\nexamples:ExtrudedSurface_2\n  a <https://linked.data.gov.au/def/csdm/geometry/ExtrudedSurface> ;\n  geo:asGML \"\"\"<gml:Polygon gml:id=\\\"blue_top\\\">\n                        <gml:exterior>\n                            <gml:LinearRing gml:id=\\\"lr1\\\">\n                                <gml:pointProperty xlink:href=\\\"#p1\\\"/>\n                                <gml:pointProperty xlink:href=\\\"#p4\\\"/>\n                                <gml:pointProperty xlink:href=\\\"#p3\\\"/>\n                                <gml:pointProperty xlink:href=\\\"#p2\\\"/>\n                                <gml:pointProperty xlink:href=\\\"#p1\\\"/>\n                            </gml:LinearRing>\n                        </gml:exterior>\n                    </gml:Polygon>\"\"\"^^geo:gmlLiteral ;\n  geo:dimension 3 ;\n  rdfs:comment \"Example with explicit upward extrusion limit information - the implicit downward extension is 0\" ;\n  rdfs:label \"ExtrudedSurface_Explicit\" ;\n  <https://linked.data.gov.au/def/csdm/geometry/limit> examples:ExtensionRule_1 ;\n.\n"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-model",
+  "gitPath": "_sources/model/geometry"
+}

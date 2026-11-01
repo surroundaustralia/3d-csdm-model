@@ -1,0 +1,44 @@
+
+
+{
+  "itemIdentifier": "icsm.csdm.utility.ontexamples",
+  "name": "Ontology Example Shapes",
+  "abstract": "Edited version of PROF shapes for creating and attaching example resources to ontology classes.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-10-26T00:00:00Z",
+  "itemClass": "model",
+  "version": "0.1",
+  "group": "Utility: design process and documentation",
+  "highlighted": false,
+  "concept": [
+    "https://data.surroundaustralia.com/def/ontexamples/shapes"
+  ],
+  "dependsOn": [
+    "ogc.model.cross-domain.dcterms",
+    "ogc.model.cross-domain.prof",
+    "ogc.model.cross-domain.prov"
+  ],
+  "sources": [
+    {
+      "title": "3D CSDM model source (icsm-au/3d-csdm)",
+      "link": "https://github.com/icsm-au/3d-csdm/tree/main/csdm_model"
+    }
+  ],
+  "tags": [
+    "3D CSDM",
+    "cadastre",
+    "ontology"
+  ],
+  "shaclShapes": {
+    "ogc.model.cross-domain.prov": [
+      "https://ogcincubator.github.io/cross-domain-model/_sources/prov/shapes.shacl"
+    ]
+  },
+  "dateOfLastChange": "2026-11-01",
+  "ontology": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/utility/ontexamples/ontology.ttl",
+  "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/utility/ontexamples/",
+  "validationPassed": true,
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/surroundaustralia/3d-csdm-model",
+  "gitPath": "_sources/utility/ontexamples"
+}

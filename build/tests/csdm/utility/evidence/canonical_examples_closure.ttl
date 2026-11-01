@@ -1,0 +1,89 @@
+@prefix examples: <https://linked.data.gov.au/def/csdm/parcels/examples/> .
+@prefix examples1: <https://linked.data.gov.au/def/csdm/surveyactivity/examples/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix implext: <https://linked.data.gov.au/dataset/csdm/implementation-examples/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix reqmetamodel: <https://linked.data.gov.au/def/csdm/reqmetamodel/> .
+@prefix surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/> .
+@prefix surveyobs-examples: <https://linked.data.gov.au/dataset/csdm/surveyobs-examples/> .
+
+geo:CompositeSolid reqmetamodel:canonicalExample examples:s1,
+        examples:s2 .
+
+prov:Organization reqmetamodel:canonicalExample examples1:LINZ .
+
+prov:SoftwareAgent reqmetamodel:canonicalExample examples1:LandOnlineNZ .
+
+<https://linked.data.gov.au/def/csdm/canonical_examples> a owl:Ontology ;
+    owl:imports <https://linked.data.gov.au/dataset/csdm/implementation-examples>,
+        <https://linked.data.gov.au/dataset/csdm/surveyfeatures-examples>,
+        <https://linked.data.gov.au/dataset/csdm/surveyobs-examples>,
+        <https://linked.data.gov.au/def/csdm/common/examples>,
+        <https://linked.data.gov.au/def/csdm/parcels/examples>,
+        <https://linked.data.gov.au/def/csdm/surveyactivity/examples> .
+
+<https://linked.data.gov.au/def/csdm/commonpatterns/RelevantJurisdictionalCodelist> foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/CodeLists.png> .
+
+<https://linked.data.gov.au/def/csdm/parcels/LandPropertyUnit> reqmetamodel:implExample implext:LandPropertyUnitLandinfraGraphic .
+
+<https://linked.data.gov.au/def/csdm/parcels/Parcel> reqmetamodel:implExample implext:GML-SpatialUnit,
+        implext:Parcel12d,
+        implext:ParcelEPlanNSW .
+
+<https://linked.data.gov.au/def/csdm/parcels/PrimaryParcel> reqmetamodel:canonicalExample examples:cp1,
+        examples:cp2 .
+
+<https://linked.data.gov.au/def/csdm/parcels/SecondaryParcel> reqmetamodel:implExample implext:EasementEPlanNSW,
+        implext:EasementInfraGML,
+        implext:EasementLADM .
+
+surv:AdoptedVector reqmetamodel:implExample implext:AdoptedObservations12D,
+        implext:AdoptedObservationsEPlanNSW .
+
+surv:BoundaryMark reqmetamodel:implExample implext:BoundaryMark,
+        implext:BoundaryMarkEPlanNSW,
+        implext:BoundaryMarkIFC,
+        implext:BoundaryMarkInfraGML,
+        implext:BoundaryMarkLADM .
+
+surv:CadastralMark reqmetamodel:implExample implext:CadasralMarkInfraGML,
+        implext:CadastralMark12D,
+        implext:CadastralMarkLADM,
+        implext:CadastralMarksEPlanNSW,
+        implext:CadastralMarksIFC .
+
+surv:GeodeticReferenceMark reqmetamodel:implExample implext:GeodeticMark12D,
+        implext:GeodeticMarkEPlanNSW,
+        implext:GeodeticMarkInfraGML,
+        implext:GeodeticMarksIFC .
+
+surv:Measure reqmetamodel:implExample implext:MeasurementInfraGML,
+        implext:MeasurementUnits12d,
+        implext:MeasurementUnitsEPlanNSW .
+
+surv:Monument reqmetamodel:implExample implext:Monument12d,
+        implext:MonumentEPlanNSW,
+        implext:MonumentLADM .
+
+surv:ObservedVector reqmetamodel:implExample implext:SurveyObservation12D,
+        implext:SurveyObservationEPlanNSW,
+        implext:SurveyObservationIFC .
+
+surv:OccupationMark reqmetamodel:implExample implext:OccupationEPlanNSW,
+        implext:OccupationObservationsIFC .
+
+surv:Setup reqmetamodel:implExample implext:SetupEPlanNSW,
+        implext:landinfrasetup,
+        implext:landinfrasetup_2 .
+
+surv:Traverse reqmetamodel:canonicalExample surveyobs-examples:tr1 .
+
+<https://linked.data.gov.au/def/csdm/surveyprov/SurveyApproval> reqmetamodel:canonicalExample examples1:SurveyApproval_1 .
+
+<https://linked.data.gov.au/def/csdm/surveyprov/SurveyLodged> reqmetamodel:canonicalExample examples1:SurveyLodged_1 .
+
+<https://w3id.org/ogc/utils/label/CompoundName> foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/CompoundName.png> ;
+    reqmetamodel:canonicalExample examples:Lot1_Appellation .
+
