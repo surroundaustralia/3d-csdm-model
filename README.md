@@ -1,4 +1,4 @@
-# 3D CSDM Ontologies â€“ OGC Blocks register
+# 3D CSDM Ontologies - OGC Blocks register
 
 The ontology modules of the ICSM 3D Cadastral Survey Data Model (3D CSDM) from the
 [`csdm_model`](https://github.com/icsm-au/3d-csdm/tree/main/csdm_model) directory of `icsm-au/3d-csdm`. They are packaged
@@ -8,9 +8,9 @@ Identifier prefix: `icsm.csdm.`
 
 The register is split in two:
 
-- **`icsm.csdm.model.*` – the CSDM model.** The ontology modules and SHACL shapes that describe the CSDM, with the
+- **`icsm.csdm.model.*` â€“ the CSDM model.** The ontology modules and SHACL shapes that describe the CSDM, with the
   canonical examples for each module. These blocks do not depend on the utility blocks.
-- **`icsm.csdm.utility.*` – design process and documentation.** The vocabularies, meta-models and evidence used to
+- **`icsm.csdm.utility.*` â€“ design process and documentation.** The vocabularies, meta-models and evidence used to
   design and document the model: implementation-specification taxonomy, requirements meta-model, example-attachment
   shapes, attributions, implementation examples from existing formats, competency queries and the pyLODE
   configuration. These blocks depend on the model, not the other way round.
@@ -25,7 +25,7 @@ The register is split in two:
 | `model.surveyobs` | `surveyobs.ttl` | vector_observations shapes, 1 example | cdm `sosa`, `geosparql`, `schema-org`, `dcterms` |
 | `model.surveyprov` | `surveyprov.ttl` | 1 example | cdm `prov`, `prof` |
 | `model.container` | `container.ttl` | container shapes | cdm `sosa`, `prov`; skos `concept` |
-| `model.all` | `csdm.ttl` (PROF profile of all modules) | – | `model.container`, `model.geometry` |
+| `model.all` | `csdm.ttl` (PROF profile of all modules) | â€“ | `model.container`, `model.geometry` |
 
 The Cadastral Parcels module has been replaced by OGC Land Parcels. `model.parcelsalignment` deprecates each CSDM
 parcels term and maps it to the Land Parcels term that replaces it. The original module and its reconciliation are kept
