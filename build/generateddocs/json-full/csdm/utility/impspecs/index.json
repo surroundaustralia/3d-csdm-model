@@ -44,7 +44,7 @@
       "https://ogcincubator.github.io/bblocks-skos/_sources/common/rules.shacl"
     ]
   },
-  "dateOfLastChange": "2026-11-01",
+  "dateOfLastChange": "2026-11-02",
   "ontology": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/utility/impspecs/ontology.ttl",
   "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/utility/impspecs/",
   "validationPassed": true,

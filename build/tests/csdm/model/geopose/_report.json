@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.csdm.model.geopose - CSDM GeoPose",
   "bblockName": "CSDM GeoPose",
   "bblockId": "icsm.csdm.model.geopose",
-  "generated": "2026-11-01T23:45:15.659298+00:00",
+  "generated": "2026-11-02T00:08:10.642297+00:00",
   "result": true,
   "items": [
     {
@@ -54,30 +54,16 @@
             {
               "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb3": {
                   "nodes": []
                 },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b12": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb28": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b27": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>": {
-                  "nodes": [
-                    "ex:result2/surv:pose/geopose:angles"
-                  ]
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b28": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>": {
@@ -85,48 +71,62 @@
                     "ex:result2/surv:pose/geopose:angles/geopose:yaw"
                   ]
                 },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b11": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb20": {
                   "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:n9c663bd13ff14a7e86f64363394189ffb27": {
+                  "nodes": []
+                },
+                "_:n9c663bd13ff14a7e86f64363394189ffb11": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>": {
+                  "nodes": [
+                    "ex:result2/surv:pose/geopose:angles"
+                  ]
                 },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>": {
-                  "nodes": []
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b4": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>": {
-                  "nodes": []
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b19": {
-                  "nodes": []
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b20": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n9c663bd13ff14a7e86f64363394189ffb4": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>": {
+                  "nodes": []
+                },
+                "_:n9c663bd13ff14a7e86f64363394189ffb19": {
+                  "nodes": []
+                },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>": {
                   "nodes": []
                 },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b3": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb12": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/geopose/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b12: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b27: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: ex:result2/surv:pose/geopose:angles\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b28: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: ex:result2/surv:pose/geopose:angles/geopose:yaw\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b11: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b4: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b19: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b20: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b3: *none*\n"
+              "message": "Focus nodes for _sources/model/geopose/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb3: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb28: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: ex:result2/surv:pose/geopose:angles/geopose:yaw\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb20: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb27: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb11: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: ex:result2/surv:pose/geopose:angles\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb4: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb19: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb12: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*\n"
             }
           ]
         }
@@ -180,30 +180,16 @@
             {
               "shaclFile": "_sources/model/geopose/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb3": {
                   "nodes": []
                 },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b12": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb28": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b27": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>": {
-                  "nodes": [
-                    "ex:result1/surv:pose/geopose:angles"
-                  ]
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b28": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>": {
@@ -211,37 +197,48 @@
                     "ex:result1/surv:pose/geopose:angles/geopose:yaw"
                   ]
                 },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b11": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb20": {
                   "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:n9c663bd13ff14a7e86f64363394189ffb27": {
+                  "nodes": []
+                },
+                "_:n9c663bd13ff14a7e86f64363394189ffb11": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>": {
+                  "nodes": [
+                    "ex:result1/surv:pose/geopose:angles"
+                  ]
                 },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>": {
                   "nodes": []
                 },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b4": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>": {
-                  "nodes": []
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b19": {
-                  "nodes": []
-                },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b20": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb4": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first": {
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>": {
+                  "nodes": []
+                },
+                "_:n9c663bd13ff14a7e86f64363394189ffb19": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>": {
@@ -249,12 +246,15 @@
                     "ex:result1/surv:pose/geopose:angles/geopose:pitch"
                   ]
                 },
-                "_:nc3d86a9960c14b8c8446f6c19f32a680b3": {
+                "_:n9c663bd13ff14a7e86f64363394189ffb12": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/geopose/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b12: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b27: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: ex:result1/surv:pose/geopose:angles\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b28: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: ex:result1/surv:pose/geopose:angles/geopose:yaw\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b11: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b4: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b19: *none*\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b20: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: ex:result1/surv:pose/geopose:angles/geopose:pitch\n - Shape _:nc3d86a9960c14b8c8446f6c19f32a680b3: *none*\n"
+              "message": "Focus nodes for _sources/model/geopose/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb3: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb28: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>: ex:result1/surv:pose/geopose:angles/geopose:yaw\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb20: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:first: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb27: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb11: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#yaw-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#angles-resource>: ex:result1/surv:pose/geopose:angles\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#h-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb4: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#position-resource>: *none*\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb19: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#pitch-literal>: ex:result1/surv:pose/geopose:angles/geopose:pitch\n - Shape _:n9c663bd13ff14a7e86f64363394189ffb12: *none*\n - Shape <https://linked.data.gov.au/def/csdm/utils/geopose.owl-shapes#roll-literal>/sh:or/rdf:rest/rdf:first: *none*\n"
             }
           ]
         }

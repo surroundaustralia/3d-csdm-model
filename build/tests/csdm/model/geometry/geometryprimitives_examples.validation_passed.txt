@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.model.geometry - CSDM Geometry Primitives
-Generated 2026-11-01T23:45:24.849990+00:00
+Generated 2026-11-02T00:08:12.741773+00:00
 === Files ===
 Using examples/geometryprimitives_examples.ttl from examples
 Output Turtle geometryprimitives_examples.ttl created
@@ -7,67 +7,67 @@ Output Turtle geometryprimitives_examples.ttl created
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
- - https://surroundaustralia.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl
  - /github/workspace/_sources/model/geometry/geometryprim.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
+ - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl
  - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle
-Validation result for _sources/model/geometry/geometryprimitives.shapes.ttl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:
- - Shape :SolidTopology: *none*
- - Shape :ExtrudedSurface: *none*
- - Shape :AbstractSolidGeometry: *none*
- - Shape geo:Feature/sh:not: *none*
- - Shape geo:Feature: *none*
- - Shape :ExtrudedGeometry: *none*
- - Shape :3DSpatialUnit: *none*
- - Shape :ExtrudedCurve: *none*
- - Shape geo:Feature/sh:not: *none*
- - Shape :ExtensionRule: *none*
- - Shape :BoundaryEdge: *none*
- - Shape geo:Geometry: *none*
- - Shape geo:Geometry/sh:not: *none*
- - Shape :Face: *none*
- - Shape geo:Geometry/sh:not: *none*
-
 Validation result for _sources/model/geometry/owl-consistency.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: examples:ExtensionRule_1/geometry:extension
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: examples:ExtensionRule_1
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: examples:ExtensionRule_1
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: examples:ExtensionRule_1/geometry:isOutward
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*
- - Shape _:n4b8aad0dfda0460cb0598af47ef2f6e4b7: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: examples:ExtensionRule_1
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*
- - Shape _:n4b8aad0dfda0460cb0598af47ef2f6e4b6: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*
+ - Shape _:n9631c7aac186481a97a32b71e3919bc9b7: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: examples:ExtensionRule_1
+ - Shape _:n9631c7aac186481a97a32b71e3919bc9b6: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: examples:ExtensionRule_1
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: examples:ExtensionRule_1/geometry:extension
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: examples:ExtensionRule_1/geometry:isOutward
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: examples:ExtensionRule_1
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*
 
-Validation result for https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl:
+Validation result for _sources/model/geometry/geometryprimitives.shapes.ttl:
   Validation Report
   Conforms: True
   
-Focus nodes for https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl:
+Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:
+ - Shape :3DSpatialUnit: *none*
+ - Shape :Face: *none*
+ - Shape geo:Geometry: *none*
+ - Shape geo:Feature: *none*
+ - Shape geo:Geometry/sh:not: *none*
+ - Shape :SolidTopology: *none*
+ - Shape :ExtrudedCurve: *none*
+ - Shape geo:Feature/sh:not: *none*
+ - Shape geo:Feature/sh:not: *none*
+ - Shape geo:Geometry/sh:not: *none*
+ - Shape :ExtensionRule: *none*
+ - Shape :ExtrudedGeometry: *none*
+ - Shape :BoundaryEdge: *none*
+ - Shape :AbstractSolidGeometry: *none*
+ - Shape :ExtrudedSurface: *none*
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:
+ - Shape :DirectedReferencesShape: *none*
  - Shape :OrientedReferenceShape: *none*
  - Shape :OrientedArcShape: *none*
  - Shape :RadiusRequiredShape: *none*
- - Shape :DirectedReferencesShape: *none*
 
 === End SHACL ===
 

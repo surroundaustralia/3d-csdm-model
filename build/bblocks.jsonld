@@ -213,7 +213,7 @@
   "name": "Building Blocks - 3D Cadastral Survey Data Model (CSDM) Ontologies",
   "abstract": "The ontology modules of the ICSM 3D Cadastral Survey Data Model (3D CSDM), packaged as OGC Blocks.\nThe CSDM model (`icsm.csdm.model.*`) - one block per ontology module, with its SHACL shapes and canonical\nexamples - is kept separate from the utility blocks (`icsm.csdm.utility.*`) that support the design process\nand documentation: implementation evidence, requirements meta-model, attributions and documentation configuration.\n",
   "description": "Source: the `csdm_model` directory of [icsm-au/3d-csdm](https://github.com/icsm-au/3d-csdm/tree/main/csdm_model).\n\nDependencies are declared to the common ontologies registered in the\n[Cross-domain model](https://ogcincubator.github.io/cross-domain-model/) (GeoSPARQL, SOSA, PROV, PROF,\nDublin Core Terms, schema.org) and the [SKOS](https://ogcincubator.github.io/bblocks-skos/) building blocks.\nCompound names are reused from the [Utility](https://ogcincubator.github.io/bblocks-utility/) register\n(`ogc.bbr.utils.compoundName.ontology`). The CSDM Common Patterns (measures, quality classes and measures,\njurisdictional codelists, reports) are the `icsm.csdm.model.commonpatterns` block of this register.\nGeometry topology is aligned with the [Topo-Feature](https://ogcincubator.github.io/topo-feature/) ontology\n(`ogc.geo.topo.ontology`).\n\nThe Cadastral Parcels module depends on the [Land Parcels](https://ogcincubator.github.io/bblocks-land-parcels/)\nontology, which was derived from it. A concept-level comparison (ignoring IRIs) is provided in the\nparcels block to support reconciliation of the two.\n\nThe [schema building blocks](https://icsm-au.github.io/3d-csdm-schema/) for the CSDM exchange format are\nmaintained separately.\n",
-  "modified": "2026-11-01T23:45:13.872790",
+  "modified": "2026-11-02T00:08:08.764632",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"862052921203373f8136e6f464e0dfdd693e79f5",
@@ -233,7 +233,7 @@
     "https://ogcincubator.github.io/bblocks-skos/build/register.json",
     "https://ogcincubator.github.io/bblocks-land-parcels/build/register.json",
     "https://ogcincubator.github.io/bblocks-utility/build/register.json",
-    "https://surroundaustralia.github.io/topo-feature/build/register.json"
+    "https://ogcincubator.github.io/topo-feature/build/register.json"
   ],
   "remoteCacheDir": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/_cache",
   "links": [
@@ -302,7 +302,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/geopose/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -384,7 +384,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/utility/ontexamples/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -452,7 +452,7 @@
         "ontology"
       ],
       "shaclShapes": null,
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/utility/reqmetamodel/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -534,7 +534,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -542,7 +542,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/geometry/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -631,7 +631,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/commonpatterns/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -719,7 +719,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/utility/attributions/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -802,7 +802,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/parcelsalignment/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -916,7 +916,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -924,7 +924,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/surveyfeatures/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1033,7 +1033,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/utility/impspecs/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1168,7 +1168,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -1185,7 +1185,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/surveyobs/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1318,7 +1318,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -1344,7 +1344,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/surveyprov/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1463,7 +1463,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -1536,7 +1536,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/container/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1649,7 +1649,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -1722,7 +1722,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/model/all/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -1838,7 +1838,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -1920,7 +1920,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/utility/evidence/",
       "validationPassed": true,
       "testOutputs": "https://github.com/surroundaustralia/3d-csdm-model/blob/main/build/tests/csdm/utility/evidence/",
@@ -2026,7 +2026,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -2099,7 +2099,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "ontology": {
         "prof:hasArtifact": "https://surroundaustralia.github.io/3d-csdm-model/build/annotated/csdm/utility/modelindex/ontology.ttl",
         "prof:hasRole": "role:specification",
@@ -2214,7 +2214,7 @@
         },
         {
           "prof:hasArtifact": [
-            "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+            "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
           ],
           "rdfs:seeAlso": "bblocks://ogc.geo.topo.ontology",
           "prof:hasRole": "role:validation",
@@ -2287,7 +2287,7 @@
           "dct:conformsTo": "shacl:"
         }
       ],
-      "dateOfLastChange": "2026-11-01",
+      "dateOfLastChange": "2026-11-02",
       "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/utility/documentation/",
       "validationPassed": true,
       "documentation": {

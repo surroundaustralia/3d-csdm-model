@@ -51,7 +51,7 @@
       "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geometry/owl-consistency.shapes.ttl"
     ],
     "ogc.geo.topo.ontology": [
-      "https://surroundaustralia.github.io/topo-feature/_sources/ontology/shapes.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
     ],
     "icsm.csdm.model.surveyfeatures": [
       "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
@@ -80,7 +80,7 @@
       "https://surroundaustralia.github.io/3d-csdm-model/_sources/utility/impspecs/speclist.shapes.ttl"
     ]
   },
-  "dateOfLastChange": "2026-11-01",
+  "dateOfLastChange": "2026-11-02",
   "sourceFiles": "https://surroundaustralia.github.io/3d-csdm-model/_sources/utility/evidence/",
   "validationPassed": true,
   "testOutputs": "https://github.com/surroundaustralia/3d-csdm-model/blob/main/build/tests/csdm/utility/evidence/",
