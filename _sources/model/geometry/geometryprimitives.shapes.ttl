@@ -22,10 +22,7 @@
 
 geo:Feature
   a sh:NodeShape ;
-  sh:not [
-      rdfs:label "Instance of Geometry" ;
-      sh:class geo:Geometry ;
-    ] ;
+  sh:targetClass geo:Feature ;
   sh:not [
       rdfs:label "Instance of Geometry" ;
       sh:class geo:Geometry ;
@@ -42,10 +39,7 @@ geo:Feature-hasGeometry
 .
 geo:Geometry
   a sh:NodeShape ;
-  sh:not [
-      rdfs:label "Instance of Feature" ;
-      sh:class geo:Feature ;
-    ] ;
+  sh:targetClass geo:Geometry ;
   sh:not [
       rdfs:label "Instance of Feature" ;
       sh:class geo:Feature ;
@@ -59,6 +53,7 @@ geo:Geometry
 .
 <https://linked.data.gov.au/def/csdm/geometry/3DSpatialUnit>
   a sh:NodeShape ;
+  sh:targetClass :3DSpatialUnit ;  # generated: tools/shape-targets.py
   sh:property <https://linked.data.gov.au/def/csdm/geometry/3DSpatialUnit-boundedBy> ;
   sh:property <https://linked.data.gov.au/def/csdm/geometry/3DSpatialUnit-hasGeometry> ;
   sh:property <https://linked.data.gov.au/def/csdm/geometry/3DSpatialUnit-hasGeometryPart> ;
@@ -90,9 +85,11 @@ geo:Geometry
 .
 :AbstractSolidGeometry
   a sh:NodeShape ;
+  sh:targetClass :AbstractSolidGeometry, :ExtensionRule, :ExtrudedCurve, :ExtrudedGeometry, :ExtrudedSurface, geo:MultiSolid, geo:Shell, geo:Solid ;  # generated: tools/shape-targets.py
 .
 :BoundaryEdge
   a sh:NodeShape ;
+  sh:targetClass :BoundaryEdge ;  # generated: tools/shape-targets.py
   sh:property :Edge-nodeFrom ;
   sh:property :Edge-nodeTo ;
 .
@@ -113,6 +110,7 @@ geo:Geometry
 .
 :ExtensionRule
   a sh:NodeShape ;
+  sh:targetClass :ExtensionRule ;  # generated: tools/shape-targets.py
   sh:property [
       a sh:PropertyShape ;
       sh:path dc:description ;
@@ -136,6 +134,7 @@ geo:Geometry
 .
 :ExtrudedCurve
   a sh:NodeShape ;
+  sh:targetClass :ExtrudedCurve ;  # generated: tools/shape-targets.py
 .
 :ExtrudedCurve-curve
   a sh:PropertyShape ;
@@ -149,20 +148,22 @@ geo:Geometry
 .
 :ExtrudedGeometry
   a sh:NodeShape ;
+  sh:targetClass :ExtrudedCurve, :ExtrudedGeometry, :ExtrudedSurface ;  # generated: tools/shape-targets.py
   sh:property :ExtrudedGeometry-extrusion ;
 .
 :ExtrudedGeometry-extrusion
   a sh:PropertyShape ;
-  sh:path :limit ;
+  sh:path :extrusion ;
   sh:class :ExtensionRule ;
   sh:description "The limit descriptor that defines the higher dimensional extruded geometry relative to the defining low-dimensional geometry element." ;
   sh:group tosh:ImplementationPropertyGroup ;
-  sh:minCount 1 ;
+  sh:minCount 0 ;
   sh:name "extension rule" ;
   sh:order "1"^^xsd:decimal ;
 .
 :ExtrudedSurface
   a sh:NodeShape ;
+  sh:targetClass :ExtrudedSurface ;  # generated: tools/shape-targets.py
   rdfs:subClassOf gml:OrientableSurface ;
 .
 :ExtrudedSurface-surface
@@ -177,6 +178,8 @@ geo:Geometry
 .
 :Face
   a sh:NodeShape ;
+  # Constraints on boundary faces
+  sh:targetClass :BoundaryFace ;
   sh:property :Face-isTruncated ;
   sh:property :Face-touchesInward ;
   sh:property :Face-touchesOutward ;
@@ -192,7 +195,7 @@ geo:Geometry
 :Face-touchesInward
   a sh:PropertyShape ;
   sh:path :touchesInward ;
-  sh:class geo:Feature ;
+  sh:nodeKind sh:IRI ;
   sh:description "Required topological relationship to the feature occupying space immediately in the inward direction of an oriented geometry." ;
   sh:maxCount 1 ;
   sh:minCount 1 ;
@@ -201,7 +204,7 @@ geo:Geometry
 :Face-touchesOutward
   a sh:PropertyShape ;
   sh:path :touchesOutward ;
-  sh:class geo:Feature ;
+  sh:nodeKind sh:IRI ;
   sh:description "Optional topological relationship to the feature occupying space immediately in the outward direction of an oriented geometry." ;
   sh:maxCount 1 ;
   sh:minCount 0 ;
@@ -213,19 +216,6 @@ geo:Geometry
   sh:datatype geo:gmlLiteral ;
   sh:group tosh:ImplementationPropertyGroup ;
   sh:nodeKind sh:Literal ;
-.
-:SolidTopology
-  a sh:NodeShape ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path :inside ;
-      sh:class <https://linked.data.gov.au/def/csdm/geometry/3DSpatialUnit> ;
-      sh:description "The feature in the inside of a directed geometry element" ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "feature inside" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
 .
 :boundedBy
   a owl:ObjectProperty ;

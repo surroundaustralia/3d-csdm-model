@@ -1,4 +1,5 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,6 +13,12 @@
             sh:message "At most 1 value(s) of condition (OWL cardinality)."@en ;
             sh:path <https://linked.data.gov.au/def/csdm/surveyfeatures/condition> ] ;
     sh:targetClass <https://linked.data.gov.au/def/csdm/surveyfeatures/Monument> .
+
+<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal> a sh:NodeShape ;
+    sh:message "age is a datatype property with range string: its values are compatible literals."@en ;
+    sh:nodeKind sh:Literal ;
+    sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
+    sh:targetObjectsOf <https://linked.data.gov.au/def/csdm/surveyfeatures/age> .
 
 <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal> a sh:NodeShape ;
     sh:message "angle is a datatype property: its values are literals."@en ;

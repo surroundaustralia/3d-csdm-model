@@ -1,5 +1,4 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -44,12 +43,6 @@
             sh:message "At most 1 value(s) of hasResult (OWL cardinality)."@en ;
             sh:path sosa:hasResult ] ;
     sh:targetClass <https://linked.data.gov.au/def/csdm/surveyobs/SurveyVectorObservation> .
-
-<https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#age-literal> a sh:NodeShape ;
-    sh:message "age is a datatype property with range string: its values are compatible literals."@en ;
-    sh:nodeKind sh:Literal ;
-    sh:or ( [ sh:datatype xsd:string ] [ sh:datatype rdf:langString ] ) ;
-    sh:targetObjectsOf <https://linked.data.gov.au/def/csdm/surveyfeatures/age> .
 
 <https://linked.data.gov.au/def/csdm/surveyobs.owl-shapes#angleAccuracyClass-resource> a sh:NodeShape ;
     sh:message "angleAccuracyClass is an object property: its values are resources, not literals."@en ;

@@ -30,62 +30,42 @@
 
 surv:AdoptedVector
     a sh:NodeShape ;
+    sh:targetClass surv:AdoptedVector ;  # generated: tools/shape-targets.py
 .
 
 surv:AllowableCoordinateReferenceSystem
     a sh:NodeShape ;
+    sh:targetClass surv:AllowableCoordinateReferenceSystem ;  # generated: tools/shape-targets.py
 .
 
 surv:Angle
     a sh:NodeShape ;
+    sh:targetClass surv:Angle ;  # generated: tools/shape-targets.py
 .
 
 surv:BoundaryMark
     a           sh:NodeShape ;
-    sh:property surv:Monument-form ;
+    sh:targetClass surv:BoundaryMark ;  # generated: tools/shape-targets.py
 .
 
 surv:CadastralMark
     a sh:NodeShape ;
-.
-
-surv:ConditionCode
-    a               owl:Class ;
-    a               sh:NodeShape ;
-    rdfs:label      "Mark Condition Code" ;
-    rdfs:subClassOf skos:Concept ;
+    sh:targetClass surv:CadastralMark ;  # generated: tools/shape-targets.py
 .
 
 surv:Distance
     a sh:NodeShape ;
+    sh:targetClass surv:Distance ;  # generated: tools/shape-targets.py
 .
 
 surv:GeodeticReferenceMark
     a sh:NodeShape ;
-.
-
-surv:InstrumentPoint
-    a           sh:NodeShape ;
-    sh:property surv:InstrumentPoint-hasGeometry ;
-    sh:property surv:InstrumentPoint-setup ;
-.
-
-surv:InstrumentPoint-hasGeometry
-    a            sh:PropertyShape ;
-    sh:path      <http://www.opengis.net/ont/geosparql#hasGeometry> ;
-    rdfs:comment "An instrument point must have a determined location" ;
-    sh:group     <http://topbraid.org/tosh#PropertyAxiomsPropertyGroup> ;
-    sh:minCount  1 ;
-.
-
-surv:InstrumentPoint-setup
-    a        sh:PropertyShape ;
-    sh:path  surv:setup ;
-    sh:class surv:Setup ;
+    sh:targetClass surv:GeodeticReferenceMark ;  # generated: tools/shape-targets.py
 .
 
 surv:Monument
     a           sh:NodeShape ;
+    sh:targetClass surv:Monument ;  # generated: tools/shape-targets.py
     sh:property surv:Monument-condition ;
     sh:property surv:Monument-form ;
     sh:property surv:Monument-replaces ;
@@ -95,58 +75,54 @@ surv:Monument
 surv:Monument-condition
     a        sh:PropertyShape ;
     sh:path  surv:condition ;
-    sh:class surv:ConditionCode ;
+    sh:nodeKind sh:IRI ;
     sh:name  "condition" ;
 .
 
 surv:Monument-form
     a           sh:PropertyShape ;
     sh:path     surv:form ;
-    sh:class    surv:MonumentForm ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:nodeKind sh:IRI ;
 .
 
 surv:Monument-replaces
     a        sh:PropertyShape ;
     sh:path  surv:replaces ;
-    sh:class surv:Monument ;
+    sh:node surv:Monument ;
     sh:name  "replaces" ;
 .
 
 surv:NoOccupation
     a sh:NodeShape ;
+    sh:targetClass surv:NoOccupation ;  # generated: tools/shape-targets.py
 .
 
 surv:ObservedVector
     a sh:NodeShape ;
+    sh:targetClass surv:ObservedVector ;  # generated: tools/shape-targets.py
 .
 
 surv:Occupation
     a sh:NodeShape ;
+    sh:targetClass <https://linked.data.gov.au/def/csdm/surveyobs/DesignModel>, <https://linked.data.gov.au/def/csdm/surveyobs/OccupationAsFeature>, surv:NoOccupation, surv:Occupation, surv:Terrain ;  # generated: tools/shape-targets.py
 .
 
 surv:OccupationMark
     a sh:NodeShape ;
-.
-
-surv:Setup
-    a sh:NodeShape ;
-.
-
-surv:Survey
-    a sh:NodeShape ;
+    sh:targetClass <https://linked.data.gov.au/def/csdm/surveyobs/OccupationModelVertex>, surv:OccupationMark ;  # generated: tools/shape-targets.py
 .
 
 surv:SurveyMark
     a           sh:NodeShape ;
+    sh:targetClass surv:BoundaryMark, surv:CadastralMark, surv:GeodeticReferenceMark, surv:SurveyMark ;  # generated: tools/shape-targets.py
     sh:property surv:SurveyMark-monumentedBy ;
 .
 
 surv:SurveyMark-monumentedBy
     a           sh:PropertyShape ;
     sh:path     surv:monumentedBy ;
-    sh:class    surv:Monument ;
+    sh:node     surv:Monument ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name     "monumentedBy" ;
@@ -156,19 +132,15 @@ surv:SurveyMark-monumentedBy
 surv:SurveyMark-state
     a           sh:PropertyShape ;
     sh:path     surv:state ;
-    sh:class    surv:SurveyPointState ;
     sh:maxCount 1 ;
     sh:minCount 1 ;
     sh:name     "state" ;
     sh:nodeKind sh:BlankNodeOrIRI ;
 .
 
-surv:SurveyMarkCondition
-    a sh:NodeShape ;
-.
-
 surv:SurveyPoint
     a           sh:NodeShape ;
+    sh:targetClass <https://linked.data.gov.au/def/csdm/surveyobs/OccupationModelVertex>, surv:BoundaryMark, surv:CadastralMark, surv:GeodeticReferenceMark, surv:OccupationMark, surv:SurveyMark, surv:SurveyPoint ;  # generated: tools/shape-targets.py
     sh:name     "Survey Point" ;
     sh:property surv:SurveyPoint-hasGeometry ;
     sh:property surv:SurveyPoint-name ;
@@ -181,7 +153,7 @@ surv:SurveyPoint-hasGeometry
     sh:path     <http://www.opengis.net/ont/geosparql#hasGeometry> ;
     rdfs:comment
                 "Note that a Survey Point may not have a geometry declared - it may be identified and described and its location determined at a future date." ;
-    sh:class    geosparql:Point ;
+    sh:or ( [ sh:class <http://www.opengis.net/ont/sf#Point> ] [ sh:class <http://www.opengis.net/ont/gml#Point> ] ) ;
     sh:group    <http://topbraid.org/tosh#PropertyAxiomsPropertyGroup> ;
     sh:maxCount 1 ;
     sh:nodeKind sh:BlankNodeOrIRI ;
@@ -191,9 +163,8 @@ surv:SurveyPoint-name
     a           sh:PropertyShape ;
     sh:path     com:name ;
     dash:viewer dash:DetailsViewer ;
-    sh:class    com:CompoundName ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:name     "name" ;
     sh:nodeKind sh:BlankNodeOrIRI ;
 .
@@ -208,7 +179,6 @@ surv:SurveyPoint-provenance
 surv:SurveyPoint-purpose
     a           sh:PropertyShape ;
     sh:path     surv:purpose ;
-    sh:class    surv:SurveyPointPurpose ;
     sh:minCount 1 ;
     sh:name     "purpose" ;
     sh:nodeKind sh:IRI ;
@@ -216,10 +186,12 @@ surv:SurveyPoint-purpose
 
 surv:SurveyPointProvenance
     a sh:NodeShape ;
+    sh:targetClass surv:SurveyPointProvenance ;  # generated: tools/shape-targets.py
 .
 
 surv:SurveyedLine
     a           sh:NodeShape ;
+    sh:targetClass surv:AdoptedVector, surv:ObservedVector, surv:SurveyedLine, surv:SurveyedVector ;  # generated: tools/shape-targets.py
     sh:property surv:SurveyedLine-purpose ;
     sh:property surv:SurveyedLine-distance ;
     sh:property surv:SurveyedLine-from ;
@@ -239,7 +211,7 @@ surv:SurveyedLine-from
     sh:path     surv:from ;
     sh:class    surv:SurveyPoint ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:nodeKind sh:IRI ;
 .
 
@@ -266,10 +238,9 @@ surv:SurveyedLine-source
 surv:SurveyedLine-target
     a           sh:PropertyShape ;
     sh:path     surv:target ;
-    sh:class    surv:SurveyMark ;
     sh:class    surv:SurveyPoint ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:nodeKind sh:IRI ;
 .
 

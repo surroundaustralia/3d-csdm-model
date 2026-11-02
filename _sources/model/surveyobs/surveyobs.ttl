@@ -128,16 +128,6 @@ surv:Traverse
     sdo:name         "Traverse" ;
 .
 
-surv:age
-    a                owl:DatatypeProperty ;
-    rdfs:domain      surv:OccupationMark ;
-    rdfs:range       xsd:string ;
-    skos:scopeNote   "In the exchange schema a string that may be constrained to a number or range using a regex."@en ;
-    rdfs:comment     "Use a note for further description" ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/csdm/surveyfeatures> ;
-    sdo:description  "Estimated Age in years of a physical object. May be implemented with any relevant object model or literal" ;
-    sdo:name         "estimated age" ;
-.
 
 ont:
     a                   owl:Ontology ;

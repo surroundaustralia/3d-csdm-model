@@ -77,23 +77,17 @@
   sh:class geometry:BoundaryFeature ;
 .
 surv:Occupation
+  a sh:NodeShape ;  # generated: tools/shape-targets.py
+  sh:targetClass surv:NoOccupation, surv:Occupation, surv:Terrain, surveyobs:DesignModel, surveyobs:OccupationAsFeature ;  # generated: tools/shape-targets.py
   sh:property surv:Occupation-age ;
-  sh:property surv:Occupation-hasResult ;
   sh:property surv:Occupation-note ;
 .
 surv:Occupation-age
   a sh:PropertyShape ;
   sh:path surv:age ;
-  sh:datatype xsd:decimal ;
+  sh:datatype xsd:string ;
   sh:maxCount 1 ;
   sh:name "Estimated Age" ;
-.
-surv:Occupation-hasResult
-  a sh:PropertyShape ;
-  sh:path sosa:hasResult ;
-  sh:class surv:Occupation ;
-  sh:maxCount 1 ;
-  sh:minCount 1 ;
 .
 surv:Occupation-note
   a sh:PropertyShape ;
@@ -102,11 +96,14 @@ surv:Occupation-note
   sh:name "note" ;
 .
 surv:OccupationMark
+  a sh:NodeShape ;  # generated: tools/shape-targets.py
+  sh:targetClass surv:OccupationMark, surveyobs:OccupationModelVertex ;  # generated: tools/shape-targets.py
   sh:property surv:Occupation-age ;
   sh:property surv:Occupation-note ;
 .
 surveyobs:DesignModel
   a sh:NodeShape ;
+  sh:targetClass surveyobs:DesignModel ;  # generated: tools/shape-targets.py
   sh:property [
       a sh:PropertyShape ;
       sh:path sosa:hasResult ;
@@ -119,6 +116,7 @@ surveyobs:DesignModel
 .
 surveyobs:IFCRef
   a sh:NodeShape ;
+  sh:targetClass surveyobs:IFCRef ;  # generated: tools/shape-targets.py
   rdfs:comment "Defines a reference to a feature or set of featires in a BIM design model as the result of an inspection process." ;
   rdfs:label "BIM/IFC design model reference" ;
   sh:property [
@@ -140,7 +138,7 @@ surveyobs:IFCRef
   sh:property [
       a sh:PropertyShape ;
       sh:path rdfs:isDefinedBy ;
-      sh:datatype xsd:anyURI ;
+      sh:nodeKind sh:IRI ;
       sh:description "Reference to the IFC resource containing the model element" ;
       sh:maxCount 1 ;
       sh:name "is defined in" ;
@@ -155,12 +153,16 @@ surveyobs:IFCRef
 .
 surveyobs:OccupationObservation
   a sh:NodeShape ;
+  sh:targetClass surveyobs:OccupationObservation ;  # generated: tools/shape-targets.py
 .
 surveyobs:ParcelBoundaryOccupation
+  a sh:NodeShape ;  # generated: tools/shape-targets.py
+  sh:targetClass surveyobs:ParcelBoundaryOccupation ;  # generated: tools/shape-targets.py
   sh:property :hasFeatureOfInterest ;
 .
 surveyobs:QualifiedVector
   a sh:NodeShape ;
+  sh:targetClass surveyobs:QualifiedVector ;  # generated: tools/shape-targets.py
   rdfs:label "QualifiedVector" ;
   sh:property [
       a sh:PropertyShape ;

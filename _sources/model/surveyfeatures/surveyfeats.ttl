@@ -420,3 +420,22 @@ An occupation feature is disjoint from (has no common elements with) a boundary.
   skos:definition "A type of distance measurement, according to assumptions about projections and datum (for example slope, horizontal or ellipsoidal distance), from a relevant jurisdictional codelist. The value of surveyobs:distanceType."@en ;
   skos:scopeNote "Not a distance measurement: surv:Distance is the measure."@en ;
 .
+
+:age
+    a                owl:DatatypeProperty ;
+    rdfs:domain      :OccupationMark ;
+    rdfs:range       xsd:string ;
+    skos:scopeNote   "In the exchange schema a string that may be constrained to a number or range using a regex."@en ;
+    rdfs:comment     "Use a note for further description" ;
+    rdfs:isDefinedBy ont: ;
+    schema:description  "Estimated Age in years of a physical object. May be implemented with any relevant object model or literal" ;
+    schema:name         "estimated age" ;
+.
+
+:ConditionCode
+    a                owl:Class ;
+    rdfs:subClassOf  skos:Concept ;
+    rdfs:label       "Mark Condition Code"@en ;
+    skos:definition  "A code from a condition vocabulary describing the physical condition of a survey mark or monument, used as the value of condition."@en ;
+    rdfs:isDefinedBy ont: ;
+.
