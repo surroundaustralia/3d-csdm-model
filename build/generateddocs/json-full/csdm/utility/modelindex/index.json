@@ -52,8 +52,8 @@
       "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyfeatures/survey_features.shapes.ttl"
     ],
     "icsm.csdm.model.surveyobs": [
-      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/owl-consistency.shapes.ttl",
-      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/vector_observations.shapes.ttl"
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/vector_observations.shapes.ttl",
+      "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/surveyobs/owl-consistency.shapes.ttl"
     ],
     "icsm.csdm.model.geopose": [
       "https://surroundaustralia.github.io/3d-csdm-model/_sources/model/geopose/owl-consistency.shapes.ttl"

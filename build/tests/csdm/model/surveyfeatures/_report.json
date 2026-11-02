@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.csdm.model.surveyfeatures - CSDM Survey Features",
   "bblockName": "CSDM Survey Features",
   "bblockId": "icsm.csdm.model.surveyfeatures",
-  "generated": "2026-11-02T00:08:16.897438+00:00",
+  "generated": "2026-11-02T02:05:46.485409+00:00",
   "result": true,
   "items": [
     {
@@ -29,7 +29,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "survey_features_examples.ttl",
-              "size": 50,
+              "size": 54,
               "isError": false,
               "message": "Output Turtle survey_features_examples.ttl created"
             }
@@ -41,7 +41,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl\n - /github/workspace/_sources/model/surveyfeatures/surveyfeats.ttl\n - /github/workspace/_sources/model/geometry/geometryprim.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/surveyfeatures/surveyfeats.ttl\n - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - /github/workspace/_sources/model/geometry/geometryprim.ttl\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl"
             },
             {
               "op": "shacl-report",
@@ -53,46 +53,32 @@
             {
               "shaclFile": "_sources/model/surveyfeatures/survey_features.shapes.ttl",
               "focusNodes": {
-                "surv:Setup": {
+                "surv:Distance": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb20": {
+                "_:n405a7717a8f546efa767b0eaabc793dab8": {
                   "nodes": []
+                },
+                "_:n405a7717a8f546efa767b0eaabc793dab23": {
+                  "nodes": []
+                },
+                "surv:SurveyPoint-hasGeometry/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:Monument": {
+                  "nodes": [
+                    ":m25"
+                  ]
                 },
                 "surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "surv:Survey": {
-                  "nodes": []
-                },
-                "surv:AllowableCoordinateReferenceSystem": {
-                  "nodes": []
-                },
-                "surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "surv:SurveyedLine-distance/sh:or/rdf:first": {
-                  "nodes": []
+                "surv:SurveyPoint": {
+                  "nodes": [
+                    ":p25"
+                  ]
                 },
                 "surv:Occupation": {
-                  "nodes": []
-                },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb11": {
-                  "nodes": []
-                },
-                "surv:BoundaryMark": {
-                  "nodes": []
-                },
-                "surv:NoOccupation": {
-                  "nodes": []
-                },
-                "surv:Monument": {
-                  "nodes": []
-                },
-                "surv:SurveyedLine-horizontalAngle/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "surv:CadastralMark": {
                   "nodes": []
                 },
                 "surv:AdoptedVector": {
@@ -101,60 +87,73 @@
                 "surv:SurveyPointProvenance": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb3": {
+                "surv:Angle": {
                   "nodes": []
                 },
-                "surv:GeodeticReferenceMark": {
+                "surv:NoOccupation": {
                   "nodes": []
                 },
-                "surv:SurveyPoint": {
+                "surv:AllowableCoordinateReferenceSystem": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb12": {
+                "surv:SurveyedLine": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-distance/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:n405a7717a8f546efa767b0eaabc793dab15": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-horizontalAngle/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:SurveyPoint-hasGeometry/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n405a7717a8f546efa767b0eaabc793dab16": {
+                  "nodes": []
+                },
+                "surv:BoundaryMark": {
+                  "nodes": [
+                    ":p25"
+                  ]
+                },
+                "surv:OccupationMark": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-verticalAngle/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "surv:ObservedVector": {
                   "nodes": []
                 },
                 "surv:SurveyMark": {
+                  "nodes": [
+                    ":p25"
+                  ]
+                },
+                "_:n405a7717a8f546efa767b0eaabc793dab7": {
                   "nodes": []
                 },
-                "surv:OccupationMark": {
+                "_:n405a7717a8f546efa767b0eaabc793dab24": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb4": {
-                  "nodes": []
-                },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb19": {
-                  "nodes": []
-                },
-                "surv:InstrumentPoint": {
-                  "nodes": []
-                },
-                "surv:Angle": {
-                  "nodes": []
-                },
-                "surv:SurveyedLine": {
-                  "nodes": []
-                },
-                "surv:ConditionCode": {
-                  "nodes": []
-                },
-                "surv:SurveyedLine-verticalAngle/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "surv:Distance": {
+                "surv:CadastralMark": {
                   "nodes": []
                 },
                 "surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "surv:SurveyMarkCondition": {
+                "surv:GeodeticReferenceMark": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/surveyfeatures/survey_features.shapes.ttl:\n - Shape surv:Setup: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb20: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:Survey: *none*\n - Shape surv:AllowableCoordinateReferenceSystem: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*\n - Shape surv:Occupation: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb11: *none*\n - Shape surv:BoundaryMark: *none*\n - Shape surv:NoOccupation: *none*\n - Shape surv:Monument: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*\n - Shape surv:CadastralMark: *none*\n - Shape surv:AdoptedVector: *none*\n - Shape surv:SurveyPointProvenance: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb3: *none*\n - Shape surv:GeodeticReferenceMark: *none*\n - Shape surv:SurveyPoint: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb12: *none*\n - Shape surv:ObservedVector: *none*\n - Shape surv:SurveyMark: *none*\n - Shape surv:OccupationMark: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb4: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb19: *none*\n - Shape surv:InstrumentPoint: *none*\n - Shape surv:Angle: *none*\n - Shape surv:SurveyedLine: *none*\n - Shape surv:ConditionCode: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*\n - Shape surv:Distance: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:SurveyMarkCondition: *none*\n"
+              "message": "Focus nodes for _sources/model/surveyfeatures/survey_features.shapes.ttl:\n - Shape surv:Distance: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab8: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab23: *none*\n - Shape surv:SurveyPoint-hasGeometry/sh:or/rdf:first: *none*\n - Shape surv:Monument: :m25\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:SurveyPoint: :p25\n - Shape surv:Occupation: *none*\n - Shape surv:AdoptedVector: *none*\n - Shape surv:SurveyPointProvenance: *none*\n - Shape surv:Angle: *none*\n - Shape surv:NoOccupation: *none*\n - Shape surv:AllowableCoordinateReferenceSystem: *none*\n - Shape surv:SurveyedLine: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab15: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*\n - Shape surv:SurveyPoint-hasGeometry/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab16: *none*\n - Shape surv:BoundaryMark: :p25\n - Shape surv:OccupationMark: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*\n - Shape surv:ObservedVector: *none*\n - Shape surv:SurveyMark: :p25\n - Shape _:n405a7717a8f546efa767b0eaabc793dab7: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab24: *none*\n - Shape surv:CadastralMark: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:GeodeticReferenceMark: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -166,21 +165,55 @@
             {
               "shaclFile": "_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>": {
                   "nodes": [
-                    ":m25"
+                    "surveymark_condition_NZ:Reliable"
                   ]
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>": {
                   "nodes": []
                 },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>": {
+                  "nodes": [
+                    "surveymark_condition_NZ:bound"
+                  ]
+                },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>": {
+                  "nodes": [
+                    "surveymark_condition_NZ:New",
+                    "icsm-monument-state:existing"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>": {
+                  "nodes": [
+                    ":m25"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>": {
@@ -191,42 +224,18 @@
                     ":m25"
                   ]
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>": {
-                  "nodes": [
-                    "surveymark_condition_NZ:New"
-                  ]
-                },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>": {
-                  "nodes": [
-                    "surveymark_condition_NZ:Reliable"
-                  ]
-                },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>": {
-                  "nodes": [
-                    "surveymark_condition_NZ:bound"
-                  ]
-                },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>": {
                   "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: :m25\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: :m25\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: surveymark_condition_NZ:New\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>: surveymark_condition_NZ:Reliable\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: surveymark_condition_NZ:bound\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>: *none*\n"
+              "message": "Focus nodes for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>: surveymark_condition_NZ:Reliable\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: surveymark_condition_NZ:bound\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: surveymark_condition_NZ:New,icsm-monument-state:existing\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: :m25\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: :m25\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -238,39 +247,39 @@
             {
               "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "_:n5da7ce288a7a4d889f516590d047d767b6": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
                   "nodes": []
                 },
-                "_:n5da7ce288a7a4d889f516590d047d767b5": {
+                "_:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
+                  "nodes": []
+                },
+                "_:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb5": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape _:n5da7ce288a7a4d889f516590d047d767b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:n5da7ce288a7a4d889f516590d047d767b5: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape _:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb5: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -282,33 +291,33 @@
             {
               "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
               "focusNodes": {
-                ":QualityClassShape": {
-                  "nodes": []
-                },
-                ":NumericLiteral/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "_:n0034fec4b43a400ba8b4cee9c6b07fabb3": {
-                  "nodes": []
-                },
-                ":QualityMeasureShape": {
-                  "nodes": []
-                },
                 ":NumericLiteral": {
+                  "nodes": []
+                },
+                "_:nd467fbf52dd144959915890860aadbc0b4": {
+                  "nodes": []
+                },
+                ":QualityClassShape": {
                   "nodes": []
                 },
                 ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
+                "_:nd467fbf52dd144959915890860aadbc0b3": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 ":MeasureShape": {
                   "nodes": []
                 },
-                "_:n0034fec4b43a400ba8b4cee9c6b07fabb4": {
+                ":QualityMeasureShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :QualityClassShape: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape _:n0034fec4b43a400ba8b4cee9c6b07fabb3: *none*\n - Shape :QualityMeasureShape: *none*\n - Shape :NumericLiteral: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape :MeasureShape: *none*\n - Shape _:n0034fec4b43a400ba8b4cee9c6b07fabb4: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape _:nd467fbf52dd144959915890860aadbc0b4: *none*\n - Shape :QualityClassShape: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nd467fbf52dd144959915890860aadbc0b3: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :MeasureShape: *none*\n - Shape :QualityMeasureShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -320,20 +329,20 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
+                ":CompoundNameShape": {
+                  "nodes": [
+                    ":p25/com:name"
+                  ]
+                },
                 ":NamePartShape": {
                   "nodes": [
                     ":p25/com:name/dct:hasPart",
                     ":p25/com:name/dct:hasPart"
                   ]
-                },
-                ":CompoundNameShape": {
-                  "nodes": [
-                    ":p25/com:name"
-                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: :p25/com:name/dct:hasPart,:p25/com:name/dct:hasPart\n - Shape :CompoundNameShape: :p25/com:name\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: :p25/com:name\n - Shape :NamePartShape: :p25/com:name/dct:hasPart,:p25/com:name/dct:hasPart\n"
             },
             {
               "op": "shacl-report",
@@ -345,16 +354,43 @@
             {
               "shaclFile": "_sources/model/geometry/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "_:n04753c03d54a4a5196a9d5ddaef7af43b6": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>": {
+                  "nodes": []
+                },
+                "_:nec0e66952ed9497383d25bdf6cf6b888b7": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>": {
@@ -363,54 +399,27 @@
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>": {
+                "_:nec0e66952ed9497383d25bdf6cf6b888b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>": {
-                  "nodes": []
-                },
-                "_:n04753c03d54a4a5196a9d5ddaef7af43b7": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:\n - Shape _:n04753c03d54a4a5196a9d5ddaef7af43b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*\n - Shape _:n04753c03d54a4a5196a9d5ddaef7af43b7: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*\n"
+              "message": "Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*\n - Shape _:nec0e66952ed9497383d25bdf6cf6b888b7: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*\n - Shape _:nec0e66952ed9497383d25bdf6cf6b888b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -422,24 +431,6 @@
             {
               "shaclFile": "_sources/model/geometry/geometryprimitives.shapes.ttl",
               "focusNodes": {
-                ":3DSpatialUnit": {
-                  "nodes": []
-                },
-                ":Face": {
-                  "nodes": []
-                },
-                "geo:Geometry": {
-                  "nodes": []
-                },
-                "geo:Feature": {
-                  "nodes": []
-                },
-                "geo:Feature/sh:not": {
-                  "nodes": []
-                },
-                ":SolidTopology": {
-                  "nodes": []
-                },
                 ":ExtrudedCurve": {
                   "nodes": []
                 },
@@ -449,7 +440,26 @@
                 ":ExtensionRule": {
                   "nodes": []
                 },
-                ":ExtrudedGeometry": {
+                "geo:Feature": {
+                  "nodes": []
+                },
+                ":Face": {
+                  "nodes": []
+                },
+                "geo:Feature/sh:not": {
+                  "nodes": []
+                },
+                ":3DSpatialUnit": {
+                  "nodes": []
+                },
+                "geo:Geometry": {
+                  "nodes": [
+                    ":g_p10",
+                    ":g_p1",
+                    ":g_p25"
+                  ]
+                },
+                ":ExtrudedSurface": {
                   "nodes": []
                 },
                 ":BoundaryEdge": {
@@ -458,12 +468,12 @@
                 ":AbstractSolidGeometry": {
                   "nodes": []
                 },
-                ":ExtrudedSurface": {
+                ":ExtrudedGeometry": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:\n - Shape :3DSpatialUnit: *none*\n - Shape :Face: *none*\n - Shape geo:Geometry: *none*\n - Shape geo:Feature: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape :SolidTopology: *none*\n - Shape :ExtrudedCurve: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape :ExtensionRule: *none*\n - Shape :ExtrudedGeometry: *none*\n - Shape :BoundaryEdge: *none*\n - Shape :AbstractSolidGeometry: *none*\n - Shape :ExtrudedSurface: *none*\n"
+              "message": "Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:\n - Shape :ExtrudedCurve: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape :ExtensionRule: *none*\n - Shape geo:Feature: *none*\n - Shape :Face: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape :3DSpatialUnit: *none*\n - Shape geo:Geometry: :g_p10,:g_p1,:g_p25\n - Shape :ExtrudedSurface: *none*\n - Shape :BoundaryEdge: *none*\n - Shape :AbstractSolidGeometry: *none*\n - Shape :ExtrudedGeometry: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -475,9 +485,6 @@
             {
               "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl",
               "focusNodes": {
-                ":DirectedReferencesShape": {
-                  "nodes": []
-                },
                 ":OrientedReferenceShape": {
                   "nodes": []
                 },
@@ -486,10 +493,13 @@
                 },
                 ":RadiusRequiredShape": {
                   "nodes": []
+                },
+                ":DirectedReferencesShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :DirectedReferencesShape: *none*\n - Shape :OrientedReferenceShape: *none*\n - Shape :OrientedArcShape: *none*\n - Shape :RadiusRequiredShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :OrientedReferenceShape: *none*\n - Shape :OrientedArcShape: *none*\n - Shape :RadiusRequiredShape: *none*\n - Shape :DirectedReferencesShape: *none*\n"
             }
           ]
         }
@@ -531,7 +541,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl\n - /github/workspace/_sources/model/surveyfeatures/surveyfeats.ttl\n - /github/workspace/_sources/model/geometry/geometryprim.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/surveyfeatures/surveyfeats.ttl\n - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - /github/workspace/_sources/model/geometry/geometryprim.ttl\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl"
             },
             {
               "op": "shacl-report",
@@ -543,46 +553,28 @@
             {
               "shaclFile": "_sources/model/surveyfeatures/survey_features.shapes.ttl",
               "focusNodes": {
-                "surv:Setup": {
+                "surv:Distance": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb20": {
+                "_:n405a7717a8f546efa767b0eaabc793dab8": {
                   "nodes": []
                 },
-                "surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first": {
+                "_:n405a7717a8f546efa767b0eaabc793dab23": {
                   "nodes": []
                 },
-                "surv:Survey": {
-                  "nodes": []
-                },
-                "surv:AllowableCoordinateReferenceSystem": {
-                  "nodes": []
-                },
-                "surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "surv:SurveyedLine-distance/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "surv:Occupation": {
-                  "nodes": []
-                },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb11": {
-                  "nodes": []
-                },
-                "surv:BoundaryMark": {
-                  "nodes": []
-                },
-                "surv:NoOccupation": {
+                "surv:SurveyPoint-hasGeometry/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "surv:Monument": {
                   "nodes": []
                 },
-                "surv:SurveyedLine-horizontalAngle/sh:or/rdf:first": {
+                "surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "surv:CadastralMark": {
+                "surv:SurveyPoint": {
+                  "nodes": []
+                },
+                "surv:Occupation": {
                   "nodes": []
                 },
                 "surv:AdoptedVector": {
@@ -591,16 +583,43 @@
                 "surv:SurveyPointProvenance": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb3": {
+                "surv:Angle": {
                   "nodes": []
                 },
-                "surv:GeodeticReferenceMark": {
+                "surv:NoOccupation": {
                   "nodes": []
                 },
-                "surv:SurveyPoint": {
+                "surv:AllowableCoordinateReferenceSystem": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb12": {
+                "surv:SurveyedLine": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-distance/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:n405a7717a8f546efa767b0eaabc793dab15": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-horizontalAngle/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "surv:SurveyPoint-hasGeometry/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:n405a7717a8f546efa767b0eaabc793dab16": {
+                  "nodes": []
+                },
+                "surv:BoundaryMark": {
+                  "nodes": []
+                },
+                "surv:OccupationMark": {
+                  "nodes": []
+                },
+                "surv:SurveyedLine-verticalAngle/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "surv:ObservedVector": {
@@ -609,44 +628,24 @@
                 "surv:SurveyMark": {
                   "nodes": []
                 },
-                "surv:OccupationMark": {
+                "_:n405a7717a8f546efa767b0eaabc793dab7": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb4": {
+                "_:n405a7717a8f546efa767b0eaabc793dab24": {
                   "nodes": []
                 },
-                "_:n49eedd6203834076a1c2c202d7d9c29eb19": {
-                  "nodes": []
-                },
-                "surv:InstrumentPoint": {
-                  "nodes": []
-                },
-                "surv:Angle": {
-                  "nodes": []
-                },
-                "surv:SurveyedLine": {
-                  "nodes": []
-                },
-                "surv:ConditionCode": {
-                  "nodes": [
-                    ":Damaged"
-                  ]
-                },
-                "surv:SurveyedLine-verticalAngle/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "surv:Distance": {
+                "surv:CadastralMark": {
                   "nodes": []
                 },
                 "surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "surv:SurveyMarkCondition": {
+                "surv:GeodeticReferenceMark": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/surveyfeatures/survey_features.shapes.ttl:\n - Shape surv:Setup: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb20: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:Survey: *none*\n - Shape surv:AllowableCoordinateReferenceSystem: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*\n - Shape surv:Occupation: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb11: *none*\n - Shape surv:BoundaryMark: *none*\n - Shape surv:NoOccupation: *none*\n - Shape surv:Monument: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*\n - Shape surv:CadastralMark: *none*\n - Shape surv:AdoptedVector: *none*\n - Shape surv:SurveyPointProvenance: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb3: *none*\n - Shape surv:GeodeticReferenceMark: *none*\n - Shape surv:SurveyPoint: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb12: *none*\n - Shape surv:ObservedVector: *none*\n - Shape surv:SurveyMark: *none*\n - Shape surv:OccupationMark: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb4: *none*\n - Shape _:n49eedd6203834076a1c2c202d7d9c29eb19: *none*\n - Shape surv:InstrumentPoint: *none*\n - Shape surv:Angle: *none*\n - Shape surv:SurveyedLine: *none*\n - Shape surv:ConditionCode: :Damaged\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*\n - Shape surv:Distance: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:SurveyMarkCondition: *none*\n"
+              "message": "Focus nodes for _sources/model/surveyfeatures/survey_features.shapes.ttl:\n - Shape surv:Distance: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab8: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab23: *none*\n - Shape surv:SurveyPoint-hasGeometry/sh:or/rdf:first: *none*\n - Shape surv:Monument: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:SurveyPoint: *none*\n - Shape surv:Occupation: *none*\n - Shape surv:AdoptedVector: *none*\n - Shape surv:SurveyPointProvenance: *none*\n - Shape surv:Angle: *none*\n - Shape surv:NoOccupation: *none*\n - Shape surv:AllowableCoordinateReferenceSystem: *none*\n - Shape surv:SurveyedLine: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab15: *none*\n - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*\n - Shape surv:SurveyPoint-hasGeometry/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab16: *none*\n - Shape surv:BoundaryMark: *none*\n - Shape surv:OccupationMark: *none*\n - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*\n - Shape surv:ObservedVector: *none*\n - Shape surv:SurveyMark: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab7: *none*\n - Shape _:n405a7717a8f546efa767b0eaabc793dab24: *none*\n - Shape surv:CadastralMark: *none*\n - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first: *none*\n - Shape surv:GeodeticReferenceMark: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -658,31 +657,28 @@
             {
               "shaclFile": "_sources/model/surveyfeatures/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>": {
@@ -691,24 +687,36 @@
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>": {
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>: *none*\n"
+              "message": "Focus nodes for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -720,39 +728,39 @@
             {
               "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "_:n5da7ce288a7a4d889f516590d047d767b6": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
                   "nodes": []
                 },
-                "_:n5da7ce288a7a4d889f516590d047d767b5": {
+                "_:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
+                  "nodes": []
+                },
+                "_:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb5": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape _:n5da7ce288a7a4d889f516590d047d767b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:n5da7ce288a7a4d889f516590d047d767b5: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape _:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb5: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -764,33 +772,33 @@
             {
               "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
               "focusNodes": {
-                ":QualityClassShape": {
-                  "nodes": []
-                },
-                ":NumericLiteral/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "_:n0034fec4b43a400ba8b4cee9c6b07fabb3": {
-                  "nodes": []
-                },
-                ":QualityMeasureShape": {
-                  "nodes": []
-                },
                 ":NumericLiteral": {
+                  "nodes": []
+                },
+                "_:nd467fbf52dd144959915890860aadbc0b4": {
+                  "nodes": []
+                },
+                ":QualityClassShape": {
                   "nodes": []
                 },
                 ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
+                "_:nd467fbf52dd144959915890860aadbc0b3": {
+                  "nodes": []
+                },
+                ":NumericLiteral/sh:or/rdf:first": {
+                  "nodes": []
+                },
                 ":MeasureShape": {
                   "nodes": []
                 },
-                "_:n0034fec4b43a400ba8b4cee9c6b07fabb4": {
+                ":QualityMeasureShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :QualityClassShape: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape _:n0034fec4b43a400ba8b4cee9c6b07fabb3: *none*\n - Shape :QualityMeasureShape: *none*\n - Shape :NumericLiteral: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape :MeasureShape: *none*\n - Shape _:n0034fec4b43a400ba8b4cee9c6b07fabb4: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape _:nd467fbf52dd144959915890860aadbc0b4: *none*\n - Shape :QualityClassShape: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nd467fbf52dd144959915890860aadbc0b3: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :MeasureShape: *none*\n - Shape :QualityMeasureShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -802,15 +810,15 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
-                ":NamePartShape": {
+                ":CompoundNameShape": {
                   "nodes": []
                 },
-                ":CompoundNameShape": {
+                ":NamePartShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: *none*\n - Shape :CompoundNameShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -822,16 +830,43 @@
             {
               "shaclFile": "_sources/model/geometry/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "_:n04753c03d54a4a5196a9d5ddaef7af43b6": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>": {
+                  "nodes": []
+                },
+                "_:nec0e66952ed9497383d25bdf6cf6b888b7": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>": {
@@ -840,54 +875,27 @@
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>": {
+                "_:nec0e66952ed9497383d25bdf6cf6b888b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>": {
-                  "nodes": []
-                },
-                "_:n04753c03d54a4a5196a9d5ddaef7af43b7": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:\n - Shape _:n04753c03d54a4a5196a9d5ddaef7af43b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*\n - Shape _:n04753c03d54a4a5196a9d5ddaef7af43b7: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*\n"
+              "message": "Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*\n - Shape _:nec0e66952ed9497383d25bdf6cf6b888b7: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*\n - Shape _:nec0e66952ed9497383d25bdf6cf6b888b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -899,24 +907,6 @@
             {
               "shaclFile": "_sources/model/geometry/geometryprimitives.shapes.ttl",
               "focusNodes": {
-                ":3DSpatialUnit": {
-                  "nodes": []
-                },
-                ":Face": {
-                  "nodes": []
-                },
-                "geo:Geometry": {
-                  "nodes": []
-                },
-                "geo:Feature": {
-                  "nodes": []
-                },
-                "geo:Feature/sh:not": {
-                  "nodes": []
-                },
-                ":SolidTopology": {
-                  "nodes": []
-                },
                 ":ExtrudedCurve": {
                   "nodes": []
                 },
@@ -926,7 +916,22 @@
                 ":ExtensionRule": {
                   "nodes": []
                 },
-                ":ExtrudedGeometry": {
+                "geo:Feature": {
+                  "nodes": []
+                },
+                ":Face": {
+                  "nodes": []
+                },
+                "geo:Feature/sh:not": {
+                  "nodes": []
+                },
+                ":3DSpatialUnit": {
+                  "nodes": []
+                },
+                "geo:Geometry": {
+                  "nodes": []
+                },
+                ":ExtrudedSurface": {
                   "nodes": []
                 },
                 ":BoundaryEdge": {
@@ -935,12 +940,12 @@
                 ":AbstractSolidGeometry": {
                   "nodes": []
                 },
-                ":ExtrudedSurface": {
+                ":ExtrudedGeometry": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:\n - Shape :3DSpatialUnit: *none*\n - Shape :Face: *none*\n - Shape geo:Geometry: *none*\n - Shape geo:Feature: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape :SolidTopology: *none*\n - Shape :ExtrudedCurve: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape :ExtensionRule: *none*\n - Shape :ExtrudedGeometry: *none*\n - Shape :BoundaryEdge: *none*\n - Shape :AbstractSolidGeometry: *none*\n - Shape :ExtrudedSurface: *none*\n"
+              "message": "Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:\n - Shape :ExtrudedCurve: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape :ExtensionRule: *none*\n - Shape geo:Feature: *none*\n - Shape :Face: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape :3DSpatialUnit: *none*\n - Shape geo:Geometry: *none*\n - Shape :ExtrudedSurface: *none*\n - Shape :BoundaryEdge: *none*\n - Shape :AbstractSolidGeometry: *none*\n - Shape :ExtrudedGeometry: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -952,9 +957,6 @@
             {
               "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl",
               "focusNodes": {
-                ":DirectedReferencesShape": {
-                  "nodes": []
-                },
                 ":OrientedReferenceShape": {
                   "nodes": []
                 },
@@ -963,10 +965,13 @@
                 },
                 ":RadiusRequiredShape": {
                   "nodes": []
+                },
+                ":DirectedReferencesShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :DirectedReferencesShape: *none*\n - Shape :OrientedReferenceShape: *none*\n - Shape :OrientedArcShape: *none*\n - Shape :RadiusRequiredShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :OrientedReferenceShape: *none*\n - Shape :OrientedArcShape: *none*\n - Shape :RadiusRequiredShape: *none*\n - Shape :DirectedReferencesShape: *none*\n"
             }
           ]
         }

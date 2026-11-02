@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.csdm.model.geometry - CSDM Geometry Primitives",
   "bblockName": "CSDM Geometry Primitives",
   "bblockId": "icsm.csdm.model.geometry",
-  "generated": "2026-11-02T00:08:12.741885+00:00",
+  "generated": "2026-11-02T02:05:42.702706+00:00",
   "result": true,
   "items": [
     {
@@ -41,7 +41,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/geometry/geometryprim.ttl\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl\n - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/model/geometry/geometryprim.ttl\n - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle\n - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl\n - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl"
             },
             {
               "op": "shacl-report",
@@ -53,10 +53,32 @@
             {
               "shaclFile": "_sources/model/geometry/owl-consistency.shapes.ttl",
               "focusNodes": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>": {
+                  "nodes": []
+                },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>": {
                   "nodes": []
                 },
-                "_:n9631c7aac186481a97a32b71e3919bc9b7": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>": {
+                  "nodes": [
+                    "examples:ExtensionRule_1"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "_:nf31569b5d84b4af9add49fe21ef89595b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>": {
+                  "nodes": [
+                    "examples:ExtensionRule_1/geometry:extension"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>": {
@@ -64,7 +86,18 @@
                     "examples:ExtensionRule_1"
                   ]
                 },
-                "_:n9631c7aac186481a97a32b71e3919bc9b6": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>": {
+                  "nodes": [
+                    "examples:ExtensionRule_1"
+                  ]
+                },
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>": {
@@ -73,38 +106,16 @@
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>": {
-                  "nodes": [
-                    "examples:ExtensionRule_1"
-                  ]
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>": {
-                  "nodes": [
-                    "examples:ExtensionRule_1/geometry:extension"
-                  ]
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>": {
+                  "nodes": []
+                },
+                "_:nf31569b5d84b4af9add49fe21ef89595b7": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>": {
@@ -112,23 +123,14 @@
                     "examples:ExtensionRule_1/geometry:isOutward"
                   ]
                 },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>": {
+                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>": {
                   "nodes": [
                     "examples:ExtensionRule_1"
                   ]
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*\n - Shape _:n9631c7aac186481a97a32b71e3919bc9b7: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: examples:ExtensionRule_1\n - Shape _:n9631c7aac186481a97a32b71e3919bc9b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: examples:ExtensionRule_1\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: examples:ExtensionRule_1/geometry:extension\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: examples:ExtensionRule_1/geometry:isOutward\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: examples:ExtensionRule_1\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*\n"
+              "message": "Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: examples:ExtensionRule_1\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:nf31569b5d84b4af9add49fe21ef89595b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: examples:ExtensionRule_1/geometry:extension\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: examples:ExtensionRule_1\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: examples:ExtensionRule_1\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*\n - Shape _:nf31569b5d84b4af9add49fe21ef89595b7: *none*\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: examples:ExtensionRule_1/geometry:isOutward\n - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: examples:ExtensionRule_1\n"
             },
             {
               "op": "shacl-report",
@@ -140,24 +142,6 @@
             {
               "shaclFile": "_sources/model/geometry/geometryprimitives.shapes.ttl",
               "focusNodes": {
-                ":3DSpatialUnit": {
-                  "nodes": []
-                },
-                ":Face": {
-                  "nodes": []
-                },
-                "geo:Geometry": {
-                  "nodes": []
-                },
-                "geo:Feature": {
-                  "nodes": []
-                },
-                "geo:Geometry/sh:not": {
-                  "nodes": []
-                },
-                ":SolidTopology": {
-                  "nodes": []
-                },
                 ":ExtrudedCurve": {
                   "nodes": []
                 },
@@ -165,23 +149,50 @@
                   "nodes": []
                 },
                 ":ExtensionRule": {
+                  "nodes": [
+                    "examples:ExtensionRule_1"
+                  ]
+                },
+                "geo:Feature": {
                   "nodes": []
                 },
-                ":ExtrudedGeometry": {
+                ":Face": {
                   "nodes": []
+                },
+                ":3DSpatialUnit": {
+                  "nodes": []
+                },
+                "geo:Geometry": {
+                  "nodes": []
+                },
+                "geo:Geometry/sh:not": {
+                  "nodes": []
+                },
+                ":ExtrudedSurface": {
+                  "nodes": [
+                    "examples:ExtrudedSurface_1",
+                    "examples:ExtrudedSurface_2"
+                  ]
                 },
                 ":BoundaryEdge": {
                   "nodes": []
                 },
                 ":AbstractSolidGeometry": {
-                  "nodes": []
+                  "nodes": [
+                    "examples:ExtrudedSurface_1",
+                    "examples:ExtrudedSurface_2",
+                    "examples:ExtensionRule_1"
+                  ]
                 },
-                ":ExtrudedSurface": {
-                  "nodes": []
+                ":ExtrudedGeometry": {
+                  "nodes": [
+                    "examples:ExtrudedSurface_1",
+                    "examples:ExtrudedSurface_2"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:\n - Shape :3DSpatialUnit: *none*\n - Shape :Face: *none*\n - Shape geo:Geometry: *none*\n - Shape geo:Feature: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape :SolidTopology: *none*\n - Shape :ExtrudedCurve: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape :ExtensionRule: *none*\n - Shape :ExtrudedGeometry: *none*\n - Shape :BoundaryEdge: *none*\n - Shape :AbstractSolidGeometry: *none*\n - Shape :ExtrudedSurface: *none*\n"
+              "message": "Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:\n - Shape :ExtrudedCurve: *none*\n - Shape geo:Feature/sh:not: *none*\n - Shape :ExtensionRule: examples:ExtensionRule_1\n - Shape geo:Feature: *none*\n - Shape :Face: *none*\n - Shape :3DSpatialUnit: *none*\n - Shape geo:Geometry: *none*\n - Shape geo:Geometry/sh:not: *none*\n - Shape :ExtrudedSurface: examples:ExtrudedSurface_1,examples:ExtrudedSurface_2\n - Shape :BoundaryEdge: *none*\n - Shape :AbstractSolidGeometry: examples:ExtrudedSurface_1,examples:ExtrudedSurface_2,examples:ExtensionRule_1\n - Shape :ExtrudedGeometry: examples:ExtrudedSurface_1,examples:ExtrudedSurface_2\n"
             },
             {
               "op": "shacl-report",
@@ -193,9 +204,6 @@
             {
               "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl",
               "focusNodes": {
-                ":DirectedReferencesShape": {
-                  "nodes": []
-                },
                 ":OrientedReferenceShape": {
                   "nodes": []
                 },
@@ -204,10 +212,13 @@
                 },
                 ":RadiusRequiredShape": {
                   "nodes": []
+                },
+                ":DirectedReferencesShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :DirectedReferencesShape: *none*\n - Shape :OrientedReferenceShape: *none*\n - Shape :OrientedArcShape: *none*\n - Shape :RadiusRequiredShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :OrientedReferenceShape: *none*\n - Shape :OrientedArcShape: *none*\n - Shape :RadiusRequiredShape: *none*\n - Shape :DirectedReferencesShape: *none*\n"
             }
           ]
         }

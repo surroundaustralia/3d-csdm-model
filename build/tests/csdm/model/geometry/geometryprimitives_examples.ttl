@@ -41,7 +41,7 @@ examples:ExtrudedSurface_2 a geometry:ExtrudedSurface ;
                     </gml:Polygon>"""^^geo:gmlLiteral ;
     geo:dimension 3 ;
     rdfs:comment "Example with explicit upward extrusion limit information - the implicit downward extension is 0" ;
-    geometry:limit examples:ExtensionRule_1 .
+    geometry:extrusion examples:ExtensionRule_1 .
 
 examples:ExtensionRule_1 a geometry:ExtensionRule ;
     rdfs:label "ExtrudedSurface_Implicit" ;

@@ -71,7 +71,7 @@ examples:ExtrudedSurface_2
   geo:dimension 3 ;
   rdfs:comment "Example with explicit upward extrusion limit information - the implicit downward extension is 0" ;
   rdfs:label "ExtrudedSurface_Explicit" ;
-  <https://linked.data.gov.au/def/csdm/geometry/limit> examples:ExtensionRule_1 ;
+  <https://linked.data.gov.au/def/csdm/geometry/extrusion> examples:ExtensionRule_1 ;
 .
 
 ```

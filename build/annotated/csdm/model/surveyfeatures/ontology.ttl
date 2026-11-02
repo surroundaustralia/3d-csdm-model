@@ -50,6 +50,12 @@ A boundary mark MAY be a Geodetic Reference Mark.""" ;
 """ ;
     skos:prefLabel "Cadastral Mark"@en .
 
+:ConditionCode a owl:Class ;
+    rdfs:label "Mark Condition Code"@en ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf skos:Concept ;
+    skos:definition "A code from a condition vocabulary describing the physical condition of a survey mark or monument, used as the value of condition."@en .
+
 :Distance a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf commonpatterns:Measure ;
@@ -91,13 +97,6 @@ A boundary mark MAY be a Geodetic Reference Mark.""" ;
             schema:caption "Diagram for Observed Vector." ;
             schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/ObservedVector.png"^^xsd:anyURI ] .
 
-:OccupationMark a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    rdfs:subClassOf :SurveyPoint ;
-    skos:definition "Means a mark used for a cadastral survey to define the location of an occupation feature near a cadastral boundary"@en ;
-    skos:editorialNote "Occupation Marks are not monumented but may be described. Observed Vectors or Direct Position Observations determine the location of the mark." ;
-    skos:prefLabel "Occupation Mark"@en .
-
 :SubtendedAngle a owl:Class ;
     dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/CSD> ;
     rdfs:isDefinedBy ont: ;
@@ -135,6 +134,15 @@ A boundary mark MAY be a Geodetic Reference Mark.""" ;
     rdfs:subClassOf commonpatterns:RelevantJurisdictionalCodelist ;
     skos:definition "Each vector MAY state how it was defined using the relevant jurisdictional code list"@en ;
     skos:prefLabel "Vector Determination Method"@en .
+
+:age a owl:DatatypeProperty ;
+    rdfs:comment "Use a note for further description" ;
+    rdfs:domain :OccupationMark ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    skos:scopeNote "In the exchange schema a string that may be constrained to a number or range using a regex."@en ;
+    schema:description "Estimated Age in years of a physical object. May be implemented with any relevant object model or literal" ;
+    schema:name "estimated age" .
 
 :angle a owl:DatatypeProperty ;
     dct:source <https://github.com/surroundaustralia/3d-csdm-common/tree/main/_sources/csdm/features/SurveyObservations> ;
@@ -244,6 +252,13 @@ A boundary mark MAY be a Geodetic Reference Mark.""" ;
     rdfs:subClassOf :SurveyMark ;
     skos:definition "Means a mark that connects a survey to the jurisdictional geodetic network, vertical or horizontal."@en ;
     skos:prefLabel "Geodetic Reference Mark"@en .
+
+:OccupationMark a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyPoint ;
+    skos:definition "Means a mark used for a cadastral survey to define the location of an occupation feature near a cadastral boundary"@en ;
+    skos:editorialNote "Occupation Marks are not monumented but may be described. Observed Vectors or Direct Position Observations determine the location of the mark." ;
+    skos:prefLabel "Occupation Mark"@en .
 
 :SurveyPointProvenance a owl:Class ;
     rdfs:isDefinedBy ont: ;

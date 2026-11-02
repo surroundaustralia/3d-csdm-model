@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.model.commonpatterns - CSDM Common Patterns
-Generated 2026-11-02T00:08:13.659296+00:00
+Generated 2026-11-02T02:05:43.581629+00:00
 === Files ===
 Using examples/commonpatterns_examples.ttl from examples
 Output Turtle commonpatterns_examples.ttl created
@@ -8,36 +8,36 @@ Output Turtle commonpatterns_examples.ttl created
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
  - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
- - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
  - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl
+ - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
 Validation result for _sources/model/commonpatterns/owl-consistency.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance1
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*
- - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b6: *none*
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:surveyPoint1/commonpatterns:qualityMeasure,ex:distance1/commonpatterns:qualityMeasure
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: ex:distance1/commonpatterns:value
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*
  - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: ex:class-b
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance1
  - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*
- - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b5: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:distance1/commonpatterns:qualityMeasure,ex:surveyPoint1/commonpatterns:qualityMeasure
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: ex:distance1/commonpatterns:value
+ - Shape _:n195e95204ee64f2392e3ca55feddf473b6: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance1
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance1
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*
+ - Shape _:n195e95204ee64f2392e3ca55feddf473b5: *none*
 
 Validation result for _sources/model/commonpatterns/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/commonpatterns/shapes.shacl:
- - Shape :NumericLiteral/sh:or/rdf:first: *none*
- - Shape :QualityClassShape: ex:class-b
- - Shape _:n5806826c7a974063a7197d01c2b6b86db3: *none*
- - Shape :QualityMeasureShape: ex:surveyPoint1/commonpatterns:qualityMeasure,ex:distance1/commonpatterns:qualityMeasure
  - Shape :NumericLiteral: *none*
+ - Shape :QualityClassShape: ex:class-b
+ - Shape _:n3d475b74b91447a886a736c251f1f561b3: *none*
+ - Shape _:n3d475b74b91447a886a736c251f1f561b4: *none*
+ - Shape :NumericLiteral/sh:or/rdf:first: *none*
  - Shape :MeasureShape: ex:distance1
- - Shape _:n5806826c7a974063a7197d01c2b6b86db4: *none*
+ - Shape :QualityMeasureShape: ex:distance1/commonpatterns:qualityMeasure,ex:surveyPoint1/commonpatterns:qualityMeasure
  - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*
 
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
@@ -45,8 +45,8 @@ Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/co
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
- - Shape :NamePartShape: *none*
  - Shape :CompoundNameShape: *none*
+ - Shape :NamePartShape: *none*
 
 === End SHACL ===
 

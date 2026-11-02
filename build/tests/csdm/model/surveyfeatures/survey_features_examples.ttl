@@ -4,6 +4,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix gml: <http://www.opengis.net/ont/gml#> .
+@prefix icsm-monument-state: <https://linked.data.gov.au/def/csdm/icsm-monument-state/> .
 @prefix nameparttype: <https://linked.data.gov.au/def/csdm/examples/nameparttypes/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -22,13 +23,15 @@
         <https://linked.data.gov.au/def/csdm/surveyfeatures.shapes>,
         <https://www.opengis.net/def/csdm/examples/codelists/surveymark_condition_NZ> .
 
-:g_p1 a gml:Point ;
+:g_p1 a geo:Geometry,
+        gml:Point ;
     rdfs:label "p1 location" ;
     geo:asGML """ <gml:Point gml:id="g_p1" srsName="*XY-MT*" srsDimension="3">
                        <gml:pos>-31.596 38.089 5.000</gml:pos>
                     </gml:Point>"""^^geo:gmlLiteral .
 
-:g_p10 a gml:Point ;
+:g_p10 a geo:Geometry,
+        gml:Point ;
     rdfs:label "p10 location" ;
     geo:asGML """ <gml:Point gml:id="g_p10" srsName="*XY-MT*" srsDimension="3">
                        <gml:pos>-33.717 43.089 4.550</gml:pos>
@@ -45,7 +48,8 @@ surv:SurveyPoint skos:example :p25 .
     prov:wasGeneratedBy <https://linked.data.gov.au/dataset/csdm//surveyactivity/examples/SurveyLodged_1> ;
     prov:wasInfluencedBy <https://linked.data.gov.au/dataset/csdm//surveyactivity/examples/SurveyApproval_1> .
 
-:g_p25 a gml:Point ;
+:g_p25 a geo:Geometry,
+        gml:Point ;
     rdfs:label "p25 location" ;
     geo:asGML """ <gml:Point gml:id="p25" srsName="*XY-MT*" srsDimension="3">
                         <gml:pos>45.089 -38.596 -0.100</gml:pos>
@@ -57,7 +61,8 @@ surv:Monument skos:example :m25 .
 
 :m25 a surv:Monument ;
     rdfs:label "IS II" ;
-    surv:condition surveymark_condition_NZ:Reliable .
+    surv:condition surveymark_condition_NZ:Reliable ;
+    surv:state icsm-monument-state:existing .
 
 :p25 a surv:BoundaryMark ;
     rdfs:label "P25" ;

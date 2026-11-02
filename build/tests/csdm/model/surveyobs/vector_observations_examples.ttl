@@ -6,7 +6,10 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix geometry: <https://linked.data.gov.au/def/csdm/geometry/> .
 @prefix gml: <http://www.opengis.net/ont/gml#> .
+@prefix icsm-monument-state: <https://linked.data.gov.au/def/csdm/icsm-monument-state/> .
+@prefix icsm-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/icsm-surveypoint-purpose/> .
 @prefix nameparttype: <https://linked.data.gov.au/def/csdm/examples/nameparttypes/> .
+@prefix nz-vector-purpose: <https://linked.data.gov.au/def/csdm/nz-vector-purpose/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -54,17 +57,24 @@ surveyobs-examples:occupation_vector_observations a sosa:ObservationCollection ;
 
 surveyobs-examples:p1 a surv:BoundaryMark ;
     rdfs:label "P1" ;
-    geo:hasGeometry surveyobs-examples:g_p1 .
+    geo:hasGeometry surveyobs-examples:g_p1 ;
+    surv:monumentedBy [ a surv:Monument ;
+            surv:state icsm-monument-state:existing ] ;
+    surv:purpose icsm-surveypoint-purpose:boundary .
 
 surveyobs-examples:p10 a surv:SurveyPoint ;
     rdfs:label "P10" ;
     geo:hasGeometry surveyobs-examples:g_p10 ;
-    skos:editorialNote "This survey point is an unmarked point at the intersection of two 3D units." .
+    skos:editorialNote "This survey point is an unmarked point at the intersection of two 3D units." ;
+    surv:purpose icsm-surveypoint-purpose:boundary .
 
 surveyobs-examples:p21 a surv:BoundaryMark ;
     rdfs:label "P21" ;
     geo:hasGeometry surveyobs-examples:g_p21 ;
     skos:editorialNote "matches sample survey scene" ;
+    surv:monumentedBy [ a surv:Monument ;
+            surv:state icsm-monument-state:existing ] ;
+    surv:purpose icsm-surveypoint-purpose:boundary ;
     surv:setup surveyobs-examples:Setup_a110 .
 
 surveyobs-examples:tr1 a surv:Traverse ;
@@ -81,6 +91,7 @@ survprov:SurveyAgent skos:example <https://linked.data.gov.au/def/csdm/surveyact
 
 surveyobs-examples:IFCRef_1 a surveyobs:IFCRef ;
     rdfs:label "Wall 637" ;
+    dct:identifier "637" ;
     dct:type <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcWall> ;
     rdfs:isDefinedBy <https://linked.data.gov.au/dataset/csdm/myifcmodel.ifc> .
 
@@ -92,7 +103,8 @@ surveyobs-examples:asbuiltBIM a sosa:Sensor ;
     rdfs:label "BIM model inspection" ;
     rdfs:comment "The capture of the BIM model is a de-facto sampling of the real world" .
 
-surveyobs-examples:blue_top a sf:Polygon ;
+surveyobs-examples:blue_top a geo:Geometry,
+        sf:Polygon ;
     rdfs:label "blue_top (truncated)" ;
     geo:asGML """<gml:Polygon gml:id="blue_top">
                         <gml:exterior>
@@ -132,28 +144,59 @@ surveyobs-examples:design_observations a sosa:ObservationCollection ;
     sosa:observedProperty surveyobs:occupation ;
     sosa:phenomenonTime "2001-01-14"^^xsd:date .
 
-surveyobs-examples:g_p10 a gml:Point ;
+surveyobs-examples:g_p1 a geo:Geometry,
+        gml:Point ;
+    rdfs:label "g_p1" ;
+    geo:asGML """<gml:Point gml:id="g_p1" srsName="*XY-MT*" srsDimension="3">
+                        <gml:pos>50.00 -12.00 -0.10</gml:pos>
+                    </gml:Point>"""^^geo:gmlLiteral ;
+    geo:coordinateDimension 3 ;
+    rdfs:comment "Illustrative position in the local survey coordinate system." .
+
+surveyobs-examples:g_p10 a geo:Geometry,
+        gml:Point ;
     rdfs:label "g_p10" ;
     geo:asGML """<gml:Point gml:id="g_p10" srsName="*XY-MT*" srsDimension="3">
         <gml:pos>43.089 -33.717 4.550</gml:pos>
  </gml:Point>"""^^geo:gmlLiteral ;
     geo:coordinateDimension 3 .
 
-surveyobs-examples:g_t1 a gml:Point ;
+surveyobs-examples:g_p21 a geo:Geometry,
+        gml:Point ;
+    rdfs:label "g_p21" ;
+    geo:asGML """<gml:Point gml:id="g_p21" srsName="*XY-MT*" srsDimension="3">
+                        <gml:pos>62.50 -24.80 -0.15</gml:pos>
+                    </gml:Point>"""^^geo:gmlLiteral ;
+    geo:coordinateDimension 3 ;
+    rdfs:comment "Illustrative position in the local survey coordinate system." .
+
+surveyobs-examples:g_p3 a geo:Geometry,
+        gml:Point ;
+    rdfs:label "g_p3" ;
+    geo:asGML """<gml:Point gml:id="g_p3" srsName="*XY-MT*" srsDimension="3">
+                        <gml:pos>74.20 -36.90 -0.20</gml:pos>
+                    </gml:Point>"""^^geo:gmlLiteral ;
+    geo:coordinateDimension 3 ;
+    rdfs:comment "Illustrative position in the local survey coordinate system." .
+
+surveyobs-examples:g_t1 a geo:Geometry,
+        gml:Point ;
     rdfs:label "g_t1" ;
     geo:asGML """<gml:Point gml:id="t1" srsName="*XY-MT*" srsDimension="3">
                         <gml:pos>50.36 -37.37 -0.22</gml:pos>
                     </gml:Point>"""^^geo:gmlLiteral ;
     geo:coordinateDimension 3 .
 
-surveyobs-examples:g_t2 a gml:Point ;
+surveyobs-examples:g_t2 a geo:Geometry,
+        gml:Point ;
     rdfs:label "g_t2" ;
     geo:asGML """<gml:Point gml:id="t2" srsName="*XY-MT*" srsDimension="3">
                   <gml:pos>43.19 -21.98 -1.84</gml:pos>
                 </gml:Point>"""^^geo:gmlLiteral ;
     geo:coordinateDimension 3 .
 
-surveyobs-examples:g_t3 a gml:Point ;
+surveyobs-examples:g_t3 a geo:Geometry,
+        gml:Point ;
     rdfs:label "g_t3" ;
     geo:asGML """<gml:Point gml:id="g_t3" srsName="*XY-MT*" srsDimension="3">
 							<gml:pos>-44.150 20.820 0.700</gml:pos>
@@ -162,34 +205,48 @@ surveyobs-examples:g_t3 a gml:Point ;
 surveyobs-examples:m25_old a surv:Monument ;
     rdfs:label "IS II damaged" ;
     rdfs:comment "Corroded" ;
-    surv:condition surveymark_condition_NZ:Damaged .
+    surv:condition surveymark_condition_NZ:Damaged ;
+    surv:state icsm-monument-state:abandoned .
 
 surveyobs-examples:m_t2 a surv:Monument ;
     rdfs:label "IS I" ;
-    surv:condition surveymark_condition_NZ:Reliable .
+    surv:condition surveymark_condition_NZ:Reliable ;
+    surv:state icsm-monument-state:existing .
 
 surveyobs-examples:m_t3 a surv:Monument ;
     rdfs:label "OIT X" ;
-    surv:condition surveymark_condition_NZ:Reliable .
+    surv:condition surveymark_condition_NZ:Reliable ;
+    surv:state icsm-monument-state:existing .
 
 surveyobs-examples:occ1 a surv:OccupationMark ;
     rdfs:label "occ1" ;
-    geo:hasGeometry [ a geo:Point ;
+    geo:hasGeometry [ a geo:Geometry,
+                sf:Point ;
             rdfs:label "occ1 location" ;
             geo:asGML """<gml:Point gml:id="g_occ1" srsName="*XY-MT*" srsDimension="3">
 						<gml:pos>-36.630 45.090 -0.100</gml:pos>
 					</gml:Point>"""^^geo:gmlLiteral ] ;
-    rdfs:comment "Center of privet hedge" .
+    rdfs:comment "Center of privet hedge" ;
+    surv:purpose icsm-surveypoint-purpose:occupation .
 
 surveyobs-examples:oo11vector a surv:ObservedVector ;
     rdfs:label "T2 -Occ10" ;
-    geo:hasGeometry [ a sf:Line ;
+    geo:hasGeometry [ a geo:Geometry,
+                sf:Line ;
             geo:asGML """<gml:LineString gml:id="ools1">
 					<gml:pointProperty xlink:href="#t2"/>
 					<gml:pointProperty xlink:href="#occ10"/>
 				</gml:LineString>"""^^geo:gmlLiteral ] ;
     surv:from surveyobs-examples:t2 ;
-    surv:target surveyobs-examples:occ10 .
+    surv:target surveyobs-examples:occ10 ;
+    surv:vectorPurpose nz-vector-purpose:measured .
+
+surveyobs-examples:p3 a surv:BoundaryMark ;
+    rdfs:label "P3" ;
+    geo:hasGeometry surveyobs-examples:g_p3 ;
+    surv:monumentedBy [ a surv:Monument ;
+            surv:state icsm-monument-state:existing ] ;
+    surv:purpose icsm-surveypoint-purpose:boundary .
 
 surveyobs-examples:vector_observations a sosa:ObservationCollection ;
     rdfs:label "Vector observations collection sharing common details" ;
@@ -199,7 +256,8 @@ surveyobs-examples:vector_observations a sosa:ObservationCollection ;
     sosa:phenomenonTime "2001-01-14"^^xsd:date ;
     sosa:usedProcedure surveyobs:Traversal .
 
-surveyobs-examples:yellow_front a gml:Polygon ;
+surveyobs-examples:yellow_front a geo:Geometry,
+        gml:Polygon ;
     rdfs:label "yellow_front" ;
     geo:asGML """<gml:Polygon gml:id="yellow_front">
                         <gml:exterior>
@@ -215,7 +273,8 @@ surveyobs-examples:yellow_front a gml:Polygon ;
 
 surveyobs-examples:yellow_front_boundary a geometry:BoundaryFace ;
     rdfs:label "yellow_front boundary" ;
-    geo:hasGeometry surveyobs-examples:yellow_front .
+    geo:hasGeometry surveyobs-examples:yellow_front ;
+    geometry:touchesInward examples:cp1 .
 
 <https://linked.data.gov.au/def/csdm/surveyactivity/examples/SurveyExample> a container:CSD ;
     rdfs:label "Example Cadastral Survey Dataset" ;
@@ -258,7 +317,8 @@ surveyobs-examples:calculated_observations a sosa:ObservationCollection ;
 
 surveyobs-examples:cv1 a surv:ObservedVector ;
     rdfs:label "ComputedVector T1-P3" ;
-    geo:hasGeometry [ a gml:LineString ;
+    geo:hasGeometry [ a geo:Geometry,
+                gml:LineString ;
             rdfs:label "LineString geometry T1-P3" ;
             geo:asGML """ <gml:LineString gml:id="cv1">
                 <gml:pointProperty xlink:href="#t1"/>
@@ -266,7 +326,8 @@ surveyobs-examples:cv1 a surv:ObservedVector ;
             </gml:LineString>"""^^geo:gmlLiteral ] ;
     rdfs:comment "The angle and distance properties of this feature are derived from individual observations, the geometry is derived from the calculated locations of instrument and target points." ;
     surv:from surveyobs-examples:t1 ;
-    surv:target surveyobs-examples:p3 .
+    surv:target surveyobs-examples:p3 ;
+    surv:vectorPurpose nz-vector-purpose:calculated .
 
 surveyobs-examples:extractCSD_1 a survprov:SurveyActivity ;
     rdfs:label "Extract survey observations for parcel cp1 (Blue Spatial Unit )" ;
@@ -299,11 +360,13 @@ surveyobs-examples:obs2_computed a surveyobs:SurveyVectorObservation ;
 
 surveyobs-examples:occ10 a surv:OccupationMark ;
     rdfs:label "Wooden Post" ;
-    geo:hasGeometry [ a geo:Point ;
+    geo:hasGeometry [ a geo:Geometry,
+                sf:Point ;
             geo:asGML """<gml:Point gml:id="g_occ10" srsName="*XY-MT*" srsDimension="3">
 						<gml:pos>-26.600 45.190 -0.600</gml:pos>
-					</gml:Point>""" ] ;
-    rdfs:comment "age 5 yrs" .
+					</gml:Point>"""^^geo:gmlLiteral ] ;
+    rdfs:comment "age 5 yrs" ;
+    surv:purpose icsm-surveypoint-purpose:occupation .
 
 surveyobs-examples:oo1 a surveyobs:OccupationObservation ;
     rdfs:label "T1 -Occ1 occupation observation" ;
@@ -329,13 +392,15 @@ surveyobs-examples:oo11 a surveyobs:OccupationObservation ;
 
 surveyobs-examples:oo1vector a surv:ObservedVector ;
     rdfs:label "T1 -Occ1" ;
-    geo:hasGeometry [ a sf:Line ;
+    geo:hasGeometry [ a geo:Geometry,
+                sf:Line ;
             geo:asGML """<gml:LineString gml:id="ools1">
 					<gml:pointProperty xlink:href="#t1"/>
 					<gml:pointProperty xlink:href="#occ1"/>
 				</gml:LineString>"""^^geo:gmlLiteral ] ;
     surv:from surveyobs-examples:t1 ;
-    surv:target surveyobs-examples:occ1 .
+    surv:target surveyobs-examples:occ1 ;
+    surv:vectorPurpose nz-vector-purpose:measured .
 
 surveyobs-examples:surveyActivity1 a survprov:SurveyActivity ;
     rdfs:label "Example typed activity using provenance model" ;
@@ -345,6 +410,7 @@ surveyobs-examples:t3 a surv:GeodeticReferenceMark ;
     rdfs:label "T3" ;
     geo:hasGeometry surveyobs-examples:g_t3 ;
     surv:monumentedBy surveyobs-examples:m_t3 ;
+    surv:purpose icsm-surveypoint-purpose:control ;
     com:name [ dct:hasPart [ a com:NamePart ;
                     rdfs:label "X" ;
                     com:namePartType nameparttype:Identifier ],
@@ -357,7 +423,8 @@ surveyobs-examples:t3 a surv:GeodeticReferenceMark ;
 
 surveyobs-examples:tv1 a surv:ObservedVector ;
     rdfs:label "T1->T2" ;
-    geo:hasGeometry [ a gml:LineString ;
+    geo:hasGeometry [ a geo:Geometry,
+                gml:LineString ;
             geo:asGML """<gml:LineString gml:id="tl1">
                             <gml:pointProperty xlink:href="#t1"/>
                             <gml:pointProperty xlink:href="#t2"/>
@@ -366,11 +433,13 @@ surveyobs-examples:tv1 a surv:ObservedVector ;
     surv:from surveyobs-examples:t1 ;
     surv:horizontalAngle 335.066 ;
     surv:target surveyobs-examples:t2 ;
+    surv:vectorPurpose nz-vector-purpose:measured ;
     surv:verticalAngle 95.27 .
 
 surveyobs-examples:tv2 a surv:AdoptedVector ;
     rdfs:label "T1->T3" ;
-    geo:hasGeometry [ a gml:LineString ;
+    geo:hasGeometry [ a geo:Geometry,
+                gml:LineString ;
             geo:asGML """<gml:LineString gml:id="tl1">
                             <gml:pointProperty xlink:href="#t1"/>
                             <gml:pointProperty xlink:href="#t3"/>
@@ -381,6 +450,7 @@ surveyobs-examples:tv2 a surv:AdoptedVector ;
     surv:from surveyobs-examples:t1 ;
     surv:horizontalAngle 257.6 ;
     surv:target surveyobs-examples:t3 ;
+    surv:vectorPurpose nz-vector-purpose:adopted ;
     surv:verticalAngle 88.26 .
 
 container:CSD skos:example <https://linked.data.gov.au/def/csdm/surveyactivity/examples/SurveyExample> .
@@ -406,7 +476,8 @@ survprov:SurveyActivity skos:example surveyobs-examples:extractCSD_1,
 
 surveyobs-examples:fence1 a surveyobs:OccupationAsFeature ;
     rdfs:label "East Fence" ;
-    geo:hasGeometry [ a gml:LineString ;
+    geo:hasGeometry [ a geo:Geometry,
+                gml:LineString ;
             geo:asGML """<gml:LineString gml:id="occf3">
             <gml:pointProperty xlink:href="#occ1"/>
             <gml:pointProperty xlink:href="#occ5"/>
@@ -434,6 +505,9 @@ surveyobs-examples:trav a surveyobs:Traversal ;
 surveyobs-examples:t1 a surv:CadastralMark ;
     rdfs:label "T1" ;
     geo:hasGeometry surveyobs-examples:g_t1 ;
+    surv:monumentedBy [ a surv:Monument ;
+            surv:state icsm-monument-state:existing ] ;
+    surv:purpose icsm-surveypoint-purpose:control ;
     surv:setup surveyobs-examples:Setup_a1101 .
 
 surveyobs-examples:t2 a surv:CadastralMark,
@@ -441,6 +515,7 @@ surveyobs-examples:t2 a surv:CadastralMark,
     rdfs:label "T2" ;
     geo:hasGeometry surveyobs-examples:g_t2 ;
     surv:monumentedBy surveyobs-examples:m_t2 ;
+    surv:purpose icsm-surveypoint-purpose:control ;
     com:name [ a com:CompoundName ;
             rdfs:label "IS I" ] .
 

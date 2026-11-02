@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.model.surveyfeatures - CSDM Survey Features
-Generated 2026-11-02T00:08:16.897313+00:00
+Generated 2026-11-02T02:05:46.485307+00:00
 === Files ===
 Using examples/survmark_condition_NZ.ttl from examples
 Output Turtle survmark_condition_NZ.ttl created
@@ -7,12 +7,12 @@ Output Turtle survmark_condition_NZ.ttl created
 
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
- - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
+ - /github/workspace/_sources/model/surveyfeatures/surveyfeats.ttl
  - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl
  - https://defs.opengis.net/prez-backend/object?uri=http://www.opengis.net/ont/geosparql&_mediatype=text/turtle
- - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
- - /github/workspace/_sources/model/surveyfeatures/surveyfeats.ttl
+ - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
  - /github/workspace/_sources/model/geometry/geometryprim.ttl
+ - https://ogcincubator.github.io/bblocks-land-parcels/build/annotated/ladm/land-parcels/spatialRepresentationDefinition/ontology.ttl
  - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
  - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl
 Validation result for _sources/model/surveyfeatures/survey_features.shapes.ttl:
@@ -20,157 +20,154 @@ Validation result for _sources/model/surveyfeatures/survey_features.shapes.ttl:
   Conforms: True
   
 Focus nodes for _sources/model/surveyfeatures/survey_features.shapes.ttl:
- - Shape surv:Setup: *none*
- - Shape _:n49eedd6203834076a1c2c202d7d9c29eb20: *none*
- - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*
- - Shape surv:Survey: *none*
- - Shape surv:AllowableCoordinateReferenceSystem: *none*
- - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*
- - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*
- - Shape surv:Occupation: *none*
- - Shape _:n49eedd6203834076a1c2c202d7d9c29eb11: *none*
- - Shape surv:BoundaryMark: *none*
- - Shape surv:NoOccupation: *none*
+ - Shape surv:Distance: *none*
+ - Shape _:n405a7717a8f546efa767b0eaabc793dab8: *none*
+ - Shape _:n405a7717a8f546efa767b0eaabc793dab23: *none*
+ - Shape surv:SurveyPoint-hasGeometry/sh:or/rdf:first: *none*
  - Shape surv:Monument: *none*
- - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*
- - Shape surv:CadastralMark: *none*
+ - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:rest/rdf:first: *none*
+ - Shape surv:SurveyPoint: *none*
+ - Shape surv:Occupation: *none*
  - Shape surv:AdoptedVector: *none*
  - Shape surv:SurveyPointProvenance: *none*
- - Shape _:n49eedd6203834076a1c2c202d7d9c29eb3: *none*
- - Shape surv:GeodeticReferenceMark: *none*
- - Shape surv:SurveyPoint: *none*
- - Shape _:n49eedd6203834076a1c2c202d7d9c29eb12: *none*
+ - Shape surv:Angle: *none*
+ - Shape surv:NoOccupation: *none*
+ - Shape surv:AllowableCoordinateReferenceSystem: *none*
+ - Shape surv:SurveyedLine: *none*
+ - Shape surv:SurveyedLine-distance/sh:or/rdf:first: *none*
+ - Shape _:n405a7717a8f546efa767b0eaabc793dab15: *none*
+ - Shape surv:SurveyedLine-distance/sh:or/rdf:rest/rdf:first: *none*
+ - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:first: *none*
+ - Shape surv:SurveyPoint-hasGeometry/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:n405a7717a8f546efa767b0eaabc793dab16: *none*
+ - Shape surv:BoundaryMark: *none*
+ - Shape surv:OccupationMark: *none*
+ - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*
  - Shape surv:ObservedVector: *none*
  - Shape surv:SurveyMark: *none*
- - Shape surv:OccupationMark: *none*
- - Shape _:n49eedd6203834076a1c2c202d7d9c29eb4: *none*
- - Shape _:n49eedd6203834076a1c2c202d7d9c29eb19: *none*
- - Shape surv:InstrumentPoint: *none*
- - Shape surv:Angle: *none*
- - Shape surv:SurveyedLine: *none*
- - Shape surv:ConditionCode: :Damaged
- - Shape surv:SurveyedLine-verticalAngle/sh:or/rdf:first: *none*
- - Shape surv:Distance: *none*
+ - Shape _:n405a7717a8f546efa767b0eaabc793dab7: *none*
+ - Shape _:n405a7717a8f546efa767b0eaabc793dab24: *none*
+ - Shape surv:CadastralMark: *none*
  - Shape surv:SurveyedLine-horizontalAngle/sh:or/rdf:rest/rdf:first: *none*
- - Shape surv:SurveyMarkCondition: *none*
+ - Shape surv:GeodeticReferenceMark: *none*
 
 Validation result for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/surveyfeatures/owl-consistency.shapes.ttl:
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#condition-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#setup-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#verticalAngle-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#state-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#target-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#Monument-condition-max>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#form-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#replaces-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#purpose-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#age-literal>/sh:or/rdf:first: *none*
  - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#distance-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#from-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#horizontalAngle-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#monumentedBy-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#angle-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#vectorPurpose-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/surveyfeatures.owl-shapes#fromSurvey-resource>: *none*
 
 Validation result for _sources/model/commonpatterns/owl-consistency.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*
- - Shape _:n5da7ce288a7a4d889f516590d047d767b6: *none*
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*
  - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*
- - Shape _:n5da7ce288a7a4d889f516590d047d767b5: *none*
+ - Shape _:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb6: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*
+ - Shape _:n91cfb03dfd9a45d7939b6fc6bbd2bc8cb5: *none*
 
 Validation result for _sources/model/commonpatterns/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/commonpatterns/shapes.shacl:
- - Shape :QualityClassShape: *none*
- - Shape :NumericLiteral/sh:or/rdf:first: *none*
- - Shape _:n0034fec4b43a400ba8b4cee9c6b07fabb3: *none*
- - Shape :QualityMeasureShape: *none*
  - Shape :NumericLiteral: *none*
+ - Shape _:nd467fbf52dd144959915890860aadbc0b4: *none*
+ - Shape :QualityClassShape: *none*
  - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*
+ - Shape _:nd467fbf52dd144959915890860aadbc0b3: *none*
+ - Shape :NumericLiteral/sh:or/rdf:first: *none*
  - Shape :MeasureShape: *none*
- - Shape _:n0034fec4b43a400ba8b4cee9c6b07fabb4: *none*
+ - Shape :QualityMeasureShape: *none*
 
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
- - Shape :NamePartShape: *none*
  - Shape :CompoundNameShape: *none*
+ - Shape :NamePartShape: *none*
 
 Validation result for _sources/model/geometry/owl-consistency.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/geometry/owl-consistency.shapes.ttl:
- - Shape _:n04753c03d54a4a5196a9d5ddaef7af43b6: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasTopology-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*
+ - Shape _:nec0e66952ed9497383d25bdf6cf6b888b7: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-isOutward-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>/sh:or/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesInward-resource>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#hasGeometryPart-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:rest/rdf:first: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#surfaceMember-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>/sh:or/rdf:first: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-extension-max>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#exterior-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extension-literal>: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#asGMLTopo-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#solidMember-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#baseSurface-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#ExtensionRule-description-max>: *none*
- - Shape _:n04753c03d54a4a5196a9d5ddaef7af43b7: *none*
- - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*
+ - Shape _:nec0e66952ed9497383d25bdf6cf6b888b6: *none*
  - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#touchesOutward-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#boundary-resource>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#isOutward-literal>: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/geometry.owl-shapes#extrusion-resource>: *none*
 
 Validation result for _sources/model/geometry/geometryprimitives.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/geometry/geometryprimitives.shapes.ttl:
- - Shape :3DSpatialUnit: *none*
- - Shape :Face: *none*
- - Shape geo:Geometry: *none*
- - Shape geo:Feature: *none*
- - Shape geo:Feature/sh:not: *none*
- - Shape :SolidTopology: *none*
  - Shape :ExtrudedCurve: *none*
- - Shape geo:Feature/sh:not: *none*
- - Shape geo:Geometry/sh:not: *none*
  - Shape geo:Geometry/sh:not: *none*
  - Shape :ExtensionRule: *none*
- - Shape :ExtrudedGeometry: *none*
+ - Shape geo:Feature: *none*
+ - Shape :Face: *none*
+ - Shape geo:Feature/sh:not: *none*
+ - Shape :3DSpatialUnit: *none*
+ - Shape geo:Geometry: *none*
+ - Shape :ExtrudedSurface: *none*
  - Shape :BoundaryEdge: *none*
  - Shape :AbstractSolidGeometry: *none*
- - Shape :ExtrudedSurface: *none*
+ - Shape :ExtrudedGeometry: *none*
 
 Validation result for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:
   Validation Report
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:
- - Shape :DirectedReferencesShape: *none*
  - Shape :OrientedReferenceShape: *none*
  - Shape :OrientedArcShape: *none*
  - Shape :RadiusRequiredShape: *none*
+ - Shape :DirectedReferencesShape: *none*
 
 === End SHACL ===
 

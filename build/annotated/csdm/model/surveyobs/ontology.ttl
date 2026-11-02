@@ -113,15 +113,6 @@ surv:Traverse a owl:Class ;
     sdo:description "Definition not yet provided" ;
     sdo:name "Traverse" .
 
-surv:age a owl:DatatypeProperty ;
-    rdfs:comment "Use a note for further description" ;
-    rdfs:domain surv:OccupationMark ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/csdm/surveyfeatures> ;
-    rdfs:range xsd:string ;
-    skos:scopeNote "In the exchange schema a string that may be constrained to a number or range using a regex."@en ;
-    sdo:description "Estimated Age in years of a physical object. May be implemented with any relevant object model or literal" ;
-    sdo:name "estimated age" .
-
 surv:lastCalibrated a owl:DatatypeProperty ;
     rdfs:isDefinedBy ont: ;
     sdo:description "The date the survey equipment was last calibrated" ;

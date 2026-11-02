@@ -51,6 +51,9 @@ Example data from `csdm_model/examples/vector_observations_examples.ttl`.
 @prefix survprov:                <https://linked.data.gov.au/def/csdm/surveyprov/> .
 @prefix teamwork:                <http://topbraid.org/teamwork#> .
 @prefix xsd:                     <http://www.w3.org/2001/XMLSchema#> .
+@prefix icsm-surveypoint-purpose: <https://linked.data.gov.au/def/csdm/icsm-surveypoint-purpose/> .
+@prefix icsm-monument-state: <https://linked.data.gov.au/def/csdm/icsm-monument-state/> .
+@prefix nz-vector-purpose: <https://linked.data.gov.au/def/csdm/nz-vector-purpose/> .
 
 sosa:ObservationCollection
     skos:example surveyobs-examples:adopted_observations ;
@@ -79,6 +82,7 @@ surveyobs-examples:IFCRef_1
     dct:type         <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2_TC1/OWL#IfcWall> ;
     rdfs:isDefinedBy <https://linked.data.gov.au/dataset/csdm/myifcmodel.ifc> ;
     rdfs:label       "Wall 637" ;
+    dct:identifier "637" ;
 .
 
 surveyobs-examples:Setup_a110
@@ -104,7 +108,7 @@ surveyobs-examples:asbuiltBIM
 .
 
 surveyobs-examples:blue_top
-    a          sf:Polygon ;
+    a          sf:Polygon, geo:Geometry ;
     geo:asGML  """<gml:Polygon gml:id=\"blue_top\">
                         <gml:exterior>
                             <gml:LinearRing gml:id=\"lr1\">
@@ -156,7 +160,7 @@ surveyobs-examples:csd2
 
 surveyobs-examples:cv1
     a               surv:ObservedVector ;
-    geo:hasGeometry [ a          gml:LineString ;
+    geo:hasGeometry [ a          gml:LineString, geo:Geometry ;
                       geo:asGML  """ <gml:LineString gml:id=\"cv1\">
                 <gml:pointProperty xlink:href=\"#t1\"/>
                 <gml:pointProperty xlink:href=\"#p3\"/>
@@ -166,6 +170,7 @@ surveyobs-examples:cv1
     rdfs:label      "ComputedVector T1-P3" ;
     surv:from       surveyobs-examples:t1 ;
     surv:target     surveyobs-examples:p3 ;
+    surv:vectorPurpose nz-vector-purpose:calculated ;
 .
 
 surveyobs-examples:design_observations
@@ -189,7 +194,7 @@ surveyobs-examples:extractCSD_1
 
 surveyobs-examples:fence1
     a               surveyobs:OccupationAsFeature ;
-    geo:hasGeometry [ a         gml:LineString ;
+    geo:hasGeometry [ a         gml:LineString, geo:Geometry ;
                       geo:asGML """<gml:LineString gml:id=\"occf3\">
             <gml:pointProperty xlink:href=\"#occ1\"/>
             <gml:pointProperty xlink:href=\"#occ5\"/>
@@ -200,7 +205,7 @@ surveyobs-examples:fence1
 .
 
 surveyobs-examples:g_p10
-    a                       gml:Point ;
+    a                       gml:Point, geo:Geometry ;
     geo:asGML               """<gml:Point gml:id=\"g_p10\" srsName=\"*XY-MT*\" srsDimension=\"3\">
         <gml:pos>43.089 -33.717 4.550</gml:pos>
  </gml:Point>"""^^geo:gmlLiteral ;
@@ -209,7 +214,7 @@ surveyobs-examples:g_p10
 .
 
 surveyobs-examples:g_t1
-    a                       gml:Point ;
+    a                       gml:Point, geo:Geometry ;
     geo:asGML               """<gml:Point gml:id=\"t1\" srsName=\"*XY-MT*\" srsDimension=\"3\">
                         <gml:pos>50.36 -37.37 -0.22</gml:pos>
                     </gml:Point>"""^^geo:gmlLiteral ;
@@ -218,7 +223,7 @@ surveyobs-examples:g_t1
 .
 
 surveyobs-examples:g_t2
-    a                       gml:Point ;
+    a                       gml:Point, geo:Geometry ;
     geo:asGML               """<gml:Point gml:id=\"t2\" srsName=\"*XY-MT*\" srsDimension=\"3\">
                   <gml:pos>43.19 -21.98 -1.84</gml:pos>
                 </gml:Point>"""^^geo:gmlLiteral ;
@@ -227,7 +232,7 @@ surveyobs-examples:g_t2
 .
 
 surveyobs-examples:g_t3
-    a          gml:Point ;
+    a          gml:Point, geo:Geometry ;
     geo:asGML  """<gml:Point gml:id=\"g_t3\" srsName=\"*XY-MT*\" srsDimension=\"3\">
 							<gml:pos>-44.150 20.820 0.700</gml:pos>
 						</gml:Point>"""^^geo:gmlLiteral ;
@@ -247,18 +252,21 @@ surveyobs-examples:m25_old
     rdfs:comment   "Corroded" ;
     rdfs:label     "IS II damaged" ;
     surv:condition surveymark_condition_NZ:Damaged ;
+    surv:state icsm-monument-state:abandoned ;
 .
 
 surveyobs-examples:m_t2
     a              surv:Monument ;
     rdfs:label     "IS I" ;
     surv:condition surveymark_condition_NZ:Reliable ;
+    surv:state icsm-monument-state:existing ;
 .
 
 surveyobs-examples:m_t3
     a              surv:Monument ;
     rdfs:label     "OIT X" ;
     surv:condition surveymark_condition_NZ:Reliable ;
+    surv:state icsm-monument-state:existing ;
 .
 
 surveyobs-examples:mysoftware
@@ -299,23 +307,25 @@ surveyobs-examples:obs2_computed
 
 surveyobs-examples:occ1
     a               surv:OccupationMark ;
-    geo:hasGeometry [ a          geo:Point ;
+    geo:hasGeometry [ a          sf:Point, geo:Geometry ;
                       geo:asGML  """<gml:Point gml:id=\"g_occ1\" srsName=\"*XY-MT*\" srsDimension=\"3\">
 						<gml:pos>-36.630 45.090 -0.100</gml:pos>
 					</gml:Point>"""^^geo:gmlLiteral ;
                       rdfs:label "occ1 location" ; ] ;
     rdfs:comment    "Center of privet hedge" ;
     rdfs:label      "occ1" ;
+    surv:purpose icsm-surveypoint-purpose:occupation ;
 .
 
 surveyobs-examples:occ10
     a               surv:OccupationMark ;
-    geo:hasGeometry [ a         geo:Point ;
+    geo:hasGeometry [ a         sf:Point, geo:Geometry ;
                       geo:asGML """<gml:Point gml:id=\"g_occ10\" srsName=\"*XY-MT*\" srsDimension=\"3\">
 						<gml:pos>-26.600 45.190 -0.600</gml:pos>
-					</gml:Point>""" ; ] ;
+					</gml:Point>"""^^geo:gmlLiteral ; ] ;
     rdfs:comment    "age 5 yrs" ;
     rdfs:label      "Wooden Post" ;
+    surv:purpose icsm-surveypoint-purpose:occupation ;
 .
 
 surveyobs-examples:occupation_observations
@@ -368,7 +378,7 @@ surveyobs-examples:oo11
 
 surveyobs-examples:oo11vector
     a               surv:ObservedVector ;
-    geo:hasGeometry [ a         sf:Line ;
+    geo:hasGeometry [ a         sf:Line, geo:Geometry ;
                       geo:asGML """<gml:LineString gml:id=\"ools1\">
 					<gml:pointProperty xlink:href=\"#t2\"/>
 					<gml:pointProperty xlink:href=\"#occ10\"/>
@@ -376,11 +386,12 @@ surveyobs-examples:oo11vector
     rdfs:label      "T2 -Occ10" ;
     surv:from       surveyobs-examples:t2 ;
     surv:target     surveyobs-examples:occ10 ;
+    surv:vectorPurpose nz-vector-purpose:measured ;
 .
 
 surveyobs-examples:oo1vector
     a               surv:ObservedVector ;
-    geo:hasGeometry [ a         sf:Line ;
+    geo:hasGeometry [ a         sf:Line, geo:Geometry ;
                       geo:asGML """<gml:LineString gml:id=\"ools1\">
 					<gml:pointProperty xlink:href=\"#t1\"/>
 					<gml:pointProperty xlink:href=\"#occ1\"/>
@@ -388,12 +399,15 @@ surveyobs-examples:oo1vector
     rdfs:label      "T1 -Occ1" ;
     surv:from       surveyobs-examples:t1 ;
     surv:target     surveyobs-examples:occ1 ;
+    surv:vectorPurpose nz-vector-purpose:measured ;
 .
 
 surveyobs-examples:p1
     a               surv:BoundaryMark ;
     geo:hasGeometry surveyobs-examples:g_p1 ;
     rdfs:label      "P1" ;
+    surv:purpose icsm-surveypoint-purpose:boundary ;
+    surv:monumentedBy [ a surv:Monument ; surv:state icsm-monument-state:existing ] ;
 .
 
 surveyobs-examples:p10
@@ -401,6 +415,7 @@ surveyobs-examples:p10
     geo:hasGeometry    surveyobs-examples:g_p10 ;
     rdfs:label         "P10" ;
     skos:editorialNote "This survey point is an unmarked point at the intersection of two 3D units." ;
+    surv:purpose icsm-surveypoint-purpose:boundary ;
 .
 
 surveyobs-examples:p21
@@ -409,6 +424,8 @@ surveyobs-examples:p21
     rdfs:label         "P21" ;
     skos:editorialNote "matches sample survey scene" ;
     surv:setup         surveyobs-examples:Setup_a110 ;
+    surv:purpose icsm-surveypoint-purpose:boundary ;
+    surv:monumentedBy [ a surv:Monument ; surv:state icsm-monument-state:existing ] ;
 .
 
 surveyobs-examples:surveyActivity1
@@ -422,6 +439,8 @@ surveyobs-examples:t1
     geo:hasGeometry surveyobs-examples:g_t1 ;
     rdfs:label      "T1" ;
     surv:setup      surveyobs-examples:Setup_a1101 ;
+    surv:purpose icsm-surveypoint-purpose:control ;
+    surv:monumentedBy [ a surv:Monument ; surv:state icsm-monument-state:existing ] ;
 .
 
 surveyobs-examples:t2
@@ -432,6 +451,7 @@ surveyobs-examples:t2
     com:name          [ a          com:CompoundName ;
                         rdfs:label "IS I" ; ] ;
     surv:monumentedBy surveyobs-examples:m_t2 ;
+    surv:purpose icsm-surveypoint-purpose:control ;
 .
 
 surveyobs-examples:t3
@@ -448,6 +468,7 @@ surveyobs-examples:t3
                                       com:namePartType nameparttype:Type ;
                                       rdfs:label       "OIT" ; ] ; ] ;
     surv:monumentedBy surveyobs-examples:m_t3 ;
+    surv:purpose icsm-surveypoint-purpose:control ;
 .
 
 surveyobs-examples:tr1
@@ -467,7 +488,7 @@ surveyobs-examples:trav
 
 surveyobs-examples:tv1
     a                    surv:ObservedVector ;
-    geo:hasGeometry      [ a         gml:LineString ;
+    geo:hasGeometry      [ a         gml:LineString, geo:Geometry ;
                            geo:asGML """<gml:LineString gml:id=\"tl1\">
                             <gml:pointProperty xlink:href=\"#t1\"/>
                             <gml:pointProperty xlink:href=\"#t2\"/>
@@ -478,11 +499,12 @@ surveyobs-examples:tv1
     surv:horizontalAngle 335.066 ;
     surv:target          surveyobs-examples:t2 ;
     surv:verticalAngle   95.27 ;
+    surv:vectorPurpose nz-vector-purpose:measured ;
 .
 
 surveyobs-examples:tv2
     a                    surv:AdoptedVector ;
-    geo:hasGeometry      [ a         gml:LineString ;
+    geo:hasGeometry      [ a         gml:LineString, geo:Geometry ;
                            geo:asGML """<gml:LineString gml:id=\"tl1\">
                             <gml:pointProperty xlink:href=\"#t1\"/>
                             <gml:pointProperty xlink:href=\"#t3\"/>
@@ -495,6 +517,7 @@ surveyobs-examples:tv2
     surv:horizontalAngle 257.6 ;
     surv:target          surveyobs-examples:t3 ;
     surv:verticalAngle   88.26 ;
+    surv:vectorPurpose nz-vector-purpose:adopted ;
 .
 
 surveyobs-examples:vector_observations
@@ -508,7 +531,7 @@ surveyobs-examples:vector_observations
 .
 
 surveyobs-examples:yellow_front
-    a          gml:Polygon ;
+    a          gml:Polygon, geo:Geometry ;
     geo:asGML  """<gml:Polygon gml:id=\"yellow_front\">
                         <gml:exterior>
                             <gml:LinearRing gml:id=\"lr18\">
@@ -527,6 +550,7 @@ surveyobs-examples:yellow_front_boundary
     a               geometry:BoundaryFace ;
     geo:hasGeometry surveyobs-examples:yellow_front ;
     rdfs:label      "yellow_front boundary" ;
+    geometry:touchesInward examples:cp1 ;
 .
 
 container:CSD
@@ -625,7 +649,43 @@ surveyobs:Traversal
     container:vectorObservations     surveyobs-examples:vector_observations ;
 .
 
+surveyobs-examples:p3
+    a               surv:BoundaryMark ;
+    geo:hasGeometry surveyobs-examples:g_p3 ;
+    rdfs:label      "P3" ;
+    surv:purpose    icsm-surveypoint-purpose:boundary ;
+    surv:monumentedBy [ a surv:Monument ; surv:state icsm-monument-state:existing ] ;
+.
 
+surveyobs-examples:g_p1
+    a                       gml:Point, geo:Geometry ;
+    geo:asGML               """<gml:Point gml:id=\"g_p1\" srsName=\"*XY-MT*\" srsDimension=\"3\">
+                        <gml:pos>50.00 -12.00 -0.10</gml:pos>
+                    </gml:Point>"""^^geo:gmlLiteral ;
+    geo:coordinateDimension 3 ;
+    rdfs:comment            "Illustrative position in the local survey coordinate system." ;
+    rdfs:label              "g_p1" ;
+.
+
+surveyobs-examples:g_p21
+    a                       gml:Point, geo:Geometry ;
+    geo:asGML               """<gml:Point gml:id=\"g_p21\" srsName=\"*XY-MT*\" srsDimension=\"3\">
+                        <gml:pos>62.50 -24.80 -0.15</gml:pos>
+                    </gml:Point>"""^^geo:gmlLiteral ;
+    geo:coordinateDimension 3 ;
+    rdfs:comment            "Illustrative position in the local survey coordinate system." ;
+    rdfs:label              "g_p21" ;
+.
+
+surveyobs-examples:g_p3
+    a                       gml:Point, geo:Geometry ;
+    geo:asGML               """<gml:Point gml:id=\"g_p3\" srsName=\"*XY-MT*\" srsDimension=\"3\">
+                        <gml:pos>74.20 -36.90 -0.20</gml:pos>
+                    </gml:Point>"""^^geo:gmlLiteral ;
+    geo:coordinateDimension 3 ;
+    rdfs:comment            "Illustrative position in the local survey coordinate system." ;
+    rdfs:label              "g_p3" ;
+.
 
 ```
 

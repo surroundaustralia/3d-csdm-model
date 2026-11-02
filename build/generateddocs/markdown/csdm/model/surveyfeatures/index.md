@@ -40,6 +40,7 @@ Example data from `csdm_model/examples/survey_features_examples.ttl`.
 @prefix survprov: <https://linked.data.gov.au/def/csdm/surveyprov/> .
 @prefix teamwork: <http://topbraid.org/teamwork#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix icsm-monument-state: <https://linked.data.gov.au/def/csdm/icsm-monument-state/> .
 
 <https://data.surroundaustralia.com/cadastre-3d/surveyobs/Distance>
   foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/images/scale_factor.png> ;
@@ -61,21 +62,21 @@ Example data from `csdm_model/examples/survey_features_examples.ttl`.
   prov:wasInfluencedBy <https://linked.data.gov.au/dataset/csdm//surveyactivity/examples/SurveyApproval_1> ;
 .
 :g_p1
-  a gml:Point ;
+  a gml:Point, geo:Geometry ;
   geo:asGML """ <gml:Point gml:id=\"g_p1\" srsName=\"*XY-MT*\" srsDimension=\"3\">
                        <gml:pos>-31.596 38.089 5.000</gml:pos>
                     </gml:Point>"""^^geo:gmlLiteral ;
   rdfs:label "p1 location" ;
 .
 :g_p10
-  a gml:Point ;
+  a gml:Point, geo:Geometry ;
   geo:asGML """ <gml:Point gml:id=\"g_p10\" srsName=\"*XY-MT*\" srsDimension=\"3\">
                        <gml:pos>-33.717 43.089 4.550</gml:pos>
                     </gml:Point>"""^^geo:gmlLiteral ;
   rdfs:label "p10 location" ;
 .
 :g_p25
-  a gml:Point ;
+  a gml:Point, geo:Geometry ;
   geo:asGML """ <gml:Point gml:id=\"p25\" srsName=\"*XY-MT*\" srsDimension=\"3\">
                         <gml:pos>45.089 -38.596 -0.100</gml:pos>
                     </gml:Point>"""^^geo:gmlLiteral ;
@@ -85,6 +86,7 @@ Example data from `csdm_model/examples/survey_features_examples.ttl`.
   a surv:Monument ;
   rdfs:label "IS II" ;
   surv:condition surveymark_condition_NZ:Reliable ;
+  surv:state icsm-monument-state:existing ;
 .
 :p25
   a surv:BoundaryMark ;

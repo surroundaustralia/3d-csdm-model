@@ -1,5 +1,5 @@
 Validation report for icsm.csdm.model.commonpatterns - CSDM Common Patterns
-Generated 2026-11-02T00:08:13.467834+00:00
+Generated 2026-11-02T02:05:43.420050+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -11,23 +11,23 @@ Using measure-without-value-fail.ttl from test resources
 === SHACL ===
 Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
  - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl
- - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
  - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl
+ - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
 Validation result for _sources/model/commonpatterns/owl-consistency.shapes.ttl:
   Validation Report
   Conforms: True
   
 Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance2
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*
- - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b6: *none*
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:distance2/commonpatterns:qualityMeasure
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*
  - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*
- - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance2
  - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*
- - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b5: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:distance2/commonpatterns:qualityMeasure
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*
+ - Shape _:n195e95204ee64f2392e3ca55feddf473b6: *none*
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance2
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance2
+ - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*
+ - Shape _:n195e95204ee64f2392e3ca55feddf473b5: *none*
 
 
 ** Validation error **
@@ -43,13 +43,13 @@ Validation result for _sources/model/commonpatterns/shapes.shacl:
   	Message: A Measure has exactly one numeric value.
   
 Focus nodes for _sources/model/commonpatterns/shapes.shacl:
- - Shape :NumericLiteral/sh:or/rdf:first: *none*
- - Shape :QualityClassShape: *none*
- - Shape _:n5806826c7a974063a7197d01c2b6b86db3: *none*
- - Shape :QualityMeasureShape: ex:distance2/commonpatterns:qualityMeasure
  - Shape :NumericLiteral: *none*
+ - Shape :QualityClassShape: *none*
+ - Shape _:n3d475b74b91447a886a736c251f1f561b3: *none*
+ - Shape _:n3d475b74b91447a886a736c251f1f561b4: *none*
+ - Shape :NumericLiteral/sh:or/rdf:first: *none*
  - Shape :MeasureShape: ex:distance2
- - Shape _:n5806826c7a974063a7197d01c2b6b86db4: *none*
+ - Shape :QualityMeasureShape: ex:distance2/commonpatterns:qualityMeasure
  - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*
 
 Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
@@ -57,8 +57,8 @@ Validation result for https://ogcincubator.github.io/bblocks-utility/_sources/co
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:
- - Shape :NamePartShape: *none*
  - Shape :CompoundNameShape: *none*
+ - Shape :NamePartShape: *none*
 
 === End SHACL ===
 

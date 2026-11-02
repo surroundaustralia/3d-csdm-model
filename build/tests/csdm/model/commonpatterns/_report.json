@@ -2,7 +2,7 @@
   "title": "Validation report for icsm.csdm.model.commonpatterns - CSDM Common Patterns",
   "bblockName": "CSDM Common Patterns",
   "bblockId": "icsm.csdm.model.commonpatterns",
-  "generated": "2026-11-02T00:08:13.659390+00:00",
+  "generated": "2026-11-02T02:05:43.581681+00:00",
   "result": true,
   "items": [
     {
@@ -42,7 +42,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl"
             },
             {
               "op": "shacl-report",
@@ -54,15 +54,10 @@
             {
               "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
-                  "nodes": [
-                    "ex:distance2"
-                  ]
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
                   "nodes": []
                 },
-                "_:ndd1bd210ab7d481f99bb7df2e7a0a602b6": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
@@ -70,29 +65,34 @@
                     "ex:distance2/commonpatterns:qualityMeasure"
                   ]
                 },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
+                "_:n195e95204ee64f2392e3ca55feddf473b6": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
-                  "nodes": []
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": [
+                    "ex:distance2"
+                  ]
                 },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
                   "nodes": [
                     "ex:distance2"
                   ]
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "_:ndd1bd210ab7d481f99bb7df2e7a0a602b5": {
+                "_:n195e95204ee64f2392e3ca55feddf473b5": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance2\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:distance2/commonpatterns:qualityMeasure\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance2\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b5: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:distance2/commonpatterns:qualityMeasure\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape _:n195e95204ee64f2392e3ca55feddf473b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance2\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance2\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape _:n195e95204ee64f2392e3ca55feddf473b5: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -104,21 +104,19 @@
             {
               "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
               "focusNodes": {
-                ":NumericLiteral/sh:or/rdf:first": {
+                ":NumericLiteral": {
                   "nodes": []
                 },
                 ":QualityClassShape": {
                   "nodes": []
                 },
-                "_:n5806826c7a974063a7197d01c2b6b86db3": {
+                "_:n3d475b74b91447a886a736c251f1f561b3": {
                   "nodes": []
                 },
-                ":QualityMeasureShape": {
-                  "nodes": [
-                    "ex:distance2/commonpatterns:qualityMeasure"
-                  ]
+                "_:n3d475b74b91447a886a736c251f1f561b4": {
+                  "nodes": []
                 },
-                ":NumericLiteral": {
+                ":NumericLiteral/sh:or/rdf:first": {
                   "nodes": []
                 },
                 ":MeasureShape": {
@@ -126,15 +124,17 @@
                     "ex:distance2"
                   ]
                 },
-                "_:n5806826c7a974063a7197d01c2b6b86db4": {
-                  "nodes": []
+                ":QualityMeasureShape": {
+                  "nodes": [
+                    "ex:distance2/commonpatterns:qualityMeasure"
+                  ]
                 },
                 ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :QualityClassShape: *none*\n - Shape _:n5806826c7a974063a7197d01c2b6b86db3: *none*\n - Shape :QualityMeasureShape: ex:distance2/commonpatterns:qualityMeasure\n - Shape :NumericLiteral: *none*\n - Shape :MeasureShape: ex:distance2\n - Shape _:n5806826c7a974063a7197d01c2b6b86db4: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape :QualityClassShape: *none*\n - Shape _:n3d475b74b91447a886a736c251f1f561b3: *none*\n - Shape _:n3d475b74b91447a886a736c251f1f561b4: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :MeasureShape: ex:distance2\n - Shape :QualityMeasureShape: ex:distance2/commonpatterns:qualityMeasure\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -146,15 +146,15 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
-                ":NamePartShape": {
+                ":CompoundNameShape": {
                   "nodes": []
                 },
-                ":CompoundNameShape": {
+                ":NamePartShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: *none*\n - Shape :CompoundNameShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
             }
           ]
         }
@@ -197,7 +197,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl"
             },
             {
               "op": "shacl-report",
@@ -209,41 +209,41 @@
             {
               "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "_:ndd1bd210ab7d481f99bb7df2e7a0a602b6": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
-                  "nodes": []
-                },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
                   "nodes": [
                     "ex:surveyPoint2/commonpatterns:qualityClass"
                   ]
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
-                  "nodes": []
-                },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
                   "nodes": []
                 },
-                "_:ndd1bd210ab7d481f99bb7df2e7a0a602b5": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
+                  "nodes": []
+                },
+                "_:n195e95204ee64f2392e3ca55feddf473b6": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
+                  "nodes": []
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
+                  "nodes": []
+                },
+                "_:n195e95204ee64f2392e3ca55feddf473b5": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: ex:surveyPoint2/commonpatterns:qualityClass\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b5: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: ex:surveyPoint2/commonpatterns:qualityClass\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: *none*\n - Shape _:n195e95204ee64f2392e3ca55feddf473b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape _:n195e95204ee64f2392e3ca55feddf473b5: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -255,7 +255,7 @@
             {
               "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
               "focusNodes": {
-                ":NumericLiteral/sh:or/rdf:first": {
+                ":NumericLiteral": {
                   "nodes": []
                 },
                 ":QualityClassShape": {
@@ -263,19 +263,19 @@
                     "ex:surveyPoint2/commonpatterns:qualityClass"
                   ]
                 },
-                "_:n5806826c7a974063a7197d01c2b6b86db3": {
+                "_:n3d475b74b91447a886a736c251f1f561b3": {
                   "nodes": []
                 },
-                ":QualityMeasureShape": {
+                "_:n3d475b74b91447a886a736c251f1f561b4": {
                   "nodes": []
                 },
-                ":NumericLiteral": {
+                ":NumericLiteral/sh:or/rdf:first": {
                   "nodes": []
                 },
                 ":MeasureShape": {
                   "nodes": []
                 },
-                "_:n5806826c7a974063a7197d01c2b6b86db4": {
+                ":QualityMeasureShape": {
                   "nodes": []
                 },
                 ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
@@ -283,7 +283,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :QualityClassShape: ex:surveyPoint2/commonpatterns:qualityClass\n - Shape _:n5806826c7a974063a7197d01c2b6b86db3: *none*\n - Shape :QualityMeasureShape: *none*\n - Shape :NumericLiteral: *none*\n - Shape :MeasureShape: *none*\n - Shape _:n5806826c7a974063a7197d01c2b6b86db4: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape :QualityClassShape: ex:surveyPoint2/commonpatterns:qualityClass\n - Shape _:n3d475b74b91447a886a736c251f1f561b3: *none*\n - Shape _:n3d475b74b91447a886a736c251f1f561b4: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :MeasureShape: *none*\n - Shape :QualityMeasureShape: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -295,15 +295,15 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
-                ":NamePartShape": {
+                ":CompoundNameShape": {
                   "nodes": []
                 },
-                ":CompoundNameShape": {
+                ":NamePartShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: *none*\n - Shape :CompoundNameShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
             }
           ]
         }
@@ -345,7 +345,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl"
+              "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/bblocks-utility/build/annotated/bbr/utils/compoundName/ontology/ontology.ttl\n - /github/workspace/_sources/model/commonpatterns/commonpatterns.ttl\n - https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl"
             },
             {
               "op": "shacl-report",
@@ -357,34 +357,34 @@
             {
               "shaclFile": "_sources/model/commonpatterns/owl-consistency.shapes.ttl",
               "focusNodes": {
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
                   "nodes": [
-                    "ex:distance1"
+                    "ex:class-b"
                   ]
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
-                  "nodes": []
-                },
-                "_:ndd1bd210ab7d481f99bb7df2e7a0a602b6": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
                   "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>": {
                   "nodes": [
-                    "ex:surveyPoint1/commonpatterns:qualityMeasure",
-                    "ex:distance1/commonpatterns:qualityMeasure"
+                    "ex:distance1/commonpatterns:qualityMeasure",
+                    "ex:surveyPoint1/commonpatterns:qualityMeasure"
                   ]
+                },
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first": {
+                  "nodes": []
                 },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>": {
                   "nodes": [
                     "ex:distance1/commonpatterns:value"
                   ]
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
+                "_:n195e95204ee64f2392e3ca55feddf473b6": {
                   "nodes": []
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>": {
                   "nodes": [
-                    "ex:class-b"
+                    "ex:distance1"
                   ]
                 },
                 "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>": {
@@ -392,15 +392,15 @@
                     "ex:distance1"
                   ]
                 },
-                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>": {
+                "<https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "_:ndd1bd210ab7d481f99bb7df2e7a0a602b5": {
+                "_:n195e95204ee64f2392e3ca55feddf473b5": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance1\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:surveyPoint1/commonpatterns:qualityMeasure,ex:distance1/commonpatterns:qualityMeasure\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: ex:distance1/commonpatterns:value\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: ex:class-b\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance1\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape _:ndd1bd210ab7d481f99bb7df2e7a0a602b5: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/owl-consistency.shapes.ttl:\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityClass-resource>: ex:class-b\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#name-resource>: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#qualityMeasure-literal>: ex:distance1/commonpatterns:qualityMeasure,ex:surveyPoint1/commonpatterns:qualityMeasure\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:rest/rdf:first: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>: ex:distance1/commonpatterns:value\n - Shape _:n195e95204ee64f2392e3ca55feddf473b6: *none*\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-qualityMeasure-max>: ex:distance1\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#Measure-value-max>: ex:distance1\n - Shape <https://linked.data.gov.au/def/csdm/commonpatterns.owl-shapes#value-literal>/sh:or/rdf:first: *none*\n - Shape _:n195e95204ee64f2392e3ca55feddf473b5: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -412,7 +412,7 @@
             {
               "shaclFile": "_sources/model/commonpatterns/shapes.shacl",
               "focusNodes": {
-                ":NumericLiteral/sh:or/rdf:first": {
+                ":NumericLiteral": {
                   "nodes": []
                 },
                 ":QualityClassShape": {
@@ -420,16 +420,13 @@
                     "ex:class-b"
                   ]
                 },
-                "_:n5806826c7a974063a7197d01c2b6b86db3": {
+                "_:n3d475b74b91447a886a736c251f1f561b3": {
                   "nodes": []
                 },
-                ":QualityMeasureShape": {
-                  "nodes": [
-                    "ex:surveyPoint1/commonpatterns:qualityMeasure",
-                    "ex:distance1/commonpatterns:qualityMeasure"
-                  ]
+                "_:n3d475b74b91447a886a736c251f1f561b4": {
+                  "nodes": []
                 },
-                ":NumericLiteral": {
+                ":NumericLiteral/sh:or/rdf:first": {
                   "nodes": []
                 },
                 ":MeasureShape": {
@@ -437,15 +434,18 @@
                     "ex:distance1"
                   ]
                 },
-                "_:n5806826c7a974063a7197d01c2b6b86db4": {
-                  "nodes": []
+                ":QualityMeasureShape": {
+                  "nodes": [
+                    "ex:distance1/commonpatterns:qualityMeasure",
+                    "ex:surveyPoint1/commonpatterns:qualityMeasure"
+                  ]
                 },
                 ":NumericLiteral/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :QualityClassShape: ex:class-b\n - Shape _:n5806826c7a974063a7197d01c2b6b86db3: *none*\n - Shape :QualityMeasureShape: ex:surveyPoint1/commonpatterns:qualityMeasure,ex:distance1/commonpatterns:qualityMeasure\n - Shape :NumericLiteral: *none*\n - Shape :MeasureShape: ex:distance1\n - Shape _:n5806826c7a974063a7197d01c2b6b86db4: *none*\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for _sources/model/commonpatterns/shapes.shacl:\n - Shape :NumericLiteral: *none*\n - Shape :QualityClassShape: ex:class-b\n - Shape _:n3d475b74b91447a886a736c251f1f561b3: *none*\n - Shape _:n3d475b74b91447a886a736c251f1f561b4: *none*\n - Shape :NumericLiteral/sh:or/rdf:first: *none*\n - Shape :MeasureShape: ex:distance1\n - Shape :QualityMeasureShape: ex:distance1/commonpatterns:qualityMeasure,ex:surveyPoint1/commonpatterns:qualityMeasure\n - Shape :NumericLiteral/sh:or/rdf:rest/rdf:first: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -457,15 +457,15 @@
             {
               "shaclFile": "https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl",
               "focusNodes": {
-                ":NamePartShape": {
+                ":CompoundNameShape": {
                   "nodes": []
                 },
-                ":CompoundNameShape": {
+                ":NamePartShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :NamePartShape: *none*\n - Shape :CompoundNameShape: *none*\n"
+              "message": "Focus nodes for https://ogcincubator.github.io/bblocks-utility/_sources/compoundName/ontology/shapes.shacl:\n - Shape :CompoundNameShape: *none*\n - Shape :NamePartShape: *none*\n"
             }
           ]
         }
